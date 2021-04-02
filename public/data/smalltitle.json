@@ -1,0 +1,672 @@
+[
+  {
+    "Id": 1,
+    "Name": "George Washington",
+    "Year": 1789,
+    "Sequence": 1,
+    "Photo": "1.jpeg",
+    "Speech": 1,
+    "Great_Speech": 1,
+    "Note": "The First Inauguration"
+  },
+  {
+    "Id": 2,
+    "Name": "George Washington",
+    "Year": 1793,
+    "Sequence": 1,
+    "Photo": "1.jpeg",
+    "Speech": 1,
+    "Great_Speech": 0,
+    "Note": "Shortest Inaugural Address"
+  },
+  {
+    "Id": 3,
+    "Name": "John Adams",
+    "Year": 1797,
+    "Sequence": 2,
+    "Photo": "2.jpeg",
+    "Speech": 1,
+    "Great_Speech": 0,
+    "Note": "First president to be sworn in by a chief justice."
+  },
+  {
+    "Id": 4,
+    "Name": "Thomas Jefferson",
+    "Year": 1801,
+    "Sequence": 3,
+    "Photo": "3.jpeg",
+    "Speech": 1,
+    "Great_Speech": 1,
+    "Note": "First Washington inauguraiton; \"We are all Federalists; we are all Republicans"
+  },
+  {
+    "Id": 5,
+    "Name": "Thomas Jefferson",
+    "Year": 1805,
+    "Sequence": 3,
+    "Photo": "3.jpeg",
+    "Speech": 1,
+    "Great_Speech": 0,
+    "Note": "First informal parade down Pennsylvania Avenue"
+  },
+  {
+    "Id": 6,
+    "Name": "James Madison",
+    "Year": 1809,
+    "Sequence": 4,
+    "Photo": "4.jpeg",
+    "Speech": 1,
+    "Great_Speech": 0,
+    "Note": "First official inaugural parade and the first inaugural ball"
+  },
+  {
+    "Id": 7,
+    "Name": "James Madison",
+    "Year": 1813,
+    "Sequence": 4,
+    "Photo": "4.jpeg",
+    "Speech": 1,
+    "Great_Speech": 0,
+    "Note": "During the middle of the war of 1812."
+  },
+  {
+    "Id": 8,
+    "Name": "James Monroe",
+    "Year": 1817,
+    "Sequence": 5,
+    "Photo": "5.jpeg",
+    "Speech": 1,
+    "Great_Speech": 0,
+    "Note": "First fully outdoor inauguration."
+  },
+  {
+    "Id": 9,
+    "Name": "James Monroe",
+    "Year": 1821,
+    "Sequence": 5,
+    "Photo": "5.jpeg",
+    "Speech": 1,
+    "Great_Speech": 0,
+    "Note": "First inauguration delayed to avoid Sunday ceremony; ceremony moved indoors due to poor weather."
+  },
+  {
+    "Id": 10,
+    "Name": "John Quincy Adams",
+    "Year": 1825,
+    "Sequence": 6,
+    "Photo": "6.jpeg",
+    "Speech": 1,
+    "Great_Speech": 0,
+    "Note": "First son of a former president; first president to wear long pants, instead of knickers at his inauguration."
+  },
+  {
+    "Id": 11,
+    "Name": "Andrew Jackson",
+    "Year": 1829,
+    "Sequence": 7,
+    "Photo": "7.jpeg",
+    "Speech": 1,
+    "Great_Speech": 0,
+    "Note": "First inauguation at Capitols East Portico featured the wildest inauguration party."
+  },
+  {
+    "Id": 12,
+    "Name": "Andrew Jackson",
+    "Year": 1833,
+    "Sequence": 7,
+    "Photo": "7.jpeg",
+    "Speech": 1,
+    "Great_Speech": 0,
+    "Note": "Ceremony moved indoors and inaugural parade cancelled due to poor weather."
+  },
+  {
+    "Id": 13,
+    "Name": "Martin Van Buren",
+    "Year": 1837,
+    "Sequence": 8,
+    "Photo": "8.jpeg",
+    "Speech": 1,
+    "Great_Speech": 0,
+    "Note": "First American president born as an American citizen.  First time old and new presidents rode together to Capitol ceremony."
+  },
+  {
+    "Id": 14,
+    "Name": "William Henry Harrison",
+    "Year": 1841,
+    "Sequence": 9,
+    "Photo": "9.jpeg",
+    "Speech": 1,
+    "Great_Speech": 0,
+    "Note": "Longest address, caught pneumonia, died one month later."
+  },
+  {
+    "Id": 15,
+    "Name": "John Tyler",
+    "Year": 1841,
+    "Sequence": 10,
+    "Photo": "10.jpeg",
+    "Speech": 0,
+    "Great_Speech": 0,
+    "Note": "First vice president to succeed to presidency upon death of predecessor"
+  },
+  {
+    "Id": 16,
+    "Name": "James K. Polk",
+    "Year": 1845,
+    "Sequence": 11,
+    "Photo": "11.jpeg",
+    "Speech": 1,
+    "Great_Speech": 0,
+    "Note": "First inauguration reported by telegraph."
+  },
+  {
+    "Id": 17,
+    "Name": "Zachary Taylor",
+    "Year": 1849,
+    "Sequence": 12,
+    "Photo": "12.jpeg",
+    "Speech": 1,
+    "Great_Speech": 0,
+    "Note": "Inauguration delayed one day to Monday."
+  },
+  {
+    "Id": 18,
+    "Name": "Millard Fillmore",
+    "Year": 1850,
+    "Sequence": 13,
+    "Photo": "13.jpeg",
+    "Speech": 0,
+    "Great_Speech": 0,
+    "Note": "Oath administered by same subsitute justice who had sworn in John Tyler"
+  },
+  {
+    "Id": 19,
+    "Name": "Franklin Pierce",
+    "Year": 1853,
+    "Sequence": 14,
+    "Photo": "14.jpeg",
+    "Speech": 1,
+    "Great_Speech": 0,
+    "Note": "Only President to affirm the oath; memorized his inaugural address."
+  },
+  {
+    "Id": 20,
+    "Name": "James Buchanan",
+    "Year": 1857,
+    "Sequence": 15,
+    "Photo": "15.jpeg",
+    "Speech": 1,
+    "Great_Speech": 0,
+    "Note": "First inauguration to be photographed."
+  },
+  {
+    "Id": 21,
+    "Name": "Abraham Lincoln",
+    "Year": 1861,
+    "Sequence": 16,
+    "Photo": "16.jpeg",
+    "Speech": 1,
+    "Great_Speech": 1,
+    "Note": "Massive military presence at inauguration."
+  },
+  {
+    "Id": 22,
+    "Name": "Abraham Lincoln",
+    "Year": 1865,
+    "Sequence": 16,
+    "Photo": "16.jpeg",
+    "Speech": 1,
+    "Great_Speech": 1,
+    "Note": "With Malice toward, none and charity to all; first inaugural parade to include African Americans"
+  },
+  {
+    "Id": 23,
+    "Name": "Andrew Johnson",
+    "Year": 1865,
+    "Sequence": 17,
+    "Photo": "17.jpeg",
+    "Speech": 0,
+    "Great_Speech": 0,
+    "Note": "Delivered his VP speech while drunk, just 42 days earlier."
+  },
+  {
+    "Id": 24,
+    "Name": "Ulysses S. Grant",
+    "Year": 1869,
+    "Sequence": 18,
+    "Photo": "18.jpeg",
+    "Speech": 1,
+    "Great_Speech": 0,
+    "Note": "Much patriotic enthusiasm for the first inauguration post Civil War"
+  },
+  {
+    "Id": 25,
+    "Name": "Ulysses S. Grant",
+    "Year": 1873,
+    "Sequence": 18,
+    "Photo": "18.jpeg",
+    "Speech": 1,
+    "Great_Speech": 0,
+    "Note": "2nd coldest inaugural; first presidential review stand; frozen food at inaugural ball"
+  },
+  {
+    "Id": 26,
+    "Name": "Rutherford B. Hayes",
+    "Year": 1877,
+    "Sequence": 19,
+    "Photo": "19.jpeg",
+    "Speech": 1,
+    "Great_Speech": 0,
+    "Note": "Only President to be sworn in a day early, privately at White House"
+  },
+  {
+    "Id": 27,
+    "Name": "James A. Garfield",
+    "Year": 1881,
+    "Sequence": 20,
+    "Photo": "20.jpeg",
+    "Speech": 1,
+    "Great_Speech": 0,
+    "Note": "First iniauguration attended by the mother of a president; first inaugural parade reviewing stand in front of White House"
+  },
+  {
+    "Id": 28,
+    "Name": "Chester A. Arthur",
+    "Year": 1881,
+    "Sequence": 21,
+    "Photo": "21.jpeg",
+    "Speech": 0,
+    "Great_Speech": 0,
+    "Note": "Only president to be sworn in at his own home."
+  },
+  {
+    "Id": 29,
+    "Name": "Grover Cleveland",
+    "Year": 1885,
+    "Sequence": 22,
+    "Photo": "22.jpeg",
+    "Speech": 1,
+    "Great_Speech": 0,
+    "Note": "Only president to serve two non consecutive terms"
+  },
+  {
+    "Id": 30,
+    "Name": "Benjamin Harrison",
+    "Year": 1889,
+    "Sequence": 23,
+    "Photo": "23.jpeg",
+    "Speech": 1,
+    "Great_Speech": 0,
+    "Note": "Outgoing President Cleveland held umbrella over Harrison during rainy ceremony"
+  },
+  {
+    "Id": 31,
+    "Name": "Grover Cleveland",
+    "Year": 1893,
+    "Sequence": 24,
+    "Photo": "24.jpeg",
+    "Speech": 1,
+    "Great_Speech": 0,
+    "Note": "Only president to serve two non consecutive terms"
+  },
+  {
+    "Id": 32,
+    "Name": "William McKinley",
+    "Year": 1897,
+    "Sequence": 25,
+    "Photo": "25.jpeg",
+    "Speech": 1,
+    "Great_Speech": 0,
+    "Note": "First inauguration to be filmed and recorded with sound"
+  },
+  {
+    "Id": 33,
+    "Name": "William McKinley",
+    "Year": 1901,
+    "Sequence": 25,
+    "Photo": "25.jpeg",
+    "Speech": 1,
+    "Great_Speech": 0,
+    "Note": "Recent war hero Theodore Roosevelt new vice president"
+  },
+  {
+    "Id": 34,
+    "Name": "Theodore Roosevelt",
+    "Year": 1901,
+    "Sequence": 26,
+    "Photo": "26.jpeg",
+    "Speech": 0,
+    "Great_Speech": 0,
+    "Note": "Inauguration of nation's youngest president, age 42"
+  },
+  {
+    "Id": 35,
+    "Name": "Theodore Roosevelt",
+    "Year": 1905,
+    "Sequence": 26,
+    "Photo": "26.jpeg",
+    "Speech": 1,
+    "Great_Speech": 0,
+    "Note": "Most colorful inaugural parad in history"
+  },
+  {
+    "Id": 36,
+    "Name": "William Howard Taft",
+    "Year": 1909,
+    "Sequence": 27,
+    "Photo": "27.jpeg",
+    "Speech": 1,
+    "Great_Speech": 0,
+    "Note": "First time president and first lady rode together back to White House after ceremony"
+  },
+  {
+    "Id": 37,
+    "Name": "Woodrow Wilson",
+    "Year": 1913,
+    "Sequence": 28,
+    "Photo": "28.jpeg",
+    "Speech": 1,
+    "Great_Speech": 1,
+    "Note": "Era of no inaugural balls begins"
+  },
+  {
+    "Id": 38,
+    "Name": "Woodrow Wilson",
+    "Year": 1917,
+    "Sequence": 28,
+    "Photo": "28.jpeg",
+    "Speech": 1,
+    "Great_Speech": 0,
+    "Note": "First private oath taking on a Sunday"
+  },
+  {
+    "Id": 39,
+    "Name": "Warren G. Harding",
+    "Year": 1921,
+    "Sequence": 29,
+    "Photo": "29.jpeg",
+    "Speech": 1,
+    "Great_Speech": 0,
+    "Note": "First time president to ride to inauguration in an automobile; first time loudspeakers used at inauguration ceremony"
+  },
+  {
+    "Id": 40,
+    "Name": "Calvin Coolidge",
+    "Year": 1923,
+    "Sequence": 30,
+    "Photo": "30.jpeg",
+    "Speech": 0,
+    "Great_Speech": 0,
+    "Note": "Oath aministered by President's father; took oath a second time to legitimize ceremony weeks later"
+  },
+  {
+    "Id": 41,
+    "Name": "Calvin Coolidge",
+    "Year": 1925,
+    "Sequence": 30,
+    "Photo": "30.jpeg",
+    "Speech": 1,
+    "Great_Speech": 0,
+    "Note": "First inauguration to be broadcast on live radio"
+  },
+  {
+    "Id": 42,
+    "Name": "Herbert Hoover",
+    "Year": 1929,
+    "Sequence": 31,
+    "Photo": "31.jpeg",
+    "Speech": 1,
+    "Great_Speech": 0,
+    "Note": "First inauguration to be broadcast on sound newsreel"
+  },
+  {
+    "Id": 43,
+    "Name": "Franklin D. Roosevelt",
+    "Year": 1933,
+    "Sequence": 32,
+    "Photo": "32.jpeg",
+    "Speech": 1,
+    "Great_Speech": 1,
+    "Note": "The only thing we have to fear, is fear itself"
+  },
+  {
+    "Id": 44,
+    "Name": "Franklin D. Roosevelt",
+    "Year": 1937,
+    "Sequence": 32,
+    "Photo": "32.jpeg",
+    "Speech": 1,
+    "Great_Speech": 0,
+    "Note": "The First January 20th ceremony"
+  },
+  {
+    "Id": 45,
+    "Name": "Franklin D. Roosevelt",
+    "Year": 1941,
+    "Sequence": 32,
+    "Photo": "32.jpeg",
+    "Speech": 1,
+    "Great_Speech": 0,
+    "Note": "First president to be elected to three terms in office"
+  },
+  {
+    "Id": 46,
+    "Name": "Franklin D. Roosevelt",
+    "Year": 1945,
+    "Sequence": 32,
+    "Photo": "32.jpeg",
+    "Speech": 1,
+    "Great_Speech": 0,
+    "Note": "Low key inauguration held on White House balcony during World War"
+  },
+  {
+    "Id": 47,
+    "Name": "Harry S. Truman",
+    "Year": 1945,
+    "Sequence": 33,
+    "Photo": "33.jpeg",
+    "Speech": 0,
+    "Great_Speech": 0,
+    "Note": "First new president in more than 12 years"
+  },
+  {
+    "Id": 48,
+    "Name": "Harry S. Truman",
+    "Year": 1949,
+    "Sequence": 33,
+    "Photo": "33.jpeg",
+    "Speech": 1,
+    "Great_Speech": 0,
+    "Note": "First televised inauguration"
+  },
+  {
+    "Id": 49,
+    "Name": "Dwight D. Eisenhower",
+    "Year": 1953,
+    "Sequence": 34,
+    "Photo": "34.jpeg",
+    "Speech": 1,
+    "Great_Speech": 0,
+    "Note": "Longest inaugural parade"
+  },
+  {
+    "Id": 50,
+    "Name": "Dwight D. Eisenhower",
+    "Year": 1957,
+    "Sequence": 34,
+    "Photo": "34.jpeg",
+    "Speech": 1,
+    "Great_Speech": 0,
+    "Note": "Private Sunday ceremony at White House"
+  },
+  {
+    "Id": 51,
+    "Name": "John F. Kennedy",
+    "Year": 1961,
+    "Sequence": 35,
+    "Photo": "35.jpeg",
+    "Speech": 1,
+    "Great_Speech": 1,
+    "Note": "Ask not what you can do for your country; first time both parents withnessed their son's inauguration"
+  },
+  {
+    "Id": 52,
+    "Name": "Lyndon B. Johnson",
+    "Year": 1965,
+    "Sequence": 36,
+    "Photo": "36.jpeg",
+    "Speech": 1,
+    "Great_Speech": 0,
+    "Note": "First lady held Bible during oath for first time"
+  },
+  {
+    "Id": 53,
+    "Name": "Richard Nixon",
+    "Year": 1969,
+    "Sequence": 37,
+    "Photo": "37.jpeg",
+    "Speech": 1,
+    "Great_Speech": 0,
+    "Note": "First inaugural parade disrupted by protestors"
+  },
+  {
+    "Id": 54,
+    "Name": "Richard Nixon",
+    "Year": 1973,
+    "Sequence": 37,
+    "Photo": "37.jpeg",
+    "Speech": 1,
+    "Great_Speech": 0,
+    "Note": "Second  inaugural parade disrupted by protestors"
+  },
+  {
+    "Id": 55,
+    "Name": "Gerald R. Ford",
+    "Year": 1974,
+    "Sequence": 38,
+    "Photo": "38.jpeg",
+    "Speech": 0,
+    "Great_Speech": 0,
+    "Note": "First inauguation of someone never elected either president or vice-president."
+  },
+  {
+    "Id": 56,
+    "Name": "Jimmy Carter",
+    "Year": 1977,
+    "Sequence": 39,
+    "Photo": "39.jpeg",
+    "Speech": 1,
+    "Great_Speech": 0,
+    "Note": "Only president to use a nickname when taking the formal oath"
+  },
+  {
+    "Id": 57,
+    "Name": "Ronald Reagan",
+    "Year": 1981,
+    "Sequence": 40,
+    "Photo": "40.jpeg",
+    "Speech": 1,
+    "Great_Speech": 0,
+    "Note": "Oldest president at time; first inauguration on Capitol's west side"
+  },
+  {
+    "Id": 58,
+    "Name": "Ronald Reagan",
+    "Year": 1985,
+    "Sequence": 40,
+    "Photo": "40.jpeg",
+    "Speech": 1,
+    "Great_Speech": 0,
+    "Note": "Sunday ceremony at White House"
+  },
+  {
+    "Id": 59,
+    "Name": "George H. W. Bush",
+    "Year": 1989,
+    "Sequence": 41,
+    "Photo": "41.jpeg",
+    "Speech": 1,
+    "Great_Speech": 0,
+    "Note": "Called inauguration \"Democracy's Big Data"
+  },
+  {
+    "Id": 60,
+    "Name": "Bill Clinton",
+    "Year": 1993,
+    "Sequence": 42,
+    "Photo": "42.jpeg",
+    "Speech": 1,
+    "Great_Speech": 0,
+    "Note": "First president to attend inaugural morning services at a predominantly African American church."
+  },
+  {
+    "Id": 61,
+    "Name": "Bill Clinton",
+    "Year": 1997,
+    "Sequence": 42,
+    "Photo": "42.jpeg",
+    "Speech": 1,
+    "Great_Speech": 0,
+    "Note": "First inauguration broadcast live over Internet"
+  },
+  {
+    "Id": 62,
+    "Name": "George W. Bush",
+    "Year": 2001,
+    "Sequence": 43,
+    "Photo": "43.jpeg",
+    "Speech": 1,
+    "Great_Speech": 0,
+    "Note": "Father George bcame first former president to personally witness the inauguration of his son"
+  },
+  {
+    "Id": 63,
+    "Name": "George W. Bush",
+    "Year": 2005,
+    "Sequence": 43,
+    "Photo": "43.jpeg",
+    "Speech": 1,
+    "Great_Speech": 0,
+    "Note": "First time a protest took place during the inaugural oath"
+  },
+  {
+    "Id": 64,
+    "Name": "Barack Obama",
+    "Year": 2009,
+    "Sequence": 44,
+    "Photo": "44.jpeg",
+    "Speech": 1,
+    "Great_Speech": 0,
+    "Note": "First inauguration of an African American preident; largest attendance"
+  },
+  {
+    "Id": 65,
+    "Name": "Barack Obama",
+    "Year": 2013,
+    "Sequence": 44,
+    "Photo": "44.jpeg",
+    "Speech": 1,
+    "Great_Speech": 0,
+    "Note": "Oath of office misstated & administered next day"
+  },
+  {
+    "Id": 66,
+    "Name": "Donald J. Trump",
+    "Year": 2017,
+    "Sequence": 45,
+    "Photo": "45.jpeg",
+    "Speech": 1,
+    "Great_Speech": 0,
+    "Note": ""
+  },
+  {
+    "Id": 67,
+    "Name": "Joseph R. Biden",
+    "Year": 2021,
+    "Sequence": 46,
+    "Photo": "46.jpeg",
+    "Speech": 1,
+    "Great_Speech": 0,
+    "Note": ""
+  }
+]
