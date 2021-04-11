@@ -52,9 +52,6 @@ export default {
         .then(response => response.json())
         .then(data => (this.inauguralDataList = data))
     },
-    setHovered (nextHovered) {
-      this.hovered = nextHovered
-    }
   },
   created () {
     this.getInauguralData()
@@ -106,5 +103,4 @@ circle {
   display: block;
 }
 
-/* if mainviz is selected via onClick then show it & hide the Title  ......   otherwise hide the main viz.*/
 </style>

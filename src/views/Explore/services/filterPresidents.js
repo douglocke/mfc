@@ -16,7 +16,8 @@ const filterBySentiment = (item, key, selectedValues) => {
 const transitionMap = {
   'Civil War': 'signficant',
   'Eve of Civil War': 'significant',
-  'Power of the People': 'significant'
+  'Power of the People': 'significant',
+  'First African American President': 'significant'
 }
 
 const filterByBendatTransition = (item, key, selectedValue) => {

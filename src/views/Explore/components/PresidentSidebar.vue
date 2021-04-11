@@ -22,6 +22,7 @@
   </div>
 
 </template>
+<!--Offload the details of each filtering into another file-->
 <script>
 import {parties, bendatTransition} from '../filters.config'
 export default {

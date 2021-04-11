@@ -5,9 +5,10 @@
       <div>Selected president details</div>
       <!-- <Component :is="currentExploreComponent" />-->
       <PresidentDetails :presidentDetails="selectedPresidentDetail" />
-      <router-view @onPresidentHover="onPresidentHover" @onPresidentSelected="onPresidentSelected" :presidentsData="filteredPresidents" />
+      <router-view @onPresidentHover="onPresidentHover" @onPresidentSelected="onPresidentSelected" :presidentsData="filteredPresidents" :selectedPresidentDetails="selectedPresidentDetail" />
     </main>
     <aside :class="$style.aside">
+      <!--each filter group needs listeners-->
       <PresidentSidebar :selectedPresidents="selectedPresidents" @onFilterChange="onFilterChange" :filters="filters" @onSelectFilterChange="onSelectFilterChange" />
     </aside>
     <!-- <footer :class="$style.footer">
@@ -19,10 +20,16 @@
 <script>
 import Header from '@/components/Header.vue'
 import PresidentDetails from './components/PresidentDetails'
+/*PresidentsSidebar is default exported */
 import PresidentSidebar from './components/PresidentSidebar'
+
+/*named import... filter is a named export in filterPresidents */
+
 import {filter} from './services/filterPresidents'
+
 export default {
-  name: 'Mainviz',
+  name: 'Explore',
+  /* this name can be used in ErrorCapture if error is thrown , otherwise this name is not referenced again specifcially.  used if we did something recursive.*/
   components: {
     Header,
     PresidentDetails,
@@ -30,10 +37,7 @@ export default {
   },
   data () {
     return {
-      presidentsData: {
-        1: {},
-        2: {}
-      },
+      presidentsData: {}, /*empty object, we will assign a new object that contains the ID and the rest of the item details*/
       selectedPresidentDetail: null /* get from Sidebar */,
       selectedPresidents: [] /* get from sidebar */,
       /* filters: [
@@ -48,9 +52,9 @@ export default {
           selected: false
         }
       ]*/
+      /*filters: default values below*/
       filters: {
-        'Party': ['Republican', 'Whig'],
-        'Sentiment': ['Positive']
+        // 'Party': ['Democratic', 'Federalist', 'Independent', 'Democratic-Republican', 'Republican', 'Whig'],
       }
     }
   },
@@ -71,8 +75,17 @@ export default {
     },
     onPresidentSelected(item) {
       console.log('on president selected', item.Name)
+      console.log('Value of selectedPresidents: ', this.selectedPresidents)
+      
       // Return if this president is already selected
+      // Doug.  arrow function, if itemID is already there, then true
+      /*we are looping through the currently selected presidents.  _ is a common naming convention for private scope */
+      /*if it finds it return the item*/
+      /*return only called if its found*/
+      
       if (this.selectedPresidents.find(_item => _item.Id === item.Id)) return
+      
+      /*not found so keep going*/
       // If we have two presidents already, we want to keep the last one added
       if (this.selectedPresidents.length == 2) {
         this.selectedPresidents = [this.selectedPresidents[1], item]
@@ -83,6 +96,7 @@ export default {
     onSelectFilterChange({filterKey, value}) {
       console.log('on select filter', filterKey, value)
       // Add a filter if it's not present yet
+      //Reflect asks if filterkey exists in this.filters (true/false)
       if (!Reflect.has(this.filters, filterKey)) {
         this.filters[filterKey] = []
       }
@@ -101,21 +115,32 @@ export default {
         this.filters[filterKey].push(value)
       } else {
         // Remove the filter
+        //but if none are checked then currently all presidents show
         this.filters[filterKey] = this.filters[filterKey].filter(_value => _value !== value)
       }      
     },
+    //question on reduce.
+    //The accumulator is the value that we end with and the reducer is what action we will perform in order to get to one value.
     normaliseData(data) {
       return data.reduce((acc, item) => {
         acc[item.Id] = item
+        //console.log('Doug: acc: ', acc[item.Id])
         return acc
       }, {})
     },
+    setInitialPresidentDetail(presidentsData) {
+      const {id} = this.$route.query
+      if (!id) return
+      this.selectedPresidentDetail = presidentsData[id]
+      
+    },  
     getMainVizData () {
       fetch('/data/MainVizData.json')
         .then(response => response.json())
         .then(data => {
           console.log({data})
           this.presidentsData = this.normaliseData(data)
+          this.setInitialPresidentDetail(this.presidentsData)
         })
     }
   },
@@ -131,11 +156,15 @@ export default {
   grid-template-columns: 1fr 22rem;
   grid-template-rows: 80px 1fr;
   min-height: 100vh;
+  background: rgb(130, 168, 168);
+  //display: flex;
+  //align-items: left;
 }
 
 .header {
   grid-row: 1 / 2;
   grid-column: 1 / 3;
+  background: lightgoldenrodyellow;
   /*
   grid-area: 1 / 1 / 2 / 3
   grid-area: row-start / col-start / row-end / col-end
@@ -145,11 +174,14 @@ export default {
 .main {
   grid-row: 2 / 4;
   grid-column: 1 / 2;
+  background: rgb(195, 148, 197);
 }
 
 .aside {
   grid-row: 2 / 4;
   grid-column: 2 / 3;
+  //display: flex;
+  //align-items: left;
 }
 
 /*
