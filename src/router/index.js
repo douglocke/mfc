@@ -40,7 +40,7 @@ const routes = [
   {
     path: '/speeches',
     name: 'Speeches',
-    component: () => import('../views/Speeches.vue')
+    component: () => import('../views/Speeches/Speeches.vue')
   }
 ]
 

@@ -1,15 +1,28 @@
 <template>
   <div :class="$style.mainViz">
     <Header :class="$style.header" />
-    <main :class="$style.main">
-      <div>Selected president details</div>
+    <main :class="[$style.main, disablePointerEvents && $style.noPointerEvents]">
       <!-- <Component :is="currentExploreComponent" />-->
       <PresidentDetails :presidentDetails="selectedPresidentDetail" />
-      <router-view @onPresidentHover="onPresidentHover" @onPresidentSelected="onPresidentSelected" :presidentsData="filteredPresidents" :selectedPresidentDetails="selectedPresidentDetail" />
+      <router-view
+        @onPresidentHover="onPresidentHover"
+        @onPresidentSelected="onPresidentSelected"
+        :presidentsData="filteredPresidents"
+        :selectedPresidentDetails="selectedPresidentDetail"
+        :colorByProperty="colorByProperty"
+      />
     </main>
     <aside :class="$style.aside">
       <!--each filter group needs listeners-->
-      <PresidentSidebar :selectedPresidents="selectedPresidents" @onFilterChange="onFilterChange" :filters="filters" @onSelectFilterChange="onSelectFilterChange" />
+      <PresidentSidebar
+        :selectedPresident="selectedPresident"
+        :selectedPresidentCompare="selectedPresidentCompare"
+        :colorByProperty="colorByProperty"
+        :filters="filters"
+        @onSelectFilterChange="onSelectFilterChange"
+        @onFilterChange="onFilterChange"
+        @onChangeColorByProperty="color => (colorByProperty = color)"
+      />
     </aside>
     <!-- <footer :class="$style.footer">
       Notes field
@@ -25,21 +38,37 @@ import PresidentSidebar from './components/PresidentSidebar'
 
 /*named import... filter is a named export in filterPresidents */
 
-import {filter} from './services/filterPresidents'
-
+import { filter } from './services/filterPresidents'
+import { useSelectedPresident } from '@/composables'
 export default {
   name: 'Explore',
   /* this name can be used in ErrorCapture if error is thrown , otherwise this name is not referenced again specifcially.  used if we did something recursive.*/
   components: {
     Header,
     PresidentDetails,
-    PresidentSidebar
+    PresidentSidebar,
   },
-  data () {
+  setup() {
+    const {
+      selectedPresident,
+      selectedPresidentCompare,
+      setSelectedPresident,
+      setSelectedPresidentCompare,
+    } = useSelectedPresident()
+
     return {
-      presidentsData: {}, /*empty object, we will assign a new object that contains the ID and the rest of the item details*/
+      selectedPresident,
+      selectedPresidentCompare,
+      setSelectedPresident,
+      setSelectedPresidentCompare,
+    }
+  },
+  data() {
+    return {
+      disablePointerEvents: true,
+      presidentsData: {} /*empty object, we will assign a new object that contains the ID and the rest of the item details*/,
       selectedPresidentDetail: null /* get from Sidebar */,
-      selectedPresidents: [] /* get from sidebar */,
+      colorByProperty: 'Party',
       /* filters: [
         {
           name: 'Party',
@@ -55,46 +84,62 @@ export default {
       /*filters: default values below*/
       filters: {
         // 'Party': ['Democratic', 'Federalist', 'Independent', 'Democratic-Republican', 'Republican', 'Whig'],
-      }
+      },
     }
   },
   computed: {
-    filteredData () {
+    filteredData() {
       return this.speeches.filter()
     },
     filteredPresidents() {
       return Object.values(this.presidentsData).filter(item => {
         return filter(item, this.filters)
       })
-    }
+    },
   },
   methods: {
     onPresidentHover(item) {
-      console.log('on hover president', item.Name)
+      if (!item) return
       this.selectedPresidentDetail = item
     },
     onPresidentSelected(item) {
-      console.log('on president selected', item.Name)
-      console.log('Value of selectedPresidents: ', this.selectedPresidents)
-      
-      // Return if this president is already selected
-      // Doug.  arrow function, if itemID is already there, then true
-      /*we are looping through the currently selected presidents.  _ is a common naming convention for private scope */
-      /*if it finds it return the item*/
-      /*return only called if its found*/
-      
+      if (!item || !item?.Name) return
+      console.log('on president selected', item, item.Name)
+      console.log('Value of selectedPresidents: ', this.selectedPresident, this.selectedPresidentCompare)
+
+      // If we don't have the first president selected
+      if (!this.selectedPresident) {
+        this.setSelectedPresident(item)
+      // If we have the selectedPresident, but we don't have the compare one
+      } else if (!this.selectedPresidentCompare) {
+        this.setSelectedPresidentCompare(item)
+      } else {
+        // If we have both presidents selected
+        // Then, move the compare one to the first selected, and add a new one
+        // in place of the previous compare
+        this.setSelectedPresident(this.selectedPresidentCompare)
+        this.setSelectedPresidentCompare(item)
+      }
+      /*
       if (this.selectedPresidents.find(_item => _item.Id === item.Id)) return
-      
-      /*not found so keep going*/
+
       // If we have two presidents already, we want to keep the last one added
       if (this.selectedPresidents.length == 2) {
+        console.log('Select both')
+        this.setSelectedPresidentCompare(item)
+        this.setSelectedPresident(this.selectedPresidents[1])
         this.selectedPresidents = [this.selectedPresidents[1], item]
       } else {
+        if (this.selectedPresidents.length === 1) {
+          this.setSelectedPresidentCompare(item)
+        } else {
+          this.setSelectedPresident(item)
+        }
         this.selectedPresidents.push(item)
       }
+      */
     },
-    onSelectFilterChange({filterKey, value}) {
-      console.log('on select filter', filterKey, value)
+    onSelectFilterChange({ filterKey, value }) {
       // Add a filter if it's not present yet
       //Reflect asks if filterkey exists in this.filters (true/false)
       if (!Reflect.has(this.filters, filterKey)) {
@@ -103,7 +148,7 @@ export default {
       // Set the filter value, e.g. this.filters.Bendat_Transition = 'significant'
       this.filters[filterKey] = value
     },
-    onFilterChange({filterKey, value, checked}) {
+    onFilterChange({ filterKey, value, checked }) {
       console.log('on filter change')
       // Add a filter if it's not present yet
       if (!Reflect.has(this.filters, filterKey)) {
@@ -116,8 +161,10 @@ export default {
       } else {
         // Remove the filter
         //but if none are checked then currently all presidents show
-        this.filters[filterKey] = this.filters[filterKey].filter(_value => _value !== value)
-      }      
+        this.filters[filterKey] = this.filters[filterKey].filter(
+          _value => _value !== value
+        )
+      }
     },
     //question on reduce.
     //The accumulator is the value that we end with and the reducer is what action we will perform in order to get to one value.
@@ -129,28 +176,33 @@ export default {
       }, {})
     },
     setInitialPresidentDetail(presidentsData) {
-      const {id} = this.$route.query
+      const { id } = this.$route.query
       if (!id) return
       this.selectedPresidentDetail = presidentsData[id]
-      
-    },  
-    getMainVizData () {
+    },
+    getMainVizData() {
       fetch('/data/MainVizData.json')
         .then(response => response.json())
         .then(data => {
-          console.log({data})
+          console.log({ data })
           this.presidentsData = this.normaliseData(data)
           this.setInitialPresidentDetail(this.presidentsData)
         })
-    }
+    },
   },
-  created () {
+  created() {
     this.getMainVizData()
-  }
+    setTimeout(() => {
+      this.disablePointerEvents = false
+    }, 3000)
+  },
 }
 </script>
 
 <style lang="scss" module>
+.noPointerEvents {
+  pointer-events: none;
+}
 .mainViz {
   display: grid;
   grid-template-columns: 1fr 22rem;
@@ -164,7 +216,7 @@ export default {
 .header {
   grid-row: 1 / 2;
   grid-column: 1 / 3;
-  background: lightgoldenrodyellow;
+  background: rgb(250, 250, 250);
   /*
   grid-area: 1 / 1 / 2 / 3
   grid-area: row-start / col-start / row-end / col-end
@@ -174,7 +226,7 @@ export default {
 .main {
   grid-row: 2 / 4;
   grid-column: 1 / 2;
-  background: rgb(195, 148, 197);
+  background: rgb(230, 230, 230);
 }
 
 .aside {

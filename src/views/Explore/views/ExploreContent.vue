@@ -1,6 +1,6 @@
 <template>
   <div>
-    This is Scatter Plot for Content
+    <!--This is Scatter Plot for Content-->
     <!--button @click.prevent="$emit('onHoverPresident')">Click me </button-->
 
     <!--<div v-for="(item, index) of presidentsData" :key="index">
@@ -57,12 +57,13 @@ export default {
       return scaleOrdinal(schemeCategory10).domain(this.colorDomain)
     },
     colorDomain() {
-      return Array.from(new Set(this.presidentsData.map(d => d[this.colorByProperty])))
+      return Array.from(
+        new Set(this.presidentsData.map(d => d[this.colorByProperty]))
+      )
     },
   },
   methods: {
     onMouseEnter(e, point) {
-      console.log('on mouse enter', e, point)
       this.$emit('onPresidentHover', point)
     },
   },

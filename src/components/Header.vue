@@ -23,6 +23,7 @@ export default {
     justify-content: space-between;
     align-items: center;
     padding: 0 2rem;
+    height: 80px;
 }
 
 .logoBlock {

@@ -92,8 +92,10 @@ circle {
   display: none;
   /* position: absolute; */
   position: absolute;
+  z-index: 2;
   top: -50px;
   left: 0px;
+  width: 200px;
   border: 1px solid gray;
   border-radius: 5px;
   background: lightgoldenrodyellow;
