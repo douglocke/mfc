@@ -4,13 +4,16 @@
     <main :class="[$style.main, disablePointerEvents && $style.noPointerEvents]">
       <!-- <Component :is="currentExploreComponent" />-->
       <PresidentDetails :presidentDetails="selectedPresidentDetail" />
-      <router-view
-        @onPresidentHover="onPresidentHover"
-        @onPresidentSelected="onPresidentSelected"
-        :presidentsData="filteredPresidents"
-        :selectedPresidentDetails="selectedPresidentDetail"
-        :colorByProperty="colorByProperty"
-      />
+      <div>
+        <router-view
+          @onPresidentHover="onPresidentHover"
+          @onPresidentSelected="onPresidentSelected"
+          :presidentsData="filteredPresidents"
+          :selectedPresidentDetails="selectedPresidentDetail"
+          :colorByProperty="colorByProperty"
+        />
+        <ExploreTextBox :colorByProperty="colorByProperty" />
+      </div>
     </main>
     <aside :class="$style.aside">
       <!--each filter group needs listeners-->
@@ -35,6 +38,7 @@ import Header from '@/components/Header.vue'
 import PresidentDetails from './components/PresidentDetails'
 /*PresidentsSidebar is default exported */
 import PresidentSidebar from './components/PresidentSidebar'
+import ExploreTextBox from './components/ExploreTextBox'
 
 /*named import... filter is a named export in filterPresidents */
 
@@ -47,6 +51,7 @@ export default {
     Header,
     PresidentDetails,
     PresidentSidebar,
+    ExploreTextBox
   },
   setup() {
     const {
@@ -170,6 +175,7 @@ export default {
     //The accumulator is the value that we end with and the reducer is what action we will perform in order to get to one value.
     normaliseData(data) {
       return data.reduce((acc, item) => {
+        item.ReachNum = +String(item.Reach).slice(0, -1)
         acc[item.Id] = item
         //console.log('Doug: acc: ', acc[item.Id])
         return acc
@@ -208,7 +214,7 @@ export default {
   grid-template-columns: 1fr 22rem;
   grid-template-rows: 80px 1fr;
   min-height: 100vh;
-  background: rgb(130, 168, 168);
+  background: rgb(236, 231, 226);
   //display: flex;
   //align-items: left;
 }
@@ -226,7 +232,7 @@ export default {
 .main {
   grid-row: 2 / 4;
   grid-column: 1 / 2;
-  background: rgb(230, 230, 230);
+  background: rgb(254, 247, 238);
 }
 
 .aside {

@@ -90,8 +90,11 @@
 
    
     </div>
-    <div v-else>Please select a president</div>
+    
+    <div v-else>Move mouse over presidents to explore.  Click to save a president to sidebar.</div>
   </div>
+  <br>
+  <hr width=”55%″>
 </template>
 
 <script>
@@ -115,6 +118,7 @@ export default {
   justify-content: space-around;
   font-size: 14px;
   height: 80px;
+  padding-top: 10px;
 }
 
 .p-info {

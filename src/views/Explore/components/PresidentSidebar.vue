@@ -35,6 +35,7 @@
       <select :value="colorByProperty" @change="onChangeColorByProperty">
         <option value="Party">Party</option>
         <option value="Bendat_Transition">Bendat Transition</option>
+        <option value="Reach">Reach</option>
       </select>
       </div>
   </div>
