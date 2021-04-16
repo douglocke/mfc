@@ -16,16 +16,13 @@
         @mouseenter="$emit('mouseenter', $event, point)"
       ></LabeledPoint>
     </g>
-    <g class="legend-container">
-      <text class="legend-label" x="5" y="0">Legend</text>
-    </g>
-    <XAxis :xScale="xScale" :yTranslate="height - margin" :id="id" />
-    <YAxis :yScale="yScale" :xTranslate="margin" :id="id" />
+    <XAxis v-if="!hideXAxis" :xScale="xScale" :yTranslate="height - margin" :id="id" />
+    <YAxis v-if="!hideYAxis" :yScale="yScale" :xTranslate="margin" :id="id" />
   </svg>
 </template>
 
 <script>
-import { max, scaleLinear, select, scaleBand } from 'd3'
+import { min, max, scaleLinear, select, scaleBand, legend, swatches } from 'd3'
 import LabeledPoint from './LabeledPoint.vue'
 import XAxis from './XAxis.vue'
 import YAxis from './YAxis.vue'
@@ -52,23 +49,33 @@ export default {
     getFill: Function,
     colorScale: {},
     colorByProperty: String,
+    hideXAxis: {
+      type: Boolean,
+      default: false
+    },
+    hideYAxis: {
+      type: Boolean,
+      default: false
+    }
   },
   computed: {
+    //derived from state, or prop from parent. re-rendered when thing change
     id() {
       return `${this.xVar}-${this.yVar}`
     },
-    colorLegend() {
-      return legendColor().scale(this.colorScale).shape('circle')
-    },
     xScale() {
+      console.log('xScale domain', [min(this.points, d => +d[this.xVar]), max(this.points, d => +d[this.xVar] + 0.5)], 'range', [this.margin, this.width - this.margin])
       return (
         scaleLinear()
-          .domain([-2, max(this.points, d => +d[this.xVar] + 0.5)])
+          //.domain([-2, max(this.points, d => +d[this.xVar] + 0.5)])
+          .domain([min(this.points, d => +d[this.xVar]), max(this.points, d => +d[this.xVar] + 0.5)])
+          
           // .domain([-2, 7])
           .range([this.margin, this.width - this.margin])
       )
     },
     yScale() {
+      console.log('yScale domain', [-2, max(this.points, d => +d[this.yVar])], 'range', [this.height - this.margin, this.margin])
       return (
         scaleLinear()
           .domain([-2, max(this.points, d => +d[this.yVar])])
@@ -82,37 +89,68 @@ export default {
       if (this.colorByProperty === 'Reach') {
         return this.getFill(point.ReachNum)
       }
+
+      if (this.colorByProperty === 'Bendat_Transition') {
+        return this.getFill(point.Bendat_Transition ? 'Yes' : 'No')
+      }
       return this.getFill(point[this.keyVar])
     },
     addLegend({
       color,
       title,
-      tickSize = 6,
-      width = 320,
-      height = 44 + tickSize,
-      marginTop = 18,
-      marginRight = 0,
-      marginBottom = 16 + tickSize,
-      marginLeft = 0,
+      tickSize = 10,
+      width = 50,
+      height = 70 + tickSize,
+      marginTop = 10,
+      marginRight = 10,
+      marginBottom = 40 + tickSize,
+      marginLeft = 150,
       ticks = width / 64,
       tickFormat,
       tickValues,
     }) {
-      const x = scaleBand()
-        .domain(color.domain())
-        .rangeRound([marginLeft, width - marginRight])
-      console.log('refs', this.$refs)
-      select('.scatterplot')
+      /*const y = scaleBand()
+        .domain(color.domain()) // bind text elements.
+        .rangeRound([marginLeft, width - marginRight])*/
+      console.log('domain', color.domain())
+
+      const g = select('.scatterplot')
         .append('g')
         .attr('class', 'legend-element')
-        .selectAll('rect')
+        .attr('transform', 'translate(680, -100)')
+
+
+      g.selectAll('text')
+        .data(color.domain())
+        .join('text')
+        .attr('x', marginRight + 30)
+        .attr('y', (d, index) => {
+          return marginTop + 15 + 23 * index
+        })
+        .attr('height', height - marginTop - marginBottom)
+        .text((d, i) => {
+          return d
+        })
+
+      g.selectAll('rect')
         .data(color.domain())
         .join('rect')
-        .attr('x', x)
-        .attr('y', marginTop)
-        .attr('width', Math.max(0, x.bandwidth() - 1))
-        .attr('height', height - marginTop - marginBottom)
+        .attr('x', marginRight)
+        .attr('y', (domain, index) => {
+          return marginTop + 23 * index
+        })
+        // .attr('width', Math.max(0, y.bandwidth() - 1))
+        .attr('width', 20)
+        .attr('height', 20)
         .attr('fill', color)
+
+      /*
+        You can use a rest operator to grab all the arguments passed to a function
+        .attr('y', (...args) => {
+          console.log('d', ...args)
+          return marginTop
+        })
+        */
     },
     updateLegend({
       color,
@@ -128,22 +166,50 @@ export default {
       tickFormat,
       tickValues,
     }) {
-      const x = scaleBand()
+      /*const y = scaleBand()
         .domain(color.domain())
-        .rangeRound([marginLeft, width - marginRight])
-      console.log('refs', this.$refs)
-      select('.scatterplot')       
+        .rangeRound([marginLeft, width - marginRight])*/
+        
+      /* select('.scatterplot')       
         .selectAll('rect')
         .data(color.domain())
         .join('rect')       
+        .attr('fill', color) */
+      const g = select('.legend-element')
+      console.log('domain', color.domain())
+      g.selectAll('text').remove()
+      g.selectAll('rect').remove()
+
+      g.selectAll('text')
+        .data(color.domain())
+        .join('text')
+        .attr('x', marginRight + 30)
+        .attr('y', (d, index) => {
+          return marginTop + 15 + 23 * index
+        })
+        .attr('height', height - marginTop - marginBottom)
+        .text((d, i) => {
+          return d
+        })
+
+      g.selectAll('rect')
+        .data(color.domain())
+        .join('rect')
+        .attr('x', marginRight)
+        .attr('y', (domain, index) => {
+          return marginTop + 23 * index
+        })
+        // .attr('width', Math.max(0, y.bandwidth() - 1))
+        .attr('width', 20)
+        .attr('height', 20)
         .attr('fill', color)
     },
   },
   updated() {
     this.updateLegend({
-        color: this.colorScale,
-        title: 'Presidents legend',
-      })
+      color: this.colorScale,
+      title: 'Presidents legend',
+    })
   },
   mounted() {
     console.log('color scale', this.colorScale, this.colorScale.domain())
@@ -153,19 +219,26 @@ export default {
         title: 'Presidents legend',
       })
     }, 100)
+    
   },
 }
 </script>
 
 <style scoped>
 .legend-container {
-  transform: translate(800px, 40px);
+  /*transform: translate(800px, 40px);*/
 }
+.legend-element {
+  transform: translate(800px, -100px);
+}
+
 text {
   cursor: pointer;
 }
 .scatterplot {
   justify-self: center;
+  overflow: initial !important;
+  padding-top: 100px;
 }
 
 .center-align {

@@ -16,6 +16,8 @@
 
     </div>-->
     <!--this is a div temporary, it could have been button, scatterplot goes here-->
+    <!-- xVar="Flesch Reading Ease"
+        yVar="CP_Public_Persuasion"-->
     <div>
       <Scatterplot
         :points="presidentsData"
@@ -27,6 +29,8 @@
         :colorScale="colorScale"
         @click="$emit('onPresidentSelected', $event)"
         :colorByProperty="colorByProperty"
+        hideXAxis
+        hideYAxis
       />
       <!--h4 v-if="speciesFilter">Species: {{ speciesFilter }}</h4-->
       <!--:onClick="value => setQueryParam('species', value)"-->
@@ -34,10 +38,11 @@
   </div>
 </template>
 <script>
-import { scaleOrdinal, schemeCategory10, scaleQuantize, schemeSpectral, scaleThreshold, schemeRdBu } from 'd3'
+import { scaleOrdinal, schemeCategory10, scaleQuantize, scaleLinear, schemeAccent, scaleThreshold, schemeRdBu } from 'd3'
 import Scatterplot from '../components/Scatterplot'
 import colorbrewer from 'colorbrewer'
 export default {
+  name: 'ExploreForm',
   components: {
     Scatterplot,
   },
@@ -55,44 +60,22 @@ export default {
       default: 'Party',
     },
   },
-  watch: {
-    colorScale(color) {
-      color.domain().forEach(value => {
-        console.log('value', value)
-      })
-      console.log({color})
-    }
-  },
   computed: {
     colorScale() {
       const colorMap = {
-        'Party': this.categoricalColorScale,
-        'Bendat_Transition': this.categoricalColorScale,
+        'Party': this.partyColorScale,
+        'Bendat_Transition': this.bendatColorScale,
         'Reach': this.reachColorScale
       }
-      return colorMap[this.colorByProperty]
-    },
-    thresholdColorScale() {
-      return scaleQuantize()
-        .domain([ 25, 60, 100 ])
-        .range(colorbrewer.Blues[9])
-    },
-    reachColorScale() {
-      try {
-        console.log('scheme rdbu', schemeRdBu)
-        //return scaleThreshold([25, 100], schemeRdBu[9])
-        return scaleThreshold().domain([25, 50, 75, 100]).range(['#F87171', '#F87171', '#60A5FA', '#2563EB', '#1E3A8A'])
-      } catch (error) {
-        console.error(error)
-        return ''
-      }
-    },
-    categoricalColorScale() {
-      return scaleOrdinal(schemeCategory10).domain(this.colorDomain)
-    },
+
+      console.log('in color scale computed', this.colorByProperty, colorMap)
+      return colorMap[this.colorByProperty]()
+    },       
     colorDomain() {
       return Array.from(
-        new Set(this.presidentsData.map(d => d[this.colorByProperty]))
+        new Set(this.presidentsData.map(d => {
+          return d[this.colorByProperty] || 'None'
+        }))
       )
     },
   },
@@ -100,9 +83,23 @@ export default {
     onMouseEnter(e, point) {
       this.$emit('onPresidentHover', point)
     },
+    bendatColorScale() {
+      return scaleOrdinal().domain(['No', 'Yes']).range(['#34d399', '#f59e0b'])
+    },
+    partyColorScale() {
+      return scaleOrdinal().domain(this.colorDomain).range(['#F87171', '#34d399', '#60A5FA', '#2563EB', '#1E3A8A', '#f59e0b'])
+    },
+    reachColorScale() {
+      try {
+        //return scaleThreshold([25, 100], schemeRdBu[9])
+        return scaleThreshold().domain([25, 50, 75, 100]).range(['#F87171', '#F87171', '#60A5FA', '#2563EB', '#1E3A8A'])
+      } catch (error) {
+        console.error(error)
+        return ''
+      }
+    },
   },
   mounted() {
-    console.log('check', this.colorScale(5))
   }
 }
 </script>

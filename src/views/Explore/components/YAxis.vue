@@ -1,5 +1,5 @@
 <template>
-  <g :class="`axis y-axis-${id}`" :transform="`translate(${xTranslate}, 0)`">
+  <g :class="`axis y-axis-${normalisedId}`" :transform="`translate(${xTranslate}, 0)`">
   </g>
 </template>
 
@@ -13,8 +13,21 @@ export default {
     xTranslate: Number,
     id: String,
   },
+ computed: {
+    normalisedId() {
+      return this.id.replaceAll(' ', '-')
+    }
+  },
+  methods: {
+    updateAxis() {
+      select(`.y-axis-${this.normalisedId}`).call(axisLeft(this.yScale))
+    },
+  },
   updated() {
-    select(`.y-axis-${this.id}`).call(axisLeft(this.yScale))
+    this.updateAxis()
+  },
+  mounted() {
+    this.updateAxis()
   },
 }
 </script>

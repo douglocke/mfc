@@ -109,8 +109,6 @@ export default {
     },
     onPresidentSelected(item) {
       if (!item || !item?.Name) return
-      console.log('on president selected', item, item.Name)
-      console.log('Value of selectedPresidents: ', this.selectedPresident, this.selectedPresidentCompare)
 
       // If we don't have the first president selected
       if (!this.selectedPresident) {
