@@ -2,12 +2,16 @@
 
 <template>
   <div>
+    <div class="title">
     <h1>"My Fellow Citizens..."</h1>
+    </div>
+    <div class="subtitle">
     <h2>The Inaugural Addresses of the Presidents of the United States</h2>
     <h2>1789-2021</h2>
-    <br />
+    
     <h4>Explore the presidential inaugurals below.</h4>
     <h4>Click on any image to continue.</h4>
+    </div>
     <ol id="president-list">
       <li
         v-for="inauguralData in inauguralDataList"
@@ -18,8 +22,8 @@
           <span class="Photo"
             ><img
               :src="'/imgs/portrait_original/' + inauguralData.Photo"
-              :width="140"
-              :height="170"
+              :width="90"
+              :height="110"
           /></span>
           <div class="inaugural-stats">
             <span class="Name">{{ inauguralData.Name }}</span>
@@ -65,6 +69,29 @@ export default {
   opacity: 0;
 }
 */
+
+.title {
+
+ font-family: Allura, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  font-size: 3em;
+
+}
+
+.subtitle {
+
+ font-family: EB Garamond, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+
+}
+
+
 .Photo img {
   border-radius: 70px;
 }

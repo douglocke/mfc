@@ -17,8 +17,6 @@
     "Recession_Ind": 1,
     "CP_Public_Persuasion": "",
     "CP_Overall": "",
-    "CP_Public_Persuasion_Display": "N/A",
-    "CP_Overall_Display": "N/A",
     "CP_Top10": 0,
     "CP_Bottom10": 0,
     "Rating": "B",
@@ -44,12 +42,9 @@
     "Realism_Rank": 13,
     "Commonality": 49.97,
     "Commonaliy_Rank": 28,
-    "orig_x": -0.53993108,
-    "orig_y": -0.19545728,
     "x": -0.53993108,
     "y": -0.19545728,
-    "coord": 0.32972912,
-    "Cluster": 4
+    "coord": 0.32972912
   },
   {
     "Filename": "58_2017_DT.txt",
@@ -69,8 +64,6 @@
     "Recession_Ind": 0,
     "CP_Public_Persuasion": "",
     "CP_Overall": "",
-    "CP_Public_Persuasion_Display": "N/A",
-    "CP_Overall_Display": "N/A",
     "CP_Top10": 0,
     "CP_Bottom10": 0,
     "Rating": "B",
@@ -96,12 +89,9 @@
     "Realism_Rank": 10,
     "Commonality": 51.51,
     "Commonaliy_Rank": 10,
-    "orig_x": -0.323503,
-    "orig_y": -1.45863699,
     "x": -0.323503,
     "y": -1.45863699,
-    "coord": 2.23227604,
-    "Cluster": 4
+    "coord": 2.23227604
   },
   {
     "Filename": "57_2013_BO.txt",
@@ -121,8 +111,6 @@
     "Recession_Ind": 0,
     "CP_Public_Persuasion": 10,
     "CP_Overall": 12,
-    "CP_Public_Persuasion_Display": 10,
-    "CP_Overall_Display": 12,
     "CP_Top10": 0,
     "CP_Bottom10": 0,
     "Rating": "C",
@@ -148,12 +136,9 @@
     "Realism_Rank": 18,
     "Commonality": 54.1,
     "Commonaliy_Rank": 1,
-    "orig_x": -1.46600867,
-    "orig_y": 1.09567816,
     "x": -1.46600867,
     "y": 1.09567816,
-    "coord": 3.34969204,
-    "Cluster": 2
+    "coord": 3.34969204
   },
   {
     "Filename": "56_2009_BO.txt",
@@ -163,7 +148,7 @@
     "Reach": "96%",
     "Reach_vs_Avg": "29%",
     "Bendat_Transition": "First African American President",
-    "Notes": "First inauguration of an African American president; largest attendance",
+    "Notes": "First inauguration of an African American preident; largest attendance",
     "Boller_Top": 0,
     "Name": "Barack Obama",
     "Party": "Democratic",
@@ -173,8 +158,6 @@
     "Recession_Ind": 1,
     "CP_Public_Persuasion": 10,
     "CP_Overall": 12,
-    "CP_Public_Persuasion_Display": 10,
-    "CP_Overall_Display": 12,
     "CP_Top10": 0,
     "CP_Bottom10": 0,
     "Rating": "C",
@@ -200,12 +183,9 @@
     "Realism_Rank": 8,
     "Commonality": 49.66,
     "Commonaliy_Rank": 35,
-    "orig_x": -0.54315755,
-    "orig_y": -1.15691197,
     "x": -0.54315755,
     "y": -1.15691197,
-    "coord": 1.63346543,
-    "Cluster": 4
+    "coord": 1.63346543
   },
   {
     "Filename": "55_2005_GB.txt",
@@ -225,8 +205,6 @@
     "Recession_Ind": 0,
     "CP_Public_Persuasion": 25,
     "CP_Overall": 33,
-    "CP_Public_Persuasion_Display": 25,
-    "CP_Overall_Display": 33,
     "CP_Top10": 0,
     "CP_Bottom10": 0,
     "Rating": "C",
@@ -252,12 +230,9 @@
     "Realism_Rank": 29,
     "Commonality": 42.78,
     "Commonaliy_Rank": 59,
-    "orig_x": 2.55263473,
-    "orig_y": -0.9261263,
     "x": 2.55263473,
     "y": -0.9261263,
-    "coord": 7.37365401,
-    "Cluster": 3
+    "coord": 7.37365401
   },
   {
     "Filename": "54_2001_GB.txt",
@@ -267,7 +242,7 @@
     "Reach": "96%",
     "Reach_vs_Avg": "29%",
     "Bendat_Transition": "Disputed Election",
-    "Notes": "Father George became first former president to personally witness the inauguration of his son",
+    "Notes": "Father George bcame first former president to personally witness the inauguration of his son",
     "Boller_Top": 0,
     "Name": "George W. Bush",
     "Party": "Republican",
@@ -277,8 +252,6 @@
     "Recession_Ind": 0,
     "CP_Public_Persuasion": 25,
     "CP_Overall": 33,
-    "CP_Public_Persuasion_Display": 25,
-    "CP_Overall_Display": 33,
     "CP_Top10": 0,
     "CP_Bottom10": 0,
     "Rating": "B",
@@ -304,12 +277,9 @@
     "Realism_Rank": 27,
     "Commonality": 51.27,
     "Commonaliy_Rank": 15,
-    "orig_x": -1.34781451,
-    "orig_y": 0.30273137,
     "x": -1.34781451,
     "y": 0.30273137,
-    "coord": 1.90825023,
-    "Cluster": 4
+    "coord": 1.90825023
   },
   {
     "Filename": "53_1997_BC.txt",
@@ -329,8 +299,6 @@
     "Recession_Ind": 0,
     "CP_Public_Persuasion": 9,
     "CP_Overall": 15,
-    "CP_Public_Persuasion_Display": 9,
-    "CP_Overall_Display": 15,
     "CP_Top10": 0,
     "CP_Bottom10": 0,
     "Rating": "B",
@@ -356,12 +324,9 @@
     "Realism_Rank": 2,
     "Commonality": 48.79,
     "Commonaliy_Rank": 45,
-    "orig_x": 1.17067988,
-    "orig_y": -1.72685009,
     "x": 1.17067988,
     "y": -1.72685009,
-    "coord": 4.3525026,
-    "Cluster": 4
+    "coord": 4.3525026
   },
   {
     "Filename": "52_1993_BC.txt",
@@ -381,8 +346,6 @@
     "Recession_Ind": 0,
     "CP_Public_Persuasion": 9,
     "CP_Overall": 15,
-    "CP_Public_Persuasion_Display": 9,
-    "CP_Overall_Display": 15,
     "CP_Top10": 0,
     "CP_Bottom10": 0,
     "Rating": "B",
@@ -408,12 +371,9 @@
     "Realism_Rank": 16,
     "Commonality": 49.94,
     "Commonaliy_Rank": 29,
-    "orig_x": -0.96330182,
-    "orig_y": -0.3898849,
     "x": -0.96330182,
     "y": -0.3898849,
-    "coord": 1.07996064,
-    "Cluster": 4
+    "coord": 1.07996064
   },
   {
     "Filename": "51_1989_GB.txt",
@@ -433,8 +393,6 @@
     "Recession_Ind": 0,
     "CP_Public_Persuasion": 23,
     "CP_Overall": 20,
-    "CP_Public_Persuasion_Display": 23,
-    "CP_Overall_Display": 20,
     "CP_Top10": 0,
     "CP_Bottom10": 0,
     "Rating": "B",
@@ -460,12 +418,9 @@
     "Realism_Rank": 9,
     "Commonality": 49.93,
     "Commonaliy_Rank": 30,
-    "orig_x": -0.86576499,
-    "orig_y": -0.9274464,
     "x": -0.86576499,
     "y": -0.9274464,
-    "coord": 1.60970585,
-    "Cluster": 4
+    "coord": 1.60970585
   },
   {
     "Filename": "50_1985_RR.txt",
@@ -485,8 +440,6 @@
     "Recession_Ind": 0,
     "CP_Public_Persuasion": 5,
     "CP_Overall": 9,
-    "CP_Public_Persuasion_Display": 5,
-    "CP_Overall_Display": 9,
     "CP_Top10": 1,
     "CP_Bottom10": 0,
     "Rating": "C",
@@ -512,12 +465,9 @@
     "Realism_Rank": 7,
     "Commonality": 51.37,
     "Commonaliy_Rank": 11,
-    "orig_x": -0.44008441,
-    "orig_y": 0.17877759,
     "x": -0.44008441,
     "y": 0.17877759,
-    "coord": 0.22563571,
-    "Cluster": 4
+    "coord": 0.22563571
   },
   {
     "Filename": "49_1981_RR.txt",
@@ -537,8 +487,6 @@
     "Recession_Ind": 1,
     "CP_Public_Persuasion": 5,
     "CP_Overall": 9,
-    "CP_Public_Persuasion_Display": 5,
-    "CP_Overall_Display": 9,
     "CP_Top10": 1,
     "CP_Bottom10": 0,
     "Rating": "B",
@@ -564,12 +512,9 @@
     "Realism_Rank": 26,
     "Commonality": 48.08,
     "Commonaliy_Rank": 53,
-    "orig_x": -0.51935961,
-    "orig_y": -0.26426035,
     "x": -0.51935961,
     "y": -0.26426035,
-    "coord": 0.33956794,
-    "Cluster": 4
+    "coord": 0.33956794
   },
   {
     "Filename": "48_1977_JC.txt",
@@ -589,8 +534,6 @@
     "Recession_Ind": 0,
     "CP_Public_Persuasion": 35,
     "CP_Overall": 26,
-    "CP_Public_Persuasion_Display": 35,
-    "CP_Overall_Display": 26,
     "CP_Top10": 0,
     "CP_Bottom10": 0,
     "Rating": "C",
@@ -616,12 +559,9 @@
     "Realism_Rank": 22,
     "Commonality": 50.45,
     "Commonaliy_Rank": 23,
-    "orig_x": 0.30248612,
-    "orig_y": 0.06053095,
     "x": 0.30248612,
     "y": 0.06053095,
-    "coord": 0.09516185,
-    "Cluster": 3
+    "coord": 0.09516185
   },
   {
     "Filename": "47_1973_RN.txt",
@@ -641,8 +581,6 @@
     "Recession_Ind": 0,
     "CP_Public_Persuasion": 26,
     "CP_Overall": 28,
-    "CP_Public_Persuasion_Display": 26,
-    "CP_Overall_Display": 28,
     "CP_Top10": 0,
     "CP_Bottom10": 0,
     "Rating": "D",
@@ -668,12 +606,9 @@
     "Realism_Rank": 4,
     "Commonality": 50.52,
     "Commonaliy_Rank": 22,
-    "orig_x": -0.35905618,
-    "orig_y": -1.83072164,
     "x": -0.35905618,
     "y": -1.83072164,
-    "coord": 3.48046306,
-    "Cluster": 4
+    "coord": 3.48046306
   },
   {
     "Filename": "46_1969_RN.txt",
@@ -693,8 +628,6 @@
     "Recession_Ind": 0,
     "CP_Public_Persuasion": 26,
     "CP_Overall": 28,
-    "CP_Public_Persuasion_Display": 26,
-    "CP_Overall_Display": 28,
     "CP_Top10": 0,
     "CP_Bottom10": 0,
     "Rating": "C",
@@ -720,12 +653,9 @@
     "Realism_Rank": 3,
     "Commonality": 52.77,
     "Commonaliy_Rank": 3,
-    "orig_x": -2.341266,
-    "orig_y": -0.13718815,
     "x": -2.341266,
     "y": -0.13718815,
-    "coord": 5.50034709,
-    "Cluster": 4
+    "coord": 5.50034709
   },
   {
     "Filename": "45_1965_LJ.txt",
@@ -745,8 +675,6 @@
     "Recession_Ind": 0,
     "CP_Public_Persuasion": 15,
     "CP_Overall": 10,
-    "CP_Public_Persuasion_Display": 15,
-    "CP_Overall_Display": 10,
     "CP_Top10": 1,
     "CP_Bottom10": 0,
     "Rating": "B",
@@ -772,12 +700,9 @@
     "Realism_Rank": 12,
     "Commonality": 48.03,
     "Commonaliy_Rank": 54,
-    "orig_x": -0.5316255,
-    "orig_y": -1.86783805,
     "x": -0.5316255,
     "y": -1.86783805,
-    "coord": 3.77144466,
-    "Cluster": 4
+    "coord": 3.77144466
   },
   {
     "Filename": "44_1961_JK.txt",
@@ -797,8 +722,6 @@
     "Recession_Ind": 1,
     "CP_Public_Persuasion": 6,
     "CP_Overall": 8,
-    "CP_Public_Persuasion_Display": 6,
-    "CP_Overall_Display": 8,
     "CP_Top10": 1,
     "CP_Bottom10": 0,
     "Rating": "D",
@@ -824,12 +747,9 @@
     "Realism_Rank": 6,
     "Commonality": 52.23,
     "Commonaliy_Rank": 5,
-    "orig_x": -2.37648168,
-    "orig_y": -1.53681154,
     "x": -2.37648168,
     "y": -1.53681154,
-    "coord": 8.00945486,
-    "Cluster": 4
+    "coord": 8.00945486
   },
   {
     "Filename": "43_1957_DE.txt",
@@ -849,8 +769,6 @@
     "Recession_Ind": 0,
     "CP_Public_Persuasion": 12,
     "CP_Overall": 5,
-    "CP_Public_Persuasion_Display": 12,
-    "CP_Overall_Display": 5,
     "CP_Top10": 1,
     "CP_Bottom10": 0,
     "Rating": "B",
@@ -876,12 +794,9 @@
     "Realism_Rank": 5,
     "Commonality": 50.06,
     "Commonaliy_Rank": 27,
-    "orig_x": -1.33902185,
-    "orig_y": -1.46157683,
     "x": -1.33902185,
     "y": -1.46157683,
-    "coord": 3.92918635,
-    "Cluster": 4
+    "coord": 3.92918635
   },
   {
     "Filename": "42_1953_DE.txt",
@@ -901,8 +816,6 @@
     "Recession_Ind": 0,
     "CP_Public_Persuasion": 12,
     "CP_Overall": 5,
-    "CP_Public_Persuasion_Display": 12,
-    "CP_Overall_Display": 5,
     "CP_Top10": 1,
     "CP_Bottom10": 0,
     "Rating": "B",
@@ -928,12 +841,9 @@
     "Realism_Rank": 17,
     "Commonality": 48.25,
     "Commonaliy_Rank": 51,
-    "orig_x": -0.30441555,
-    "orig_y": -1.24218551,
     "x": -0.30441555,
     "y": -1.24218551,
-    "coord": 1.63569366,
-    "Cluster": 4
+    "coord": 1.63569366
   },
   {
     "Filename": "41_1949_HT.txt",
@@ -953,8 +863,6 @@
     "Recession_Ind": 1,
     "CP_Public_Persuasion": 14,
     "CP_Overall": 6,
-    "CP_Public_Persuasion_Display": 14,
-    "CP_Overall_Display": 6,
     "CP_Top10": 1,
     "CP_Bottom10": 0,
     "Rating": "C",
@@ -980,12 +888,9 @@
     "Realism_Rank": 14,
     "Commonality": 48.24,
     "Commonaliy_Rank": 52,
-    "orig_x": 0.4694385,
-    "orig_y": -1.68628588,
     "x": 0.4694385,
     "y": -1.68628588,
-    "coord": 3.06393256,
-    "Cluster": 4
+    "coord": 3.06393256
   },
   {
     "Filename": "40_1945_FR.txt",
@@ -1005,8 +910,6 @@
     "Recession_Ind": 1,
     "CP_Public_Persuasion": 1,
     "CP_Overall": 3,
-    "CP_Public_Persuasion_Display": 1,
-    "CP_Overall_Display": 3,
     "CP_Top10": 1,
     "CP_Bottom10": 0,
     "Rating": "C",
@@ -1032,12 +935,9 @@
     "Realism_Rank": 1,
     "Commonality": 49.83,
     "Commonaliy_Rank": 33,
-    "orig_x": -0.68864215,
-    "orig_y": -2.00018253,
     "x": -0.68864215,
     "y": -2.00018253,
-    "coord": 4.47495817,
-    "Cluster": 4
+    "coord": 4.47495817
   },
   {
     "Filename": "39_1941_FR.txt",
@@ -1057,8 +957,6 @@
     "Recession_Ind": 0,
     "CP_Public_Persuasion": 1,
     "CP_Overall": 3,
-    "CP_Public_Persuasion_Display": 1,
-    "CP_Overall_Display": 3,
     "CP_Top10": 1,
     "CP_Bottom10": 0,
     "Rating": "B",
@@ -1084,12 +982,9 @@
     "Realism_Rank": 11,
     "Commonality": 47.21,
     "Commonaliy_Rank": 56,
-    "orig_x": -0.05648617,
-    "orig_y": -1.44752263,
     "x": -0.05648617,
     "y": -1.44752263,
-    "coord": 2.09851245,
-    "Cluster": 4
+    "coord": 2.09851245
   },
   {
     "Filename": "38_1937_FR.txt",
@@ -1099,7 +994,7 @@
     "Reach": "89%",
     "Reach_vs_Avg": "22%",
     "Bendat_Transition": "",
-    "Notes": "The first January 20th ceremony",
+    "Notes": "The First January 20th ceremony",
     "Boller_Top": 0,
     "Name": "Franklin D. Roosevelt",
     "Party": "Democratic",
@@ -1109,8 +1004,6 @@
     "Recession_Ind": 0,
     "CP_Public_Persuasion": 1,
     "CP_Overall": 3,
-    "CP_Public_Persuasion_Display": 1,
-    "CP_Overall_Display": 3,
     "CP_Top10": 1,
     "CP_Bottom10": 0,
     "Rating": "B",
@@ -1136,12 +1029,9 @@
     "Realism_Rank": 15,
     "Commonality": 51.37,
     "Commonaliy_Rank": 11,
-    "orig_x": -0.59857789,
-    "orig_y": -0.5584184,
     "x": -0.59857789,
     "y": -0.5584184,
-    "coord": 0.6701266,
-    "Cluster": 4
+    "coord": 0.6701266
   },
   {
     "Filename": "37_1933_FR.txt",
@@ -1161,8 +1051,6 @@
     "Recession_Ind": 1,
     "CP_Public_Persuasion": 1,
     "CP_Overall": 3,
-    "CP_Public_Persuasion_Display": 1,
-    "CP_Overall_Display": 3,
     "CP_Top10": 1,
     "CP_Bottom10": 0,
     "Rating": "C",
@@ -1188,12 +1076,9 @@
     "Realism_Rank": 25,
     "Commonality": 51.95,
     "Commonaliy_Rank": 6,
-    "orig_x": -1.13239791,
-    "orig_y": 0.32816216,
     "x": -1.13239791,
     "y": 0.32816216,
-    "coord": 1.39001543,
-    "Cluster": 4
+    "coord": 1.39001543
   },
   {
     "Filename": "36_1929_HH.txt",
@@ -1213,8 +1098,6 @@
     "Recession_Ind": 0,
     "CP_Public_Persuasion": 38,
     "CP_Overall": 36,
-    "CP_Public_Persuasion_Display": 38,
-    "CP_Overall_Display": 36,
     "CP_Top10": 0,
     "CP_Bottom10": 1,
     "Rating": "C",
@@ -1240,12 +1123,9 @@
     "Realism_Rank": 37,
     "Commonality": 50.93,
     "Commonaliy_Rank": 17,
-    "orig_x": 0.31553425,
-    "orig_y": 0.36830309,
     "x": 0.31553425,
     "y": 0.36830309,
-    "coord": 0.23520903,
-    "Cluster": 3
+    "coord": 0.23520903
   },
   {
     "Filename": "35_1925_CC.txt",
@@ -1265,8 +1145,6 @@
     "Recession_Ind": 0,
     "CP_Public_Persuasion": 24,
     "CP_Overall": 27,
-    "CP_Public_Persuasion_Display": 24,
-    "CP_Overall_Display": 27,
     "CP_Top10": 0,
     "CP_Bottom10": 0,
     "Rating": "C",
@@ -1292,12 +1170,9 @@
     "Realism_Rank": 51,
     "Commonality": 49.58,
     "Commonaliy_Rank": 38,
-    "orig_x": 0.20743438,
-    "orig_y": 0.76847836,
     "x": 0.20743438,
     "y": 0.76847836,
-    "coord": 0.63358801,
-    "Cluster": 3
+    "coord": 0.63358801
   },
   {
     "Filename": "34_1921_WH.txt",
@@ -1317,8 +1192,6 @@
     "Recession_Ind": 1,
     "CP_Public_Persuasion": 36,
     "CP_Overall": 40,
-    "CP_Public_Persuasion_Display": 36,
-    "CP_Overall_Display": 40,
     "CP_Top10": 0,
     "CP_Bottom10": 1,
     "Rating": "D",
@@ -1344,12 +1217,9 @@
     "Realism_Rank": 57,
     "Commonality": 51.79,
     "Commonaliy_Rank": 7,
-    "orig_x": -0.77924356,
-    "orig_y": 1.65763785,
     "x": -0.77924356,
     "y": 1.65763785,
-    "coord": 3.35498376,
-    "Cluster": 2
+    "coord": 3.35498376
   },
   {
     "Filename": "33_1917_WW.txt",
@@ -1369,8 +1239,6 @@
     "Recession_Ind": 0,
     "CP_Public_Persuasion": 11,
     "CP_Overall": 11,
-    "CP_Public_Persuasion_Display": 11,
-    "CP_Overall_Display": 11,
     "CP_Top10": 0,
     "CP_Bottom10": 0,
     "Rating": "D",
@@ -1396,12 +1264,9 @@
     "Realism_Rank": 23,
     "Commonality": 46.15,
     "Commonaliy_Rank": 57,
-    "orig_x": 6.99600989,
-    "orig_y": -0.12117533,
-    "x": 6.99600989,
+    "x": 3,
     "y": -0.12117533,
-    "coord": 48.95883787,
-    "Cluster": 1
+    "coord": 48.95883787
   },
   {
     "Filename": "32_1913_WW.txt",
@@ -1421,8 +1286,6 @@
     "Recession_Ind": 1,
     "CP_Public_Persuasion": 11,
     "CP_Overall": 11,
-    "CP_Public_Persuasion_Display": 11,
-    "CP_Overall_Display": 11,
     "CP_Top10": 0,
     "CP_Bottom10": 0,
     "Rating": "D",
@@ -1448,12 +1311,9 @@
     "Realism_Rank": 42,
     "Commonality": 49.86,
     "Commonaliy_Rank": 32,
-    "orig_x": -0.62246633,
-    "orig_y": 0.2070322,
     "x": -0.62246633,
     "y": 0.2070322,
-    "coord": 0.43032666,
-    "Cluster": 3
+    "coord": 0.43032666
   },
   {
     "Filename": "31_1909_WT.txt",
@@ -1473,8 +1333,6 @@
     "Recession_Ind": 0,
     "CP_Public_Persuasion": 31,
     "CP_Overall": 24,
-    "CP_Public_Persuasion_Display": 31,
-    "CP_Overall_Display": 24,
     "CP_Top10": 0,
     "CP_Bottom10": 0,
     "Rating": "E",
@@ -1500,12 +1358,9 @@
     "Realism_Rank": 52,
     "Commonality": 49.45,
     "Commonaliy_Rank": 39,
-    "orig_x": -0.1760234,
-    "orig_y": 0.12729865,
     "x": -0.1760234,
     "y": 0.12729865,
-    "coord": 0.04718918,
-    "Cluster": 3
+    "coord": 0.04718918
   },
   {
     "Filename": "30_1905_TR.txt",
@@ -1515,7 +1370,7 @@
     "Reach": "65%",
     "Reach_vs_Avg": "-2%",
     "Bendat_Transition": "",
-    "Notes": "Most colorful inaugural parade in history",
+    "Notes": "Most colorful inaugural parad in history",
     "Boller_Top": 0,
     "Name": "Theodore Roosevelt",
     "Party": "Republican",
@@ -1525,8 +1380,6 @@
     "Recession_Ind": 0,
     "CP_Public_Persuasion": 2,
     "CP_Overall": 4,
-    "CP_Public_Persuasion_Display": 2,
-    "CP_Overall_Display": 4,
     "CP_Top10": 1,
     "CP_Bottom10": 0,
     "Rating": "D",
@@ -1552,12 +1405,9 @@
     "Realism_Rank": 41,
     "Commonality": 48.98,
     "Commonaliy_Rank": 43,
-    "orig_x": 0.25510192,
-    "orig_y": -0.55913692,
     "x": 0.25510192,
     "y": -0.55913692,
-    "coord": 0.37771108,
-    "Cluster": 3
+    "coord": 0.37771108
   },
   {
     "Filename": "29_1901_WM.txt",
@@ -1577,8 +1427,6 @@
     "Recession_Ind": 0,
     "CP_Public_Persuasion": 16,
     "CP_Overall": 16,
-    "CP_Public_Persuasion_Display": 16,
-    "CP_Overall_Display": 16,
     "CP_Top10": 0,
     "CP_Bottom10": 0,
     "Rating": "D",
@@ -1604,12 +1452,9 @@
     "Realism_Rank": 45,
     "Commonality": 45.29,
     "Commonaliy_Rank": 58,
-    "orig_x": 0.39747465,
-    "orig_y": -1.04285274,
     "x": 0.39747465,
     "y": -1.04285274,
-    "coord": 1.24552794,
-    "Cluster": 3
+    "coord": 1.24552794
   },
   {
     "Filename": "28_1897_WM.txt",
@@ -1629,8 +1474,6 @@
     "Recession_Ind": 0,
     "CP_Public_Persuasion": 16,
     "CP_Overall": 16,
-    "CP_Public_Persuasion_Display": 16,
-    "CP_Overall_Display": 16,
     "CP_Top10": 0,
     "CP_Bottom10": 0,
     "Rating": "E",
@@ -1656,12 +1499,9 @@
     "Realism_Rank": 48,
     "Commonality": 49.92,
     "Commonaliy_Rank": 31,
-    "orig_x": 0.1666017,
-    "orig_y": 0.13240507,
     "x": 0.1666017,
     "y": 0.13240507,
-    "coord": 0.04528723,
-    "Cluster": 3
+    "coord": 0.04528723
   },
   {
     "Filename": "27_1893_GC.txt",
@@ -1681,8 +1521,6 @@
     "Recession_Ind": 1,
     "CP_Public_Persuasion": 20,
     "CP_Overall": 23,
-    "CP_Public_Persuasion_Display": 20,
-    "CP_Overall_Display": 23,
     "CP_Top10": 0,
     "CP_Bottom10": 0,
     "Rating": "E",
@@ -1708,12 +1546,9 @@
     "Realism_Rank": 19,
     "Commonality": 50.2,
     "Commonaliy_Rank": 25,
-    "orig_x": -1.66364174,
-    "orig_y": 2.81363997,
     "x": -1.66364174,
     "y": 2.81363997,
-    "coord": 10.68427373,
-    "Cluster": 2
+    "coord": 10.68427373
   },
   {
     "Filename": "26_1889_BH.txt",
@@ -1733,8 +1568,6 @@
     "Recession_Ind": 0,
     "CP_Public_Persuasion": 32,
     "CP_Overall": 30,
-    "CP_Public_Persuasion_Display": 32,
-    "CP_Overall_Display": 30,
     "CP_Top10": 0,
     "CP_Bottom10": 0,
     "Rating": "E",
@@ -1760,12 +1593,9 @@
     "Realism_Rank": 49,
     "Commonality": 51.72,
     "Commonaliy_Rank": 8,
-    "orig_x": 0.10964828,
-    "orig_y": 0.27435066,
     "x": 0.10964828,
     "y": 0.27435066,
-    "coord": 0.08729103,
-    "Cluster": 3
+    "coord": 0.08729103
   },
   {
     "Filename": "25_1885_GC.txt",
@@ -1785,8 +1615,6 @@
     "Recession_Ind": 0,
     "CP_Public_Persuasion": 20,
     "CP_Overall": 23,
-    "CP_Public_Persuasion_Display": 20,
-    "CP_Overall_Display": 23,
     "CP_Top10": 0,
     "CP_Bottom10": 0,
     "Rating": "E",
@@ -1812,12 +1640,9 @@
     "Realism_Rank": 33,
     "Commonality": 50.17,
     "Commonaliy_Rank": 26,
-    "orig_x": 0.58103729,
-    "orig_y": 0.0811834,
     "x": 0.58103729,
     "y": 0.0811834,
-    "coord": 0.34419508,
-    "Cluster": 3
+    "coord": 0.34419508
   },
   {
     "Filename": "24_1881_JG.txt",
@@ -1827,7 +1652,7 @@
     "Reach": "60%",
     "Reach_vs_Avg": "-7%",
     "Bendat_Transition": "",
-    "Notes": "First inauguration attended by the mother of a president; first inaugural parade reviewing stand in front of White House",
+    "Notes": "First iniauguration attended by the mother of a president; first inaugural parade reviewing stand in front of White House",
     "Boller_Top": 0,
     "Name": "James A. Garfield",
     "Party": "Republican",
@@ -1837,8 +1662,6 @@
     "Recession_Ind": 0,
     "CP_Public_Persuasion": 21,
     "CP_Overall": 29,
-    "CP_Public_Persuasion_Display": 21,
-    "CP_Overall_Display": 29,
     "CP_Top10": 0,
     "CP_Bottom10": 0,
     "Rating": "D",
@@ -1864,12 +1687,9 @@
     "Realism_Rank": 36,
     "Commonality": 50.7,
     "Commonaliy_Rank": 21,
-    "orig_x": -0.28952786,
-    "orig_y": -0.45005986,
     "x": -0.28952786,
     "y": -0.45005986,
-    "coord": 0.28638026,
-    "Cluster": 3
+    "coord": 0.28638026
   },
   {
     "Filename": "23_1877_RH.txt",
@@ -1889,8 +1709,6 @@
     "Recession_Ind": 0,
     "CP_Public_Persuasion": 29,
     "CP_Overall": 32,
-    "CP_Public_Persuasion_Display": 29,
-    "CP_Overall_Display": 32,
     "CP_Top10": 0,
     "CP_Bottom10": 0,
     "Rating": "E",
@@ -1916,12 +1734,9 @@
     "Realism_Rank": 39,
     "Commonality": 50.71,
     "Commonaliy_Rank": 20,
-    "orig_x": 0.68722421,
-    "orig_y": 0.14611887,
     "x": 0.68722421,
     "y": 0.14611887,
-    "coord": 0.49362785,
-    "Cluster": 3
+    "coord": 0.49362785
   },
   {
     "Filename": "22_1873_UG.txt",
@@ -1941,8 +1756,6 @@
     "Recession_Ind": 1,
     "CP_Public_Persuasion": 19,
     "CP_Overall": 22,
-    "CP_Public_Persuasion_Display": 19,
-    "CP_Overall_Display": 22,
     "CP_Top10": 0,
     "CP_Bottom10": 0,
     "Rating": "D",
@@ -1968,12 +1781,9 @@
     "Realism_Rank": 20,
     "Commonality": 48.33,
     "Commonaliy_Rank": 48,
-    "orig_x": 0.55100529,
-    "orig_y": 0.09829514,
     "x": 0.55100529,
     "y": 0.09829514,
-    "coord": 0.31326877,
-    "Cluster": 3
+    "coord": 0.31326877
   },
   {
     "Filename": "21_1869_UG.txt",
@@ -1993,8 +1803,6 @@
     "Recession_Ind": 0,
     "CP_Public_Persuasion": 19,
     "CP_Overall": 22,
-    "CP_Public_Persuasion_Display": 19,
-    "CP_Overall_Display": 22,
     "CP_Top10": 0,
     "CP_Bottom10": 0,
     "Rating": "D",
@@ -2020,12 +1828,9 @@
     "Realism_Rank": 20,
     "Commonality": 48.33,
     "Commonaliy_Rank": 48,
-    "orig_x": 0.55100529,
-    "orig_y": 0.09829514,
     "x": 0.55100529,
     "y": 0.09829514,
-    "coord": 0.31326877,
-    "Cluster": 3
+    "coord": 0.31326877
   },
   {
     "Filename": "20_1865_AL.txt",
@@ -2035,7 +1840,7 @@
     "Reach": "77%",
     "Reach_vs_Avg": "10%",
     "Bendat_Transition": "Civil War",
-    "Notes": "With malice toward, none and charity to all; first inaugural parade to include African Americans",
+    "Notes": "With Malice toward, none and charity to all; first inaugural parade to include African Americans",
     "Boller_Top": 1,
     "Name": "Abraham Lincoln",
     "Party": "Republican",
@@ -2045,8 +1850,6 @@
     "Recession_Ind": 1,
     "CP_Public_Persuasion": 3,
     "CP_Overall": 1,
-    "CP_Public_Persuasion_Display": 3,
-    "CP_Overall_Display": 1,
     "CP_Top10": 1,
     "CP_Bottom10": 0,
     "Rating": "D",
@@ -2072,12 +1875,9 @@
     "Realism_Rank": 24,
     "Commonality": 50.72,
     "Commonaliy_Rank": 19,
-    "orig_x": -1.11855794,
-    "orig_y": -0.03921583,
     "x": -1.11855794,
     "y": -0.03921583,
-    "coord": 1.25270974,
-    "Cluster": 4
+    "coord": 1.25270974
   },
   {
     "Filename": "19_1861_AL.txt",
@@ -2097,8 +1897,6 @@
     "Recession_Ind": 1,
     "CP_Public_Persuasion": 3,
     "CP_Overall": 1,
-    "CP_Public_Persuasion_Display": 3,
-    "CP_Overall_Display": 1,
     "CP_Top10": 1,
     "CP_Bottom10": 0,
     "Rating": "D",
@@ -2124,12 +1922,9 @@
     "Realism_Rank": 35,
     "Commonality": 48.48,
     "Commonaliy_Rank": 46,
-    "orig_x": -1.58958241,
-    "orig_y": -0.97425934,
     "x": -1.58958241,
     "y": -0.97425934,
-    "coord": 3.47595349,
-    "Cluster": 4
+    "coord": 3.47595349
   },
   {
     "Filename": "18_1857_JB.txt",
@@ -2149,8 +1944,6 @@
     "Recession_Ind": 1,
     "CP_Public_Persuasion": 43,
     "CP_Overall": 43,
-    "CP_Public_Persuasion_Display": 43,
-    "CP_Overall_Display": 43,
     "CP_Top10": 0,
     "CP_Bottom10": 1,
     "Rating": "E",
@@ -2176,12 +1969,9 @@
     "Realism_Rank": 31,
     "Commonality": 51.32,
     "Commonaliy_Rank": 13,
-    "orig_x": 0.83467757,
-    "orig_y": 0.17200149,
     "x": 0.83467757,
     "y": 0.17200149,
-    "coord": 0.72627115,
-    "Cluster": 3
+    "coord": 0.72627115
   },
   {
     "Filename": "17_1853_FP.txt",
@@ -2201,8 +1991,6 @@
     "Recession_Ind": 1,
     "CP_Public_Persuasion": 41,
     "CP_Overall": 41,
-    "CP_Public_Persuasion_Display": 41,
-    "CP_Overall_Display": 41,
     "CP_Top10": 0,
     "CP_Bottom10": 1,
     "Rating": "E",
@@ -2228,12 +2016,9 @@
     "Realism_Rank": 56,
     "Commonality": 49.44,
     "Commonaliy_Rank": 40,
-    "orig_x": 0.41226871,
-    "orig_y": 0.79447745,
     "x": 0.41226871,
     "y": 0.79447745,
-    "coord": 0.80115991,
-    "Cluster": 3
+    "coord": 0.80115991
   },
   {
     "Filename": "16_1849_ZT.txt",
@@ -2253,8 +2038,6 @@
     "Recession_Ind": 0,
     "CP_Public_Persuasion": 27,
     "CP_Overall": 31,
-    "CP_Public_Persuasion_Display": 27,
-    "CP_Overall_Display": 31,
     "CP_Top10": 0,
     "CP_Bottom10": 0,
     "Rating": "E",
@@ -2280,12 +2063,9 @@
     "Realism_Rank": 54,
     "Commonality": 48.48,
     "Commonaliy_Rank": 46,
-    "orig_x": 1.91740289,
-    "orig_y": 1.65607602,
     "x": 1.91740289,
     "y": 1.65607602,
-    "coord": 6.41902161,
-    "Cluster": 3
+    "coord": 6.41902161
   },
   {
     "Filename": "15_1845_JP.txt",
@@ -2305,8 +2085,6 @@
     "Recession_Ind": 0,
     "CP_Public_Persuasion": 13,
     "CP_Overall": 14,
-    "CP_Public_Persuasion_Display": 13,
-    "CP_Overall_Display": 14,
     "CP_Top10": 0,
     "CP_Bottom10": 0,
     "Rating": "E",
@@ -2332,12 +2110,9 @@
     "Realism_Rank": 34,
     "Commonality": 49.77,
     "Commonaliy_Rank": 34,
-    "orig_x": 0.27236996,
-    "orig_y": -0.47934755,
     "x": 0.27236996,
     "y": -0.47934755,
-    "coord": 0.30395947,
-    "Cluster": 3
+    "coord": 0.30395947
   },
   {
     "Filename": "14_1841_WH.txt",
@@ -2357,8 +2132,6 @@
     "Recession_Ind": 1,
     "CP_Public_Persuasion": 28,
     "CP_Overall": 38,
-    "CP_Public_Persuasion_Display": 28,
-    "CP_Overall_Display": 38,
     "CP_Top10": 0,
     "CP_Bottom10": 1,
     "Rating": "E",
@@ -2384,12 +2157,9 @@
     "Realism_Rank": 28,
     "Commonality": 48.33,
     "Commonaliy_Rank": 48,
-    "orig_x": 0.79849027,
-    "orig_y": -0.45521397,
     "x": 0.79849027,
     "y": -0.45521397,
-    "coord": 0.84480647,
-    "Cluster": 3
+    "coord": 0.84480647
   },
   {
     "Filename": "13_1837_MB.txt",
@@ -2409,8 +2179,6 @@
     "Recession_Ind": 1,
     "CP_Public_Persuasion": 30,
     "CP_Overall": 34,
-    "CP_Public_Persuasion_Display": 30,
-    "CP_Overall_Display": 34,
     "CP_Top10": 0,
     "CP_Bottom10": 0,
     "Rating": "E",
@@ -2436,12 +2204,9 @@
     "Realism_Rank": 59,
     "Commonality": 52.93,
     "Commonaliy_Rank": 2,
-    "orig_x": -0.68920867,
-    "orig_y": 2.45792578,
     "x": -0.68920867,
     "y": 2.45792578,
-    "coord": 6.51640773,
-    "Cluster": 2
+    "coord": 6.51640773
   },
   {
     "Filename": "12_1833_AJ.txt",
@@ -2461,8 +2226,6 @@
     "Recession_Ind": 0,
     "CP_Public_Persuasion": 7,
     "CP_Overall": 18,
-    "CP_Public_Persuasion_Display": 7,
-    "CP_Overall_Display": 18,
     "CP_Top10": 0,
     "CP_Bottom10": 0,
     "Rating": "E",
@@ -2488,12 +2251,9 @@
     "Realism_Rank": 30,
     "Commonality": 49.61,
     "Commonaliy_Rank": 36,
-    "orig_x": 1.08244904,
-    "orig_y": -0.44435521,
     "x": 1.08244904,
     "y": -0.44435521,
-    "coord": 1.36914748,
-    "Cluster": 3
+    "coord": 1.36914748
   },
   {
     "Filename": "11_1829_AJ.txt",
@@ -2513,8 +2273,6 @@
     "Recession_Ind": 0,
     "CP_Public_Persuasion": 7,
     "CP_Overall": 18,
-    "CP_Public_Persuasion_Display": 7,
-    "CP_Overall_Display": 18,
     "CP_Top10": 0,
     "CP_Bottom10": 0,
     "Rating": "E",
@@ -2540,12 +2298,9 @@
     "Realism_Rank": 53,
     "Commonality": 50.3,
     "Commonaliy_Rank": 24,
-    "orig_x": 0.80020798,
-    "orig_y": 2.33483952,
     "x": 0.80020798,
     "y": 2.33483952,
-    "coord": 6.0918084,
-    "Cluster": 2
+    "coord": 6.0918084
   },
   {
     "Filename": "10_1825_JA.txt",
@@ -2565,8 +2320,6 @@
     "Recession_Ind": 1,
     "CP_Public_Persuasion": 33,
     "CP_Overall": 21,
-    "CP_Public_Persuasion_Display": 33,
-    "CP_Overall_Display": 21,
     "CP_Top10": 0,
     "CP_Bottom10": 0,
     "Rating": "E",
@@ -2592,12 +2345,9 @@
     "Realism_Rank": 47,
     "Commonality": 48.88,
     "Commonaliy_Rank": 44,
-    "orig_x": 0.75114286,
-    "orig_y": 0.22643573,
     "x": 0.75114286,
     "y": 0.22643573,
-    "coord": 0.61548873,
-    "Cluster": 3
+    "coord": 0.61548873
   },
   {
     "Filename": "9_1821_JM.txt",
@@ -2617,8 +2367,6 @@
     "Recession_Ind": 1,
     "CP_Public_Persuasion": 17,
     "CP_Overall": 13,
-    "CP_Public_Persuasion_Display": 17,
-    "CP_Overall_Display": 13,
     "CP_Top10": 0,
     "CP_Bottom10": 0,
     "Rating": "E",
@@ -2644,12 +2392,9 @@
     "Realism_Rank": 43,
     "Commonality": 49.39,
     "Commonaliy_Rank": 41,
-    "orig_x": 0.82307095,
-    "orig_y": -0.28323232,
     "x": 0.82307095,
     "y": -0.28323232,
-    "coord": 0.75766634,
-    "Cluster": 3
+    "coord": 0.75766634
   },
   {
     "Filename": "8_1817_JM.txt",
@@ -2669,8 +2414,6 @@
     "Recession_Ind": 1,
     "CP_Public_Persuasion": 17,
     "CP_Overall": 13,
-    "CP_Public_Persuasion_Display": 17,
-    "CP_Overall_Display": 13,
     "CP_Top10": 0,
     "CP_Bottom10": 0,
     "Rating": "D",
@@ -2696,12 +2439,9 @@
     "Realism_Rank": 40,
     "Commonality": 51.19,
     "Commonaliy_Rank": 16,
-    "orig_x": 0.56501881,
-    "orig_y": 0.21709265,
     "x": 0.56501881,
     "y": 0.21709265,
-    "coord": 0.36637548,
-    "Cluster": 3
+    "coord": 0.36637548
   },
   {
     "Filename": "7_1813_JM.txt",
@@ -2721,8 +2461,6 @@
     "Recession_Ind": 0,
     "CP_Public_Persuasion": 18,
     "CP_Overall": 17,
-    "CP_Public_Persuasion_Display": 18,
-    "CP_Overall_Display": 17,
     "CP_Top10": 0,
     "CP_Bottom10": 0,
     "Rating": "E",
@@ -2748,12 +2486,9 @@
     "Realism_Rank": 58,
     "Commonality": 52.53,
     "Commonaliy_Rank": 4,
-    "orig_x": -0.94225243,
-    "orig_y": 1.77512155,
     "x": -0.94225243,
     "y": 1.77512155,
-    "coord": 4.03889617,
-    "Cluster": 2
+    "coord": 4.03889617
   },
   {
     "Filename": "6_1809_JM.txt",
@@ -2773,8 +2508,6 @@
     "Recession_Ind": 1,
     "CP_Public_Persuasion": 18,
     "CP_Overall": 17,
-    "CP_Public_Persuasion_Display": 18,
-    "CP_Overall_Display": 17,
     "CP_Top10": 0,
     "CP_Bottom10": 0,
     "Rating": "E",
@@ -2800,12 +2533,9 @@
     "Realism_Rank": 32,
     "Commonality": 49.61,
     "Commonaliy_Rank": 36,
-    "orig_x": 0.44033815,
-    "orig_y": 1.27626765,
     "x": 0.44033815,
     "y": 1.27626765,
-    "coord": 1.82275679,
-    "Cluster": 2
+    "coord": 1.82275679
   },
   {
     "Filename": "5_1805_TJ.txt",
@@ -2825,8 +2555,6 @@
     "Recession_Ind": 0,
     "CP_Public_Persuasion": 8,
     "CP_Overall": 7,
-    "CP_Public_Persuasion_Display": 8,
-    "CP_Overall_Display": 7,
     "CP_Top10": 1,
     "CP_Bottom10": 0,
     "Rating": "E",
@@ -2852,12 +2580,9 @@
     "Realism_Rank": 46,
     "Commonality": 51.63,
     "Commonaliy_Rank": 9,
-    "orig_x": -0.3695111,
-    "orig_y": 1.08437993,
     "x": -0.3695111,
     "y": 1.08437993,
-    "coord": 1.31241829,
-    "Cluster": 2
+    "coord": 1.31241829
   },
   {
     "Filename": "4_1801_TJ.txt",
@@ -2867,7 +2592,7 @@
     "Reach": "60%",
     "Reach_vs_Avg": "-7%",
     "Bendat_Transition": "First Change in Political Power",
-    "Notes": "First Washington inauguration; \"We are all Federalists; we are all Republicans",
+    "Notes": "First Washington inauguraiton; \"We are all Federalists; we are all Republicans",
     "Boller_Top": 1,
     "Name": "Thomas Jefferson",
     "Party": "Democratic-Republican",
@@ -2877,8 +2602,6 @@
     "Recession_Ind": 0,
     "CP_Public_Persuasion": 8,
     "CP_Overall": 7,
-    "CP_Public_Persuasion_Display": 8,
-    "CP_Overall_Display": 7,
     "CP_Top10": 1,
     "CP_Bottom10": 0,
     "Rating": "E",
@@ -2904,12 +2627,9 @@
     "Realism_Rank": 44,
     "Commonality": 47.72,
     "Commonaliy_Rank": 55,
-    "orig_x": 1.19462648,
-    "orig_y": 0.80921415,
     "x": 1.19462648,
     "y": 0.80921415,
-    "coord": 2.08195996,
-    "Cluster": 3
+    "coord": 2.08195996
   },
   {
     "Filename": "3_1797_JA.txt",
@@ -2929,8 +2649,6 @@
     "Recession_Ind": 1,
     "CP_Public_Persuasion": 22,
     "CP_Overall": 19,
-    "CP_Public_Persuasion_Display": 22,
-    "CP_Overall_Display": 19,
     "CP_Top10": 0,
     "CP_Bottom10": 0,
     "Rating": "E",
@@ -2956,12 +2674,9 @@
     "Realism_Rank": 38,
     "Commonality": 51.29,
     "Commonaliy_Rank": 14,
-    "orig_x": 0.7587005,
-    "orig_y": 0.74031482,
     "x": 0.7587005,
     "y": 0.74031482,
-    "coord": 1.12369248,
-    "Cluster": 3
+    "coord": 1.12369248
   },
   {
     "Filename": "2_1793_GW.txt",
@@ -2981,8 +2696,6 @@
     "Recession_Ind": 1,
     "CP_Public_Persuasion": 4,
     "CP_Overall": 2,
-    "CP_Public_Persuasion_Display": 4,
-    "CP_Overall_Display": 2,
     "CP_Top10": 1,
     "CP_Bottom10": 0,
     "Rating": "E",
@@ -3008,12 +2721,9 @@
     "Realism_Rank": 50,
     "Commonality": 50.86,
     "Commonaliy_Rank": 18,
-    "orig_x": -1.21248204,
-    "orig_y": 2.16456394,
     "x": -1.21248204,
     "y": 2.16456394,
-    "coord": 6.15544974,
-    "Cluster": 2
+    "coord": 6.15544974
   },
   {
     "Filename": "1_1789_GW.txt",
@@ -3033,8 +2743,6 @@
     "Recession_Ind": 1,
     "CP_Public_Persuasion": 4,
     "CP_Overall": 2,
-    "CP_Public_Persuasion_Display": 4,
-    "CP_Overall_Display": 2,
     "CP_Top10": 1,
     "CP_Bottom10": 0,
     "Rating": "E",
@@ -3060,11 +2768,8 @@
     "Realism_Rank": 55,
     "Commonality": 49.35,
     "Commonaliy_Rank": 42,
-    "orig_x": 0.22531341,
-    "orig_y": 1.21552518,
     "x": 0.22531341,
     "y": 1.21552518,
-    "coord": 1.5282676,
-    "Cluster": 3
+    "coord": 1.5282676
   }
 ]

@@ -1,6 +1,8 @@
 <template>
   <g :class="`axis y-axis-${normalisedId}`" :transform="`translate(${xTranslate}, 0)`">
   </g>
+    <g :class="`axis y-axis-${normalisedId}Label`" :transform="`translate(${xTranslate}, 0)`">
+  </g>
 </template>
 
 <script>
@@ -21,6 +23,13 @@ export default {
   methods: {
     updateAxis() {
       select(`.y-axis-${this.normalisedId}`).call(axisLeft(this.yScale))
+      select(`.y-axis-${this.normalisedId}Label`).append("text")
+        //.attr("transform", "translate(" + (width / 2) + " ," + (height + margin.bottom) + ")")
+        .attr("transform", "translate(-100,300)")
+        .style("text-anchor", "middle")
+        .style("color", "red")
+        .style("font-size", "12px")
+        .text(this.id.split("-").pop());
     },
   },
   updated() {

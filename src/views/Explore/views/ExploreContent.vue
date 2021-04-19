@@ -40,6 +40,7 @@
 <script>
 import { scaleOrdinal, schemeCategory10, scaleQuantize, scaleLinear, schemeAccent, scaleThreshold, schemeRdBu } from 'd3'
 import Scatterplot from '../components/Scatterplot'
+import Overlay from '../components/Overlay'
 import colorbrewer from 'colorbrewer'
 export default {
   name: 'ExploreForm',

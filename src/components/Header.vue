@@ -24,6 +24,16 @@ export default {
     align-items: center;
     padding: 0 2rem;
     height: 80px;
+
+ font-family: EB Garamond, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+
+
+
+    
 }
 
 .logoBlock {
@@ -33,11 +43,12 @@ export default {
 
 .logoTitle {
     margin-left: 0.5rem;
-    font-size: 1.4rem;
+    font-size: 1.8rem;
 }
 
 .nav {
     display: flex;
+    font-size: 1.1rem;
 
     a + a {
         margin-left: 1rem;

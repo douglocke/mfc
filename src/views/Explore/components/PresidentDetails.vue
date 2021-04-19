@@ -50,6 +50,7 @@
      Year <b>{{presidentDetails.Year}}</b><br>
      Party <b>{{ presidentDetails.Party }} </b><br>
      C-SPAN Persuasion Rank <b>{{ presidentDetails.CP_Public_Persuasion}}</b><br>
+     C-SPAN Overall Rank <b>{{ presidentDetails.CP_Overall}}</b><br>
       </div>
 
 

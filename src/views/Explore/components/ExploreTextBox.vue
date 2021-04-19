@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="footerbox">
     <p v-if="currentText">{{ currentText }}</p>
   </div>
 </template>
@@ -43,3 +43,15 @@ export default {
   },
 }
 </script>
+<style scoped>
+
+.footerbox{
+font-family: EB Garamond, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+
+}
+ 
+</style>

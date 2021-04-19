@@ -16,6 +16,7 @@
         @mouseenter="$emit('mouseenter', $event, point)"
       ></LabeledPoint>
     </g>
+    <Overlay/>
     <XAxis v-if="!hideXAxis" :xScale="xScale" :yTranslate="height - margin" :id="id" />
     <YAxis v-if="!hideYAxis" :yScale="yScale" :xTranslate="margin" :id="id" />
   </svg>
@@ -64,7 +65,7 @@ export default {
       return `${this.xVar}-${this.yVar}`
     },
     xScale() {
-      console.log('xScale domain', [min(this.points, d => +d[this.xVar]), max(this.points, d => +d[this.xVar] + 0.5)], 'range', [this.margin, this.width - this.margin])
+      //console.log('xScale domain', [min(this.points, d => +d[this.xVar]), max(this.points, d => +d[this.xVar] + 0.5)], 'range', [this.margin, this.width - this.margin])
       return (
         scaleLinear()
           //.domain([-2, max(this.points, d => +d[this.xVar] + 0.5)])
@@ -75,7 +76,7 @@ export default {
       )
     },
     yScale() {
-      console.log('yScale domain', [-2, max(this.points, d => +d[this.yVar])], 'range', [this.height - this.margin, this.margin])
+      //console.log('yScale domain', [-2, max(this.points, d => +d[this.yVar])], 'range', [this.height - this.margin, this.margin])
       return (
         scaleLinear()
           .domain([-2, max(this.points, d => +d[this.yVar])])
@@ -95,6 +96,29 @@ export default {
       }
       return this.getFill(point[this.keyVar])
     },
+    addCircles(){
+       const g = select('.scatterplot')
+       .append('ellipse')
+    .attr('cx', 350)  
+    .attr('cy', 300) 
+    .attr('rx', 95)
+    .attr('ry', 300)
+    .style('fill', 'lightgreen')
+    .style('stroke', '#232323')
+    .style('opacity', .15)
+     .attr("transform","rotate("+10+")")
+       /* .append('text')
+        //.attr("transform", "translate(" + (width / 2) + " ," + (height + margin.bottom) + ")")
+        .attr('transform', 'translate(500,40)')
+        .style('text-anchor', 'middle')
+        .style('color', 'red')
+        .style('font-size', '32px')
+        .text('addcircles function in scatteplot')
+*/
+
+    },
+
+
     addLegend({
       color,
       title,
@@ -117,7 +141,7 @@ export default {
       const g = select('.scatterplot')
         .append('g')
         .attr('class', 'legend-element')
-        .attr('transform', 'translate(680, -100)')
+        .attr('transform', 'translate(900, 50)')
 
 
       g.selectAll('text')
@@ -210,9 +234,19 @@ export default {
       color: this.colorScale,
       title: 'Presidents legend',
     })
+
+    
   },
   mounted() {
     console.log('color scale', this.colorScale, this.colorScale.domain())
+   
+setTimeout(() => {
+      this.addCircles({
+        title: 'Circles',
+      })
+    }, 100)
+
+
     setTimeout(() => {
       this.addLegend({
         color: this.colorScale,
@@ -220,6 +254,9 @@ export default {
       })
     }, 100)
     
+ 
+
+
   },
 }
 </script>
@@ -238,7 +275,7 @@ text {
 .scatterplot {
   justify-self: center;
   overflow: initial !important;
-  padding-top: 100px;
+  padding-top: 1px;
 }
 
 .center-align {
