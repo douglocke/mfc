@@ -23,26 +23,56 @@
         :points="presidentsData"
         xVar="Flesch Reading Ease"
         yVar="CP_Public_Persuasion"
-        keyVar="Party"
+        keyVar="Cluster"
         :getFill="colorScale"
         @mouseenter="onMouseEnter"
         :colorScale="colorScale"
         @click="$emit('onPresidentSelected', $event)"
         :colorByProperty="colorByProperty"
-      />
+      >
+        <template v-if="showClusters">
+          <Cluster
+            selector=".scatterplot"
+            shape="ellipse"
+            :attributes="{
+              cx: 350,
+              cy: 80,
+              rx: 295,
+              ry: 120,
+            }"
+            :styles="{
+              fill: 'lightgreen',
+              stroke: '#232323',
+              opacity: 0.15,
+              'pointer-events': 'none',
+              transform: 'rotate(5)',
+            }"
+          />
+        </template>
+      </Scatterplot>
       <!--h4 v-if="speciesFilter">Species: {{ speciesFilter }}</h4-->
       <!--:onClick="value => setQueryParam('species', value)"-->
     </div>
   </div>
 </template>
 <script>
-import { scaleOrdinal, schemeCategory10, scaleQuantize, scaleLinear, schemeAccent, scaleThreshold, schemeRdBu } from 'd3'
+import {
+  scaleOrdinal,
+  schemeCategory10,
+  scaleQuantize,
+  scaleLinear,
+  schemeAccent,
+  scaleThreshold,
+  schemeRdBu,
+} from 'd3'
 import Scatterplot from '../components/Scatterplot'
+import Cluster from '../components/Cluster'
 import colorbrewer from 'colorbrewer'
 export default {
   name: 'ExploreForm',
   components: {
     Scatterplot,
+    Cluster,
   },
   props: {
     presidentsData: {
@@ -55,25 +85,32 @@ export default {
     },
     colorByProperty: {
       type: String,
-      default: 'Party',
+      default: 'Cluster',
+    },
+    showClusters: {
+      type: Boolean,
+      default: false,
     },
   },
   computed: {
     colorScale() {
       const colorMap = {
-        'Party': this.partyColorScale,
-        'Bendat_Transition': this.bendatColorScale,
-        'Reach': this.reachColorScale
+        Cluster: this.clusterColorScale,
+        Party: this.partyColorScale,
+        Bendat_Transition: this.bendatColorScale,
+        Reach: this.reachColorScale,
       }
 
       console.log('in color scale computed', this.colorByProperty, colorMap)
       return colorMap[this.colorByProperty]()
-    },       
+    },
     colorDomain() {
       return Array.from(
-        new Set(this.presidentsData.map(d => {
-          return d[this.colorByProperty] || 'None'
-        }))
+        new Set(
+          this.presidentsData.map(d => {
+            return d[this.colorByProperty] || 'None'
+          })
+        )
       )
     },
   },
@@ -85,20 +122,35 @@ export default {
       return scaleOrdinal().domain(['No', 'Yes']).range(['#34d399', '#f59e0b'])
     },
     partyColorScale() {
-      return scaleOrdinal().domain(this.colorDomain).range(['#F87171', '#34d399', '#60A5FA', '#2563EB', '#1E3A8A', '#f59e0b'])
+      return scaleOrdinal()
+        .domain(this.colorDomain)
+        .range([
+          '#F87171',
+          '#34d399',
+          '#60A5FA',
+          '#2563EB',
+          '#1E3A8A',
+          '#f59e0b',
+        ])
+    },
+    clusterColorScale() {
+      return scaleOrdinal()
+        .domain(['1', '2', '3', '4'])
+        .range(['#F0C808', '#52AA5E', '#1E3A8A', '#F87171'])
     },
     reachColorScale() {
       try {
         //return scaleThreshold([25, 100], schemeRdBu[9])
-        return scaleThreshold().domain([25, 50, 75, 100]).range(['#F87171', '#F87171', '#60A5FA', '#2563EB', '#1E3A8A'])
+        return scaleThreshold()
+          .domain([25, 50, 75, 100])
+          .range(['#F87171', '#F87171', '#60A5FA', '#2563EB', '#1E3A8A'])
       } catch (error) {
         console.error(error)
         return ''
       }
     },
   },
-  mounted() {
-  }
+  mounted() {},
 }
 </script>
 <style module>

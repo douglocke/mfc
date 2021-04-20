@@ -18,12 +18,13 @@
         :key="inauguralData.Id"
         class="inaugural-data"
       >
-        <router-link :to="`/explore/content?id=${inauguralData.Id}`">
+        <Component :is="inauguralData.Speech === 1 ? 'router-link' : 'div'" class="presidentBlock" :to="`/explore/content?id=${inauguralData.Id}`">
           <span class="Photo"
             ><img
               :src="'/imgs/portrait_original/' + inauguralData.Photo"
               :width="90"
               :height="110"
+              class="presidentImage"
           /></span>
           <div class="inaugural-stats">
             <span class="Name">{{ inauguralData.Name }}</span>
@@ -32,7 +33,7 @@
             <br />
             <span class="Note">{{ inauguralData.Note }}</span>
           </div>
-        </router-link>
+        </Component>
       </li>
     </ol>
   </div>
@@ -63,16 +64,27 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 /*
 .Year2 text {
   opacity: 0;
 }
 */
 
+a.presidentBlock {
+  .presidentImage {
+    transition: 0.25s all;
+  }
+  .presidentImage:hover {
+    box-shadow: 0 10px 15px -1px rgba(0, 0, 0, 0.1), 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+    transform: translateY(5px);
+    opacity: 0.75;
+  }
+}
+
 .title {
 
- font-family: Allura, Helvetica, Arial, sans-serif;
+ font-family: RemsenScript, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -120,7 +132,8 @@ circle {
   /* position: absolute; */
   position: absolute;
   z-index: 2;
-  top: -50px;
+  top: 0;
+  transform: translateY(-90%);
   left: 0px;
   width: 200px;
   border: 1px solid gray;

@@ -46,84 +46,123 @@
 
     <div class="flex" v-if="presidentDetails">
       <div class="p-facts">
-     Name <b>{{ presidentDetails.Name }}</b><br>
-     Year <b>{{presidentDetails.Year}}</b><br>
-     Party <b>{{ presidentDetails.Party }} </b><br>
-     C-SPAN Persuasion Rank <b>{{ presidentDetails.CP_Public_Persuasion}}</b><br>
-     C-SPAN Overall Rank <b>{{ presidentDetails.CP_Overall}}</b><br>
+        Name <b>{{ presidentDetails.Name }}</b
+        ><br />
+        Year <b>{{ presidentDetails.Year }}</b
+        ><br />
+        Party <b>{{ presidentDetails.Party }} </b><br />
+        C-SPAN Persuasion Rank <b>{{ presidentDetails.CP_Public_Persuasion }}</b
+        ><br />
+        C-SPAN Overall Rank <b>{{ presidentDetails.CP_Overall }}</b
+        ><br />
       </div>
 
-
-    <div class="p-photo">
-    <img
-              :src="'/imgs/portrait_original/' + presidentDetails.Sequence + '.jpeg'"
-              :width="60"
-              :height="80"
-          />
+      <div class="p-photo">
+        <img
+          :src="
+            '/imgs/portrait_original/' + presidentDetails.Sequence + '.jpeg'
+          "
+          :width="60"
+          :height="80"
+        />
       </div>
-    <div class="p-info">
-      {{presidentDetails.Notes}}<br>
-      {{presidentDetails.War}}<br>
-      {{presidentDetails.Recession}}<br>
-      {{presidentDetails.Bendat_Transition}}<br>
-      </div>
-
-
-
-    <div class="p-form">
-     Form<br>
-     Reach <b>{{presidentDetails.Reach}}</b><br>
-     Grade Level <b>{{presidentDetails.["Flesch Kincaid Grade Level"]}}</b><br>
-     Words <b>{{presidentDetails.["Word Count"]}}</b>
+      <div class="p-info">
+        {{ presidentDetails.Notes }}<br />
+        {{ presidentDetails.War }}<br />
+        {{ presidentDetails.Recession }}<br />
+        {{ presidentDetails.Bendat_Transition }}<br />
       </div>
 
+      <div class="p-form">
+        Form<br />
+        Reach <b>{{ presidentDetails.Reach }}</b
+        ><br />
+        Grade Level <b>{{ presidentDetails['Flesch Kincaid Grade Level'] }}</b
+        ><br />
+        Words <b>{{ presidentDetails['Word Count'] }}</b>
+      </div>
 
       <div class="p-content">
-     Content<br>
-     Activity <b>{{presidentDetails.Activity}}</b><br>
-     Certainty <b>{{presidentDetails.Certainty}}</b><br>
-     Optimism <b>{{presidentDetails.Optimism}}</b><br>
-     Realism <b>{{presidentDetails.Realism}}</b><br>
+        Content<br />
+        Activity <b>{{ parseFloat(presidentDetails.Activity).toFixed(1) }}</b
+        ><br />
+        Certainty <b>{{ parseFloat(presidentDetails.Certainty).toFixed(1) }}</b
+        ><br />
+        Optimism <b>{{ parseFloat(presidentDetails.Optimism).toFixed(1) }}</b
+        ><br />
+         <span data-tippy-content="Lorem ipsum Realism">Realism</span> <b>{{ parseFloat(presidentDetails.Realism).toFixed(1) }}</b
+        ><br />
+        <span data-tippy-content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem adipisci sunt officiis delectus? Recusandae itaque doloribus autem repudiandae, facilis pariatur possimus et magni dolor adipisci, ratione nostrum magnam aut quia?">Commonality</span>
+        <b>{{ parseFloat(presidentDetails.Commonality).toFixed(1) }}</b
+        ><br />
       </div>
-
-
-      
-
-   
     </div>
-    
-    <div v-else>Move mouse over presidents to explore.  Click to save a president to sidebar.</div>
+
+    <div class="mouseover-info" v-else>
+      Move mouse over presidents to explore. Click to save a president to
+      sidebar.
+    </div>
   </div>
-  <br>
-  <hr width=”55%″>
+  <hr width="”55%″" />
 </template>
 
 <script>
+import tippy from 'tippy.js'
+import 'tippy.js/dist/tippy.css';
+
 export default {
   props: {
     presidentDetails: {
       type: Object,
     },
   },
+  methods: {
+    destroyTooltips() {
+      this.tooltips?.forEach(instance => instance?.destroy())
+    }
+  },
+  updated() {
+    console.log(this.tooltips)
+    this.destroyTooltips()
+    this.tooltips = tippy('[data-tippy-content]')
+  },
+  beforeUnmount() {
+    this.destroyTooltips()
+  },
+  mounted() {
+    this.tooltips = tippy('[data-tippy-content]')
+  }
 }
 </script>
 
 <style scoped>
-
+.details-bar {
+  height: 105px;
+}
 .details-bar img {
   border-radius: 70px;
+}
+
+.mouseover-info {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .flex {
   display: flex;
   justify-content: space-around;
   font-size: 14px;
-  height: 80px;
   padding-top: 10px;
 }
 
+.p-photo {
+  flex-basis: 80px;
+}
+
 .p-info {
-  width: 180px;
+  flex-basis: 40%;
 }
 
 .p-facts {

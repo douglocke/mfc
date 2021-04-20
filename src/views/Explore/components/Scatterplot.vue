@@ -3,6 +3,8 @@
     <text :y="margin / 2" :x="width / 2" class="center-align">
       <!--{{ xVar }} vs {{ yVar }}-->
     </text>
+    <!-- <Overlay /> -->
+
     <g class="points">
       <LabeledPoint
         :key="point.key"
@@ -13,12 +15,18 @@
         :r="5"
         :fill="getFillColor(point)"
         @click="$emit('click', point)"
+        :font-style="point.Boller_Top === 1 ? 'italic' : 'normal'"
         @mouseenter="$emit('mouseenter', $event, point)"
       ></LabeledPoint>
     </g>
-    <Overlay/>
-    <XAxis v-if="!hideXAxis" :xScale="xScale" :yTranslate="height - margin" :id="id" />
+    <XAxis
+      v-if="!hideXAxis"
+      :xScale="xScale"
+      :yTranslate="height - margin"
+      :id="id"
+    />
     <YAxis v-if="!hideYAxis" :yScale="yScale" :xTranslate="margin" :id="id" />
+    <slot />
   </svg>
 </template>
 
@@ -52,13 +60,14 @@ export default {
     colorByProperty: String,
     hideXAxis: {
       type: Boolean,
-      default: false
+      default: false,
     },
     hideYAxis: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
+ 
   computed: {
     //derived from state, or prop from parent. re-rendered when thing change
     id() {
@@ -69,8 +78,11 @@ export default {
       return (
         scaleLinear()
           //.domain([-2, max(this.points, d => +d[this.xVar] + 0.5)])
-          .domain([min(this.points, d => +d[this.xVar]), max(this.points, d => +d[this.xVar] + 0.5)])
-          
+          .domain([
+            min(this.points, d => +d[this.xVar]),
+            max(this.points, d => +d[this.xVar] + 0.5),
+          ])
+
           // .domain([-2, 7])
           .range([this.margin, this.width - this.margin])
       )
@@ -91,31 +103,18 @@ export default {
         return this.getFill(point.ReachNum)
       }
 
+      if (this.colorByProperty === 'Cluster') {
+        return this.getFill(point.Cluster)
+      }
+
+      if (this.colorByProperty === 'Party') {
+        return this.getFill(point.Party)
+      }
+
       if (this.colorByProperty === 'Bendat_Transition') {
         return this.getFill(point.Bendat_Transition ? 'Yes' : 'No')
       }
       return this.getFill(point[this.keyVar])
-    },
-    addCircles(){
-       const g = select('.scatterplot')
-       .append('ellipse')
-    .attr('cx', 350)  
-    .attr('cy', 300) 
-    .attr('rx', 95)
-    .attr('ry', 300)
-    .style('fill', 'lightgreen')
-    .style('stroke', '#232323')
-    .style('opacity', .15)
-     .attr("transform","rotate("+10+")")
-       /* .append('text')
-        //.attr("transform", "translate(" + (width / 2) + " ," + (height + margin.bottom) + ")")
-        .attr('transform', 'translate(500,40)')
-        .style('text-anchor', 'middle')
-        .style('color', 'red')
-        .style('font-size', '32px')
-        .text('addcircles function in scatteplot')
-*/
-
     },
 
 
@@ -141,8 +140,7 @@ export default {
       const g = select('.scatterplot')
         .append('g')
         .attr('class', 'legend-element')
-        .attr('transform', 'translate(900, 50)')
-
+        .attr('transform', 'translate(850, 50)')
 
       g.selectAll('text')
         .data(color.domain())
@@ -193,7 +191,7 @@ export default {
       /*const y = scaleBand()
         .domain(color.domain())
         .rangeRound([marginLeft, width - marginRight])*/
-        
+
       /* select('.scatterplot')       
         .selectAll('rect')
         .data(color.domain())
@@ -234,29 +232,14 @@ export default {
       color: this.colorScale,
       title: 'Presidents legend',
     })
-
-    
   },
   mounted() {
-    console.log('color scale', this.colorScale, this.colorScale.domain())
-   
-setTimeout(() => {
-      this.addCircles({
-        title: 'Circles',
-      })
-    }, 100)
-
-
-    setTimeout(() => {
+    setTimeout(() => {  
       this.addLegend({
         color: this.colorScale,
         title: 'Presidents legend',
       })
     }, 100)
-    
- 
-
-
   },
 }
 </script>

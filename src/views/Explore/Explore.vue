@@ -11,10 +11,11 @@
           :presidentsData="filteredPresidents"
           :selectedPresidentDetails="selectedPresidentDetail"
           :colorByProperty="colorByProperty"
+          :showClusters="showClusters"
         />
         <ExploreTextBox :colorByProperty="colorByProperty" />
       </div>
-    </main>
+    </main> 
     <aside :class="$style.aside">
       <!--each filter group needs listeners-->
       <PresidentSidebar
@@ -22,10 +23,17 @@
         :selectedPresidentCompare="selectedPresidentCompare"
         :colorByProperty="colorByProperty"
         :filters="filters"
+        v-model:showClusters="showClusters"
+       
         @onSelectFilterChange="onSelectFilterChange"
         @onFilterChange="onFilterChange"
         @onChangeColorByProperty="color => (colorByProperty = color)"
       />
+      <!--
+        v-model:showClusters is an equivalent of
+        :showClusters=""
+        @update:showClusters
+        -->
     </aside>
     <!-- <footer :class="$style.footer">
       Notes field
@@ -73,7 +81,8 @@ export default {
       disablePointerEvents: true,
       presidentsData: {} /*empty object, we will assign a new object that contains the ID and the rest of the item details*/,
       selectedPresidentDetail: null /* get from Sidebar */,
-      colorByProperty: 'Party',
+      colorByProperty: 'Cluster',
+      showClusters: false,
       /* filters: [
         {
           name: 'Party',

@@ -23,7 +23,7 @@
         :points="presidentsData"
         xVar="x"
         yVar="y"
-        keyVar="Party"
+        keyVar="Cluster"
         :getFill="colorScale"
         @mouseenter="onMouseEnter"
         :colorScale="colorScale"
@@ -31,7 +31,45 @@
         :colorByProperty="colorByProperty"
         hideXAxis
         hideYAxis
-      />
+        :showClusters="showClusters"
+      >
+       <template v-if="showClusters">
+          <Cluster
+            selector=".scatterplot"
+            shape="ellipse"
+            :attributes="{
+              cx: 350,
+              cy: 80,
+              rx: 295,
+              ry: 120,
+            }"
+            :styles="{
+              fill: 'lightgreen',
+              stroke: '#232323',
+              opacity: 0.15,
+              'pointer-events': 'none',
+              transform: 'rotate(5)',
+            }"
+          />
+          <Cluster
+            selector=".scatterplot"
+            shape="ellipse"
+            :attributes="{
+              cx: 500,
+              cy: 150,
+              rx: 695,
+              ry: 320,
+            }"
+            :styles="{
+              fill: 'red',
+              stroke: '#232323',
+              opacity: 0.15,
+              'pointer-events': 'none',
+              transform: 'rotate(5)',
+            }"
+          />
+        </template>
+      </Scatterplot>
       <!--h4 v-if="speciesFilter">Species: {{ speciesFilter }}</h4-->
       <!--:onClick="value => setQueryParam('species', value)"-->
     </div>
@@ -39,14 +77,17 @@
 </template>
 <script>
 import { scaleOrdinal, schemeCategory10, scaleQuantize, scaleLinear, schemeAccent, scaleThreshold, schemeRdBu } from 'd3'
+import Cluster from '../components/Cluster'
+
 import Scatterplot from '../components/Scatterplot'
 import Overlay from '../components/Overlay'
 import colorbrewer from 'colorbrewer'
 export default {
-  name: 'ExploreForm',
+  name: 'ExploreContent',
   components: {
     Scatterplot,
-  },
+    Cluster
+  },  
   props: {
     presidentsData: {
       type: Array,
@@ -58,15 +99,21 @@ export default {
     },
     colorByProperty: {
       type: String,
-      default: 'Party',
+      default: 'Cluster',
     },
+    showClusters: {
+      type: Boolean,
+       default: false
+    }
   },
   computed: {
     colorScale() {
       const colorMap = {
+        'Cluster': this.clusterColorScale,
         'Party': this.partyColorScale,
         'Bendat_Transition': this.bendatColorScale,
         'Reach': this.reachColorScale
+        
       }
 
       console.log('in color scale computed', this.colorByProperty, colorMap)
@@ -89,6 +136,9 @@ export default {
     },
     partyColorScale() {
       return scaleOrdinal().domain(this.colorDomain).range(['#F87171', '#34d399', '#60A5FA', '#2563EB', '#1E3A8A', '#f59e0b'])
+    },
+     clusterColorScale() {
+      return scaleOrdinal().domain(['1','2','3','4']).range(['#F0C808', '#52AA5E', '#1E3A8A', '#F87171'])
     },
     reachColorScale() {
       try {

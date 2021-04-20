@@ -1,0 +1,28 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 4041541, 2021-04-20T08:07:09-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: RemsenScript by Three Islands Press
+ * URL: https://www.myfonts.com/fonts/3ip/remsen-script/regular/
+ * Copyright: Remsen Script is copyright &amp;#x00A9; 2014 by Brian Willson/Three Islands Press (3IP). All rights reserved worldwide.
+ * 
+ * 
+ * 
+ * © 2021 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/3dab45");
+  
+@font-face {
+  font-family: "RemsenScript";
+  src: url('webFonts/RemsenScript/font.woff2') format('woff2'), url('webFonts/RemsenScript/font.woff') format('woff');
+}
+
