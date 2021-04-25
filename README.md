@@ -1,7 +1,16 @@
-# Presidential Inaugural Addresses
+# Title My Fellow Citizens 
+
+# Subtitle  
+
+A Visual Exploration of the United States Presidential Inaugural Addresses (1789-2021)
+
+# Preview
 
 ![Preview](preview.png)
 
+# Abstract
+
+The United States Presidential inaugural speeches serve to form a qualitative and historical basis for applying data visualization techniques.    This data visualization serves to illuminate historical context, further evaluate the texts, and aid in their appreciation.   Visualization techniques employed are designed to aid in topical exploration & allow user agency to enable new discovery of insights.
 
 ![MindMap](mindmap.png)
 
