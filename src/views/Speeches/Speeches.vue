@@ -1,4 +1,4 @@
-<template>
+pwd<template>
   <div>
     <Header />
     <div :class="$style.speechesContent">
@@ -217,7 +217,8 @@ export default {
   flex-basis: 435px;
   flex-shrink: 0;
   position: relative;
-  background-color: #FFF7EC;
+  background-color: #FFDFD8;
+  //red #FFDFD8   cream FFF7EC
 }
 
 
