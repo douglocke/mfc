@@ -1,7 +1,5 @@
 # Presidential Inaugural Addresses
 
-![MindMap](mindmap.png)
-
 ## 1.  Topic:  Overview with Comparisons between many speeches over time
 
 ### Research Question:  where do we see transitions or interesting in-betweens as we explore the various speeches?  Where do the modern presidents similar or not similar to predecessors?  Where do we see the shifts occur?    
@@ -118,5 +116,4 @@
 United States: National Academy of Sciences
 Proceedings of the National Academy of Sciences - PNAS, 2015-09-01, Vol.112 (35), p.10837-10844
 
-
-
+*XMind - Trial Version*
