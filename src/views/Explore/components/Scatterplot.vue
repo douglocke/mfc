@@ -1,5 +1,7 @@
 <template>
   <svg ref="scatterplot" :height="height" :width="width" class="scatterplot">
+    <slot />
+
     <text :y="margin / 2" :x="width / 2" class="center-align">
       <!--{{ xVar }} vs {{ yVar }}-->
     </text>
@@ -16,6 +18,7 @@
         :fill="getFillColor(point)"
         @click="$emit('click', point)"
         :font-style="point.Boller_Top === 1 ? 'italic' : 'normal'"
+        :font-weight="point.Boller_Top === 1 ? 'bold' : 'normal'"
         @mouseenter="$emit('mouseenter', $event, point)"
       ></LabeledPoint>
     </g>
@@ -26,7 +29,6 @@
       :id="id"
     />
     <YAxis v-if="!hideYAxis" :yScale="yScale" :xTranslate="margin" :id="id" />
-    <slot />
   </svg>
 </template>
 

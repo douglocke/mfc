@@ -27,6 +27,7 @@ export default {
 }
 .labeled-point:hover text {
   opacity: 1;
+  //not doing anything
 }
 circle {
   stroke: black;

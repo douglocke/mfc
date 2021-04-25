@@ -44,9 +44,36 @@
               fill: 'lightgreen',
               stroke: '#232323',
               opacity: 0.15,
-              'pointer-events': 'none',
               transform: 'rotate(5)',
             }"
+            showTooltip
+            tooltipLabel="Hello tooltip"
+            :tooltipPosition="{x: 120, y: 80}"
+          />
+
+          <!-- 
+            <Cluster>
+            <template #default="{isHovering}">
+              <TooltipText v-if="isHovering" />
+            </template>
+          </Cluster>
+          <TooltipText label="Hello tooltip" :position="{x: 0, y:0}" x="0" y="25" /> -->
+           <Cluster
+            selector=".scatterplot"
+            shape="rect"
+            :attributes="{
+              x: 350,
+              y: 80,
+              width: 295,
+              height: 120,
+            }"
+            :styles="{
+              fill: 'red',
+              stroke: '#232323',
+              opacity: 0.15,
+              transform: 'rotate(5)',
+            }"
+            tooltipLabel="Hello tooltip"
           />
         </template>
       </Scatterplot>

@@ -121,14 +121,14 @@ const prepareData = (selectedPresident = {}, selectedPresidentCompare = {}) => {
       right: right.Recession,
     },
     {
-      left: 'Yes',
+      left: left.War,
       label: 'War',
-      right: 'No',
+      right: right.War,
     },
     {
-      left: 'Newspaper',
-      label: 'Media',
-      right: 'Newspaper',
+      left: left.CP_Overall,
+      label: 'C-Span Historian Rank',
+      right: right.CP_Overall,
     },
     {
       headline: 'Rank',
@@ -228,8 +228,8 @@ export default {
   cursor: pointer;
   background: transparent;
   outline: none;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   border: 1px solid transparent;
   background-color: #bbb;
@@ -240,8 +240,8 @@ export default {
 .presidentImage {
   object-fit: cover;
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   border-color: transparent;
 }
 </style>

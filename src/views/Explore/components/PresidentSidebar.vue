@@ -51,7 +51,7 @@
         </div>
       </div>
       <div class="filter-section">
-        <h3 class="section-headline">Bendat Transition</h3>
+        <h3 class="section-headline">Transition of Power</h3>
         <select @change="onBendatTransitionChange">
           <option
             v-for="(item, index) of bendatTransition"
@@ -72,7 +72,7 @@
         </select>
       </div>
       <div class="filter-section">
-        <h3 class="section-headline">Show clusters</h3>
+        <h3 class="section-headline">Show Overlay</h3>
         <Toggle
           :modelValue="showClusters"
           @update:modelValue="onUpdateShowClusters"
@@ -191,7 +191,8 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 2rem 0;
+  margin: 0.1rem 0;
+  height: 110px;
 }
 
 .section-headline {
@@ -219,8 +220,8 @@ export default {
 
 .president-image {
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   object-fit: cover;
 }
 

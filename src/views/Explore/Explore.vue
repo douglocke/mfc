@@ -247,6 +247,7 @@ export default {
   grid-column: 2 / 3;
   //display: flex;
   //align-items: left;
+  background: rgb(254, 247, 238)
 }
 
 /*

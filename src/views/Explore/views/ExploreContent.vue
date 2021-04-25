@@ -55,10 +55,10 @@
             selector=".scatterplot"
             shape="ellipse"
             :attributes="{
-              cx: 500,
-              cy: 150,
-              rx: 695,
-              ry: 320,
+              cx: 240,
+              cy: 420,
+              rx: 260,
+              ry: 220,
             }"
             :styles="{
               fill: 'red',
@@ -68,6 +68,24 @@
               transform: 'rotate(5)',
             }"
           />
+ <Cluster
+            selector=".scatterplot"
+            shape="ellipse"
+            :attributes="{
+              cx: 560,
+              cy: 320,
+              rx: 300,
+              ry: 200,
+            }"
+            :styles="{
+              fill: 'blue',
+              stroke: '#232323',
+              opacity: 0.15,
+              'pointer-events': 'none',
+              transform: 'rotate(5)',
+            }"
+          />
+
         </template>
       </Scatterplot>
       <!--h4 v-if="speciesFilter">Species: {{ speciesFilter }}</h4-->

@@ -8,7 +8,14 @@
     <main :class="$style.contentContainer">
       <section v-if="selectedPresident" :class="$style.speechContainer">
         <div :class="$style.speechTitle">
-          {{ selectedPresident.Name }}
+          {{ selectedPresident.Name }}'{{ selectedPresident.Label }}
+        </div>
+
+          <div :class="$style.speechSubTitle">
+          Delivered {{ selectedPresident.Speech_Date }}<br>
+          at {{ selectedPresident.Speech_Building }}
+          in {{ selectedPresident.Speech_City }} <br><br>
+          Weather: {{ selectedPresident.Speech_Weather }} <br>
         </div>
 
         <template v-if="speech?.length">
@@ -170,6 +177,8 @@ export default {
 <style lang="scss" module>
 .speechesContent {
   position: relative;
+
+
 }
 
 .selectPresidentOverlayContainer {
@@ -189,11 +198,50 @@ export default {
 
 .speechContainer {
   flex-grow: 1;
+    font-family: EB Garamond, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: justify;
+  color: #2c3e50;
+  font-size: 1.2em;
+  padding-right: 90px;
+  padding-left: 110px
+
 }
 
+
+
+
+
 .sidebarContainer {
-  flex-basis: 300px;
+  flex-basis: 435px;
   flex-shrink: 0;
   position: relative;
+  background-color: #FFF7EC;
 }
+
+
+.speechTitle {
+  
+    font-family: EB Garamond, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: red;
+  font-size: 1.5em;
+}
+
+.speechSubTitle {
+  
+    font-family: EB Garamond, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: red;
+  font-size: 1.0em;
+  font-style: italic;
+  padding-top: 19px
+}
+
+
 </style>

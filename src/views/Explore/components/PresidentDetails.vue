@@ -46,10 +46,8 @@
 
     <div class="flex" v-if="presidentDetails">
       <div class="p-facts">
-        Name <b>{{ presidentDetails.Name }}</b
-        ><br />
-        Year <b>{{ presidentDetails.Year }}</b
-        ><br />
+        <span class="p-name">{{ presidentDetails.Name }}<br></span>
+        <b>{{ presidentDetails.Year }}</b> {{ presidentDetails.Short_Label }}<br>
         Party <b>{{ presidentDetails.Party }} </b><br />
         C-SPAN Persuasion Rank <b>{{ presidentDetails.CP_Public_Persuasion }}</b
         ><br />
@@ -74,7 +72,7 @@
       </div>
 
       <div class="p-form">
-        Form<br />
+        
         Reach <b>{{ presidentDetails.Reach }}</b
         ><br />
         Grade Level <b>{{ presidentDetails['Flesch Kincaid Grade Level'] }}</b
@@ -83,17 +81,20 @@
       </div>
 
       <div class="p-content">
-        Content<br />
-        Activity <b>{{ parseFloat(presidentDetails.Activity).toFixed(1) }}</b
+        
+        <span data-tippy-content="Language featuring movement, change, the implementation of ideas and the
+avoidance of inertia.">Activity </span><b>{{ parseFloat(presidentDetails.Activity_Rank).toFixed(0) }}</b><br />
+         <span data-tippy-content="Language indicating resoluteness, inflexibility, and completeness and a tendency to
+speak ex cathedra.">Certainty</span> <b>{{ parseFloat(presidentDetails.Certainty_Rank).toFixed(0) }}</b><br />
+        <span data-tippy-content="Language endorsing some person, group, concept or event, or highlighting their
+positive entailments.">Optimism</span> <b>{{ parseFloat(presidentDetails.Optimism_Rank).toFixed(0) }}</b
         ><br />
-        Certainty <b>{{ parseFloat(presidentDetails.Certainty).toFixed(1) }}</b
+         <span data-tippy-content="Language describing tangible, immediate, recognizable matters that affect people's
+everyday lives.">Realism</span> <b>{{ parseFloat(presidentDetails.Realism_Rank).toFixed(0) }}</b
         ><br />
-        Optimism <b>{{ parseFloat(presidentDetails.Optimism).toFixed(1) }}</b
-        ><br />
-         <span data-tippy-content="Lorem ipsum Realism">Realism</span> <b>{{ parseFloat(presidentDetails.Realism).toFixed(1) }}</b
-        ><br />
-        <span data-tippy-content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem adipisci sunt officiis delectus? Recusandae itaque doloribus autem repudiandae, facilis pariatur possimus et magni dolor adipisci, ratione nostrum magnam aut quia?">Commonality</span>
-        <b>{{ parseFloat(presidentDetails.Commonality).toFixed(1) }}</b
+        <span data-tippy-content="Language highlighting the agreed-upon values of a group and rejecting
+idiosyncratic modes of engagement.">Commonality</span>
+        <span :class="['rank', presidentDetails.Commonaliy_Rank < 12 && 'rank-high', presidentDetails.Commonaliy_Rank > 50 && 'rank-low']">{{ parseFloat(presidentDetails.Commonaliy_Rank).toFixed(0) }}</span
         ><br />
       </div>
     </div>
@@ -135,7 +136,21 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+.rank {
+  font-weight: bold;
+}
+
+.rank-high { 
+  color: orange;
+  &:after {
+    content: '\2022'
+  }
+}
+
+.rank-low {
+  color: red;
+}
 .details-bar {
   height: 105px;
 }
@@ -165,15 +180,23 @@ export default {
   flex-basis: 40%;
 }
 
+.p-name{
+font-size: 1.2em;
+font-weight: 900;
+}
+
 .p-facts {
   text-align: left;
+  line-height: 1.4;
 }
 
 .p-form {
   text-align: right;
+  line-height: 1.4;
 }
 
 .p-content {
   text-align: right;
+  line-height: 1.4;
 }
 </style>

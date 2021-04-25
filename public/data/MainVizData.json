@@ -7,7 +7,7 @@
     "Reach": "100%",
     "Reach_vs_Avg": "33%",
     "Bendat_Transition": "",
-    "Notes": "",
+    "Notes": "Oldest president at time; first female Vice President Kamala Harris.",
     "Boller_Top": 0,
     "Name": "Joseph R. Biden",
     "Party": "Democratic",
@@ -49,7 +49,14 @@
     "x": -0.53993108,
     "y": -0.19545728,
     "coord": 0.32972912,
-    "Cluster": 4
+    "Cluster": 4,
+    "Label": "s Inaugural Address",
+    "Short_Label": "",
+    "Speech_Date": "January 20th, 2021",
+    "President_Age": 78,
+    "Speech_Building": "Capitol Building, West Front",
+    "Speech_City": "Washington, DC",
+    "Speech_Weather": "42 degrees, cloudy and brisk"
   },
   {
     "Filename": "58_2017_DT.txt",
@@ -59,7 +66,7 @@
     "Reach": "97%",
     "Reach_vs_Avg": "30%",
     "Bendat_Transition": "",
-    "Notes": "",
+    "Notes": "Together, let's make America great again.",
     "Boller_Top": 0,
     "Name": "Donald J. Trump",
     "Party": "Republican",
@@ -101,7 +108,14 @@
     "x": -0.323503,
     "y": -1.45863699,
     "coord": 2.23227604,
-    "Cluster": 4
+    "Cluster": 4,
+    "Label": "s Inaugural Address",
+    "Short_Label": "",
+    "Speech_Date": "January 20th, 2017",
+    "President_Age": 70,
+    "Speech_Building": "Capitol Building, West Front",
+    "Speech_City": "Washington, DC",
+    "Speech_Weather": "48 degrees, rain sprinkles"
   },
   {
     "Filename": "57_2013_BO.txt",
@@ -153,7 +167,14 @@
     "x": -1.46600867,
     "y": 1.09567816,
     "coord": 3.34969204,
-    "Cluster": 2
+    "Cluster": 2,
+    "Label": "s Second Inaugural Address",
+    "Short_Label": "2nd",
+    "Speech_Date": "January 20th, 2013",
+    "President_Age": 51,
+    "Speech_Building": "Capitol Building, West Front",
+    "Speech_City": "Washington, DC",
+    "Speech_Weather": "45 degrees, cloudy"
   },
   {
     "Filename": "56_2009_BO.txt",
@@ -205,7 +226,14 @@
     "x": -0.54315755,
     "y": -1.15691197,
     "coord": 1.63346543,
-    "Cluster": 4
+    "Cluster": 4,
+    "Label": "s First Inaugural Address",
+    "Short_Label": "1st",
+    "Speech_Date": "January 20th, 2009",
+    "President_Age": 47,
+    "Speech_Building": "Capitol Building, West Front",
+    "Speech_City": "Washington, DC",
+    "Speech_Weather": "28 degrees, cold and windy"
   },
   {
     "Filename": "55_2005_GB.txt",
@@ -257,7 +285,14 @@
     "x": 2.55263473,
     "y": -0.9261263,
     "coord": 7.37365401,
-    "Cluster": 3
+    "Cluster": 3,
+    "Label": "s Second Inaugural Address",
+    "Short_Label": "2nd",
+    "Speech_Date": "January 20th, 2005",
+    "President_Age": 58,
+    "Speech_Building": "Capitol Building, West Front",
+    "Speech_City": "Washington, DC",
+    "Speech_Weather": "35 degrees mostly cloudy with some sun"
   },
   {
     "Filename": "54_2001_GB.txt",
@@ -309,7 +344,14 @@
     "x": -1.34781451,
     "y": 0.30273137,
     "coord": 1.90825023,
-    "Cluster": 4
+    "Cluster": 4,
+    "Label": "s First Inaugural Address",
+    "Short_Label": "1st",
+    "Speech_Date": "January 20th, 2001",
+    "President_Age": 54,
+    "Speech_Building": "Capitol Building, West Front",
+    "Speech_City": "Washington, DC",
+    "Speech_Weather": "36 degrees, fog and rain; sleet later in day"
   },
   {
     "Filename": "53_1997_BC.txt",
@@ -361,7 +403,14 @@
     "x": 1.17067988,
     "y": -1.72685009,
     "coord": 4.3525026,
-    "Cluster": 4
+    "Cluster": 4,
+    "Label": "s Second Inaugural Address",
+    "Short_Label": "2nd",
+    "Speech_Date": "January 20th, 1997",
+    "President_Age": 50,
+    "Speech_Building": "Capitol Building, West Front",
+    "Speech_City": "Washington, DC",
+    "Speech_Weather": "34 degrees, sunny and overcast"
   },
   {
     "Filename": "52_1993_BC.txt",
@@ -413,7 +462,14 @@
     "x": -0.96330182,
     "y": -0.3898849,
     "coord": 1.07996064,
-    "Cluster": 4
+    "Cluster": 4,
+    "Label": "s First Inaugural Address",
+    "Short_Label": "1st",
+    "Speech_Date": "January 20th, 1993",
+    "President_Age": 46,
+    "Speech_Building": "Capitol Building, West Front",
+    "Speech_City": "Washington, DC",
+    "Speech_Weather": "40 degrees, sunny"
   },
   {
     "Filename": "51_1989_GB.txt",
@@ -423,7 +479,7 @@
     "Reach": "100%",
     "Reach_vs_Avg": "33%",
     "Bendat_Transition": "",
-    "Notes": "Called inauguration \"Democracy's Big Data",
+    "Notes": "Called inauguration \"Democracy's Big Day",
     "Boller_Top": 0,
     "Name": "George H. W. Bush",
     "Party": "Republican",
@@ -465,7 +521,14 @@
     "x": -0.86576499,
     "y": -0.9274464,
     "coord": 1.60970585,
-    "Cluster": 4
+    "Cluster": 4,
+    "Label": "s Inaugural Address",
+    "Short_Label": "",
+    "Speech_Date": "January 20th, 1989",
+    "President_Age": 64,
+    "Speech_Building": "Capitol Building, West Front",
+    "Speech_City": "Washington, DC",
+    "Speech_Weather": "51 degrees, cloudy, mild and breezy"
   },
   {
     "Filename": "50_1985_RR.txt",
@@ -517,7 +580,14 @@
     "x": -0.44008441,
     "y": 0.17877759,
     "coord": 0.22563571,
-    "Cluster": 4
+    "Cluster": 4,
+    "Label": "s Second Inaugural Address",
+    "Short_Label": "2nd",
+    "Speech_Date": "January 21th, 1985",
+    "President_Age": 73,
+    "Speech_Building": "Capitol Rotunda",
+    "Speech_City": "Washington, DC",
+    "Speech_Weather": "7 degrees, sunny but bitter cold"
   },
   {
     "Filename": "49_1981_RR.txt",
@@ -569,7 +639,14 @@
     "x": -0.51935961,
     "y": -0.26426035,
     "coord": 0.33956794,
-    "Cluster": 4
+    "Cluster": 4,
+    "Label": "s First Inaugural Address",
+    "Short_Label": "1st",
+    "Speech_Date": "January 20th, 1981",
+    "President_Age": 69,
+    "Speech_Building": "Capitol Building, West Front",
+    "Speech_City": "Washington, DC",
+    "Speech_Weather": "55 degrees, cloudy and mild"
   },
   {
     "Filename": "48_1977_JC.txt",
@@ -619,9 +696,16 @@
     "orig_x": 0.30248612,
     "orig_y": 0.06053095,
     "x": 0.30248612,
-    "y": -0.0253095,
+    "y": 0.06053095,
     "coord": 0.09516185,
-    "Cluster": 3
+    "Cluster": 3,
+    "Label": "s Inaugural Address",
+    "Short_Label": "",
+    "Speech_Date": "January 20th, 1977",
+    "President_Age": 52,
+    "Speech_Building": "Capitol Building, East Portico",
+    "Speech_City": "Washington, DC",
+    "Speech_Weather": "28 degrees, cold and sunny"
   },
   {
     "Filename": "47_1973_RN.txt",
@@ -673,7 +757,14 @@
     "x": -0.35905618,
     "y": -1.83072164,
     "coord": 3.48046306,
-    "Cluster": 4
+    "Cluster": 4,
+    "Label": "s Second Inaugural Address",
+    "Short_Label": "2nd",
+    "Speech_Date": "January 20th, 1973",
+    "President_Age": 60,
+    "Speech_Building": "Capitol Building, East Portico",
+    "Speech_City": "Washington, DC",
+    "Speech_Weather": "42 degrees, cloudy and windy"
   },
   {
     "Filename": "46_1969_RN.txt",
@@ -725,7 +816,14 @@
     "x": -2.341266,
     "y": -0.13718815,
     "coord": 5.50034709,
-    "Cluster": 4
+    "Cluster": 4,
+    "Label": "s First Inaugural Address",
+    "Short_Label": "1st",
+    "Speech_Date": "January 20th, 1969",
+    "President_Age": 56,
+    "Speech_Building": "Capitol Building, East Portico",
+    "Speech_City": "Washington, DC",
+    "Speech_Weather": "35 degrees, cloudy with rain and sleet later in day"
   },
   {
     "Filename": "45_1965_LJ.txt",
@@ -777,7 +875,14 @@
     "x": -0.5316255,
     "y": -1.86783805,
     "coord": 3.77144466,
-    "Cluster": 4
+    "Cluster": 4,
+    "Label": "s Inaugural Address",
+    "Short_Label": "",
+    "Speech_Date": "January 20th, 1965",
+    "President_Age": 56,
+    "Speech_Building": "Capitol Building, East Portico",
+    "Speech_City": "Washington, DC",
+    "Speech_Weather": "38 degrees, cloudy with snow on ground"
   },
   {
     "Filename": "44_1961_JK.txt",
@@ -829,7 +934,14 @@
     "x": -2.37648168,
     "y": -1.53681154,
     "coord": 8.00945486,
-    "Cluster": 4
+    "Cluster": 4,
+    "Label": "s Inaugural Address",
+    "Short_Label": "",
+    "Speech_Date": "January 20th, 1961",
+    "President_Age": 43,
+    "Speech_Building": "Capitol Building, East Portico",
+    "Speech_City": "Washington, DC",
+    "Speech_Weather": "22 degrees, snow before ceremony, then sunny and cold"
   },
   {
     "Filename": "43_1957_DE.txt",
@@ -881,7 +993,14 @@
     "x": -1.33902185,
     "y": -1.46157683,
     "coord": 3.92918635,
-    "Cluster": 4
+    "Cluster": 4,
+    "Label": "s Second Inaugural Address",
+    "Short_Label": "2nd",
+    "Speech_Date": "January 21th, 1957",
+    "President_Age": 66,
+    "Speech_Building": "Capitol Building, East Portico",
+    "Speech_City": "Washington, DC",
+    "Speech_Weather": "44 degrees, mostly cloudy with snow flurries"
   },
   {
     "Filename": "42_1953_DE.txt",
@@ -933,7 +1052,14 @@
     "x": -0.30441555,
     "y": -1.24218551,
     "coord": 1.63569366,
-    "Cluster": 4
+    "Cluster": 4,
+    "Label": "s First Inaugural Address",
+    "Short_Label": "1st",
+    "Speech_Date": "January 20th, 1953",
+    "President_Age": 62,
+    "Speech_Building": "Capitol Building, East Portico",
+    "Speech_City": "Washington, DC",
+    "Speech_Weather": "49 degrees, cloudy"
   },
   {
     "Filename": "41_1949_HT.txt",
@@ -985,7 +1111,14 @@
     "x": 0.4694385,
     "y": -1.68628588,
     "coord": 3.06393256,
-    "Cluster": 4
+    "Cluster": 4,
+    "Label": "s  Inaugural Address",
+    "Short_Label": "",
+    "Speech_Date": "January 20th, 1949",
+    "President_Age": 64,
+    "Speech_Building": "Capitol Building, East Portico",
+    "Speech_City": "Washington, DC",
+    "Speech_Weather": "38 degrees, sunny and windy"
   },
   {
     "Filename": "40_1945_FR.txt",
@@ -1037,7 +1170,14 @@
     "x": -0.68864215,
     "y": -2.00018253,
     "coord": 4.47495817,
-    "Cluster": 4
+    "Cluster": 4,
+    "Label": "s Fourth Inaugural Address",
+    "Short_Label": "4th",
+    "Speech_Date": "January 20th, 1941",
+    "President_Age": 62,
+    "Speech_Building": "Capitol Building, East Portico",
+    "Speech_City": "Washington, DC",
+    "Speech_Weather": "35 derees, snow before ceremony, then cloudy"
   },
   {
     "Filename": "39_1941_FR.txt",
@@ -1089,7 +1229,14 @@
     "x": -0.05648617,
     "y": -1.44752263,
     "coord": 2.09851245,
-    "Cluster": 4
+    "Cluster": 4,
+    "Label": "s Third Inaugural Address",
+    "Short_Label": "3rd",
+    "Speech_Date": "January 20th, 1941",
+    "President_Age": 58,
+    "Speech_Building": "Capitol Building, East Portico",
+    "Speech_City": "Washington, DC",
+    "Speech_Weather": "29 degrees, sunny and cold"
   },
   {
     "Filename": "38_1937_FR.txt",
@@ -1141,7 +1288,14 @@
     "x": -0.59857789,
     "y": -0.5584184,
     "coord": 0.6701266,
-    "Cluster": 4
+    "Cluster": 4,
+    "Label": "s Second Inaugural Address",
+    "Short_Label": "2nd",
+    "Speech_Date": "January 20th, 1937",
+    "President_Age": 54,
+    "Speech_Building": "Capitol Building, East Portico",
+    "Speech_City": "Washington, DC",
+    "Speech_Weather": "33 degrees, cold  and rainy"
   },
   {
     "Filename": "37_1933_FR.txt",
@@ -1193,7 +1347,14 @@
     "x": -1.13239791,
     "y": 0.32816216,
     "coord": 1.39001543,
-    "Cluster": 4
+    "Cluster": 4,
+    "Label": "s First Inaugural Address",
+    "Short_Label": "1st",
+    "Speech_Date": "March 4th, 1933",
+    "President_Age": 51,
+    "Speech_Building": "Capitol Building, East Portico",
+    "Speech_City": "Washington, DC",
+    "Speech_Weather": "42 degrees, mostly cloudy"
   },
   {
     "Filename": "36_1929_HH.txt",
@@ -1243,9 +1404,16 @@
     "orig_x": 0.31553425,
     "orig_y": 0.36830309,
     "x": 0.31553425,
-    "y": 0.4830309,
+    "y": 0.36830309,
     "coord": 0.23520903,
-    "Cluster": 3
+    "Cluster": 3,
+    "Label": "s Inaugural Address",
+    "Short_Label": "",
+    "Speech_Date": "March 4th, 1929",
+    "President_Age": 54,
+    "Speech_Building": "Capitol Building, East Portico",
+    "Speech_City": "Washington, DC",
+    "Speech_Weather": "48 degrees, rainy"
   },
   {
     "Filename": "35_1925_CC.txt",
@@ -1297,7 +1465,14 @@
     "x": 0.20743438,
     "y": 0.76847836,
     "coord": 0.63358801,
-    "Cluster": 3
+    "Cluster": 3,
+    "Label": "s Inaugural Address",
+    "Short_Label": "",
+    "Speech_Date": "March 4th, 1925",
+    "President_Age": 52,
+    "Speech_Building": "Capitol Building, East Portico",
+    "Speech_City": "Washington, DC",
+    "Speech_Weather": "44 degrees, sunny"
   },
   {
     "Filename": "34_1921_WH.txt",
@@ -1349,7 +1524,14 @@
     "x": -0.77924356,
     "y": 1.65763785,
     "coord": 3.35498376,
-    "Cluster": 2
+    "Cluster": 2,
+    "Label": "s Inaugural Address",
+    "Short_Label": "",
+    "Speech_Date": "March 4th, 1921",
+    "President_Age": 55,
+    "Speech_Building": "Capitol Building, East Portico",
+    "Speech_City": "Washington, DC",
+    "Speech_Weather": "38 degrees, sunny"
   },
   {
     "Filename": "33_1917_WW.txt",
@@ -1398,10 +1580,17 @@
     "Commonaliy_Rank": 57,
     "orig_x": 6.99600989,
     "orig_y": -0.12117533,
-    "x": 3.09600989,
+    "x": 6.99600989,
     "y": -0.12117533,
     "coord": 48.95883787,
-    "Cluster": 1
+    "Cluster": 1,
+    "Label": "s Second Inaugural Address",
+    "Short_Label": "2nd",
+    "Speech_Date": "March 5th, 1917",
+    "President_Age": 60,
+    "Speech_Building": "Capitol Building, East Portico",
+    "Speech_City": "Washington, DC",
+    "Speech_Weather": "38 degrees, partly cloudy and windy"
   },
   {
     "Filename": "32_1913_WW.txt",
@@ -1453,7 +1642,14 @@
     "x": -0.62246633,
     "y": 0.2070322,
     "coord": 0.43032666,
-    "Cluster": 3
+    "Cluster": 3,
+    "Label": "s First Inaugural Address",
+    "Short_Label": "1st",
+    "Speech_Date": "March 4th, 1913",
+    "President_Age": 56,
+    "Speech_Building": "Capitol Building, East Portico",
+    "Speech_City": "Washington, DC",
+    "Speech_Weather": "55 degrees, overcast"
   },
   {
     "Filename": "31_1909_WT.txt",
@@ -1505,7 +1701,14 @@
     "x": -0.1760234,
     "y": 0.12729865,
     "coord": 0.04718918,
-    "Cluster": 3
+    "Cluster": 3,
+    "Label": "s Inaugural Address",
+    "Short_Label": "",
+    "Speech_Date": "March 4th, 1909",
+    "President_Age": 51,
+    "Speech_Building": "Capitol Building, U.S. Senate",
+    "Speech_City": "Washington, DC",
+    "Speech_Weather": "32 degrees, snow"
   },
   {
     "Filename": "30_1905_TR.txt",
@@ -1557,7 +1760,14 @@
     "x": 0.25510192,
     "y": -0.55913692,
     "coord": 0.37771108,
-    "Cluster": 3
+    "Cluster": 3,
+    "Label": "s Inaugural Address",
+    "Short_Label": "",
+    "Speech_Date": "March 4th, 1905",
+    "President_Age": 46,
+    "Speech_Building": "Capitol Building, East Portico",
+    "Speech_City": "Washington, DC",
+    "Speech_Weather": "45 degrees, sunny and windy"
   },
   {
     "Filename": "29_1901_WM.txt",
@@ -1609,7 +1819,14 @@
     "x": 0.39747465,
     "y": -1.04285274,
     "coord": 1.24552794,
-    "Cluster": 3
+    "Cluster": 3,
+    "Label": "s Second Inaugural Address",
+    "Short_Label": "2nd",
+    "Speech_Date": "March 4th, 1901",
+    "President_Age": 58,
+    "Speech_Building": "Capitol Building, East Portico",
+    "Speech_City": "Washington, DC",
+    "Speech_Weather": "47 degrees, rain"
   },
   {
     "Filename": "28_1897_WM.txt",
@@ -1661,7 +1878,14 @@
     "x": 0.1666017,
     "y": 0.13240507,
     "coord": 0.04528723,
-    "Cluster": 3
+    "Cluster": 3,
+    "Label": "s First Inaugural Address",
+    "Short_Label": "1st",
+    "Speech_Date": "March 4th, 1897",
+    "President_Age": 54,
+    "Speech_Building": "Capitol Building, East Portico",
+    "Speech_City": "Washington, DC",
+    "Speech_Weather": "40 degrees, clear"
   },
   {
     "Filename": "27_1893_GC.txt",
@@ -1713,7 +1937,14 @@
     "x": -1.66364174,
     "y": 2.81363997,
     "coord": 10.68427373,
-    "Cluster": 2
+    "Cluster": 2,
+    "Label": "s  Second Inaugural Address",
+    "Short_Label": "2nd",
+    "Speech_Date": "March 4th, 1893",
+    "President_Age": 55,
+    "Speech_Building": "Capitol Building, East Portico",
+    "Speech_City": "Washington, DC",
+    "Speech_Weather": "25 degrees, snow and wind"
   },
   {
     "Filename": "26_1889_BH.txt",
@@ -1763,9 +1994,16 @@
     "orig_x": 0.10964828,
     "orig_y": 0.27435066,
     "x": 0.10964828,
-    "y": 0.37435066,
+    "y": 0.27435066,
     "coord": 0.08729103,
-    "Cluster": 3
+    "Cluster": 3,
+    "Label": "s Inaugural Address",
+    "Short_Label": "",
+    "Speech_Date": "March 4th, 1889",
+    "President_Age": 55,
+    "Speech_Building": "Capitol Building, East Portico",
+    "Speech_City": "Washington, DC",
+    "Speech_Weather": "43 degrees, rain"
   },
   {
     "Filename": "25_1885_GC.txt",
@@ -1815,9 +2053,16 @@
     "orig_x": 0.58103729,
     "orig_y": 0.0811834,
     "x": 0.58103729,
-    "y": 0.0111834,
+    "y": 0.0811834,
     "coord": 0.34419508,
-    "Cluster": 3
+    "Cluster": 3,
+    "Label": "s First Inaugural Address",
+    "Short_Label": "1st",
+    "Speech_Date": "March 4th, 1885",
+    "President_Age": 47,
+    "Speech_Building": "Capitol Building, East Portico",
+    "Speech_City": "Washington, DC",
+    "Speech_Weather": "54 degrees, sunny"
   },
   {
     "Filename": "24_1881_JG.txt",
@@ -1869,7 +2114,14 @@
     "x": -0.28952786,
     "y": -0.45005986,
     "coord": 0.28638026,
-    "Cluster": 3
+    "Cluster": 3,
+    "Label": "s Inaugural Address",
+    "Short_Label": "",
+    "Speech_Date": "March 4th, 1881",
+    "President_Age": 49,
+    "Speech_Building": "Capitol Building, East Portico",
+    "Speech_City": "Washington, DC",
+    "Speech_Weather": "33 degrees, snow before ceremony, then sunny and windy"
   },
   {
     "Filename": "23_1877_RH.txt",
@@ -1918,10 +2170,17 @@
     "Commonaliy_Rank": 20,
     "orig_x": 0.68722421,
     "orig_y": 0.14611887,
-    "x": 0.78722421,
+    "x": 0.68722421,
     "y": 0.14611887,
     "coord": 0.49362785,
-    "Cluster": 3
+    "Cluster": 3,
+    "Label": "s Inaugural Address",
+    "Short_Label": "",
+    "Speech_Date": "March 5th, 1877",
+    "President_Age": 54,
+    "Speech_Building": "Capitol Building, East Portico",
+    "Speech_City": "Washington, DC",
+    "Speech_Weather": "35 degrees, cloudy with light snow"
   },
   {
     "Filename": "22_1873_UG.txt",
@@ -1973,7 +2232,14 @@
     "x": 0.55100529,
     "y": 0.09829514,
     "coord": 0.31326877,
-    "Cluster": 3
+    "Cluster": 3,
+    "Label": "s Second Inaugural Address",
+    "Short_Label": "2nd",
+    "Speech_Date": "March 4th, 1873",
+    "President_Age": 50,
+    "Speech_Building": "Capitol Building, East Portico",
+    "Speech_City": "Washington, DC",
+    "Speech_Weather": "16 degrees, clear windy and cold"
   },
   {
     "Filename": "21_1869_UG.txt",
@@ -2025,7 +2291,14 @@
     "x": 0.55100529,
     "y": 0.09829514,
     "coord": 0.31326877,
-    "Cluster": 3
+    "Cluster": 3,
+    "Label": "s First Inaugural Address",
+    "Short_Label": "1st",
+    "Speech_Date": "March 4th, 1869",
+    "President_Age": 46,
+    "Speech_Building": "Capitol Building, East Portico",
+    "Speech_City": "Washington, DC",
+    "Speech_Weather": "40 degrees, rain before ceremony, then sun"
   },
   {
     "Filename": "20_1865_AL.txt",
@@ -2077,7 +2350,14 @@
     "x": -1.11855794,
     "y": -0.03921583,
     "coord": 1.25270974,
-    "Cluster": 4
+    "Cluster": 4,
+    "Label": "s Second Inaugural Address",
+    "Short_Label": "2nd",
+    "Speech_Date": "March 4th, 1865",
+    "President_Age": 56,
+    "Speech_Building": "Capitol Building, East Portico",
+    "Speech_City": "Washington, DC",
+    "Speech_Weather": "45 degrees, rain before ceremony, then sun"
   },
   {
     "Filename": "19_1861_AL.txt",
@@ -2129,7 +2409,14 @@
     "x": -1.58958241,
     "y": -0.97425934,
     "coord": 3.47595349,
-    "Cluster": 4
+    "Cluster": 4,
+    "Label": "s First Inaugural Address",
+    "Short_Label": "1st",
+    "Speech_Date": "March 4th, 1861",
+    "President_Age": 52,
+    "Speech_Building": "Capitol Building, East Portico",
+    "Speech_City": "Washington, DC",
+    "Speech_Weather": "rain in morning, sunny in afternoon"
   },
   {
     "Filename": "18_1857_JB.txt",
@@ -2181,7 +2468,14 @@
     "x": 0.83467757,
     "y": 0.17200149,
     "coord": 0.72627115,
-    "Cluster": 3
+    "Cluster": 3,
+    "Label": "s Inaugural Address",
+    "Short_Label": "",
+    "Speech_Date": "March 4th, 1857",
+    "President_Age": 65,
+    "Speech_Building": "Capitol Building, East Portico",
+    "Speech_City": "Washington, DC",
+    "Speech_Weather": "49 degrees, sunny"
   },
   {
     "Filename": "17_1853_FP.txt",
@@ -2233,7 +2527,14 @@
     "x": 0.41226871,
     "y": 0.79447745,
     "coord": 0.80115991,
-    "Cluster": 3
+    "Cluster": 3,
+    "Label": "s Inaugural Address",
+    "Short_Label": "",
+    "Speech_Date": "March 4th, 1853",
+    "President_Age": 48,
+    "Speech_Building": "Capitol Building, East Portico",
+    "Speech_City": "Washington, DC",
+    "Speech_Weather": "35 degrees, snow and wind"
   },
   {
     "Filename": "16_1849_ZT.txt",
@@ -2285,7 +2586,14 @@
     "x": 1.91740289,
     "y": 1.65607602,
     "coord": 6.41902161,
-    "Cluster": 3
+    "Cluster": 3,
+    "Label": "s Inaugural Address",
+    "Short_Label": "",
+    "Speech_Date": "March 5th, 1849",
+    "President_Age": 64,
+    "Speech_Building": "Capitol Building, East Portico",
+    "Speech_City": "Washington, DC",
+    "Speech_Weather": "42 degrees, cloudy with snow flurries"
   },
   {
     "Filename": "15_1845_JP.txt",
@@ -2337,7 +2645,14 @@
     "x": 0.27236996,
     "y": -0.47934755,
     "coord": 0.30395947,
-    "Cluster": 3
+    "Cluster": 3,
+    "Label": "s Inaugural Address",
+    "Short_Label": "",
+    "Speech_Date": "March 4th, 1845",
+    "President_Age": 49,
+    "Speech_Building": "Capitol Building, East Portico",
+    "Speech_City": "Washington, DC",
+    "Speech_Weather": "42 degrees, rain"
   },
   {
     "Filename": "14_1841_WH.txt",
@@ -2389,7 +2704,14 @@
     "x": 0.79849027,
     "y": -0.45521397,
     "coord": 0.84480647,
-    "Cluster": 3
+    "Cluster": 3,
+    "Label": "s Inaugural Address",
+    "Short_Label": "",
+    "Speech_Date": "March 4th, 1841",
+    "President_Age": 68,
+    "Speech_Building": "Capitol Building, East Portico",
+    "Speech_City": "Washington, DC",
+    "Speech_Weather": "48 degrees, overcast and windy"
   },
   {
     "Filename": "13_1837_MB.txt",
@@ -2441,7 +2763,14 @@
     "x": -0.68920867,
     "y": 2.45792578,
     "coord": 6.51640773,
-    "Cluster": 2
+    "Cluster": 2,
+    "Label": "s Inaugural Address",
+    "Short_Label": "",
+    "Speech_Date": "March 4th, 1837",
+    "President_Age": 54,
+    "Speech_Building": "House of Reps.",
+    "Speech_City": "Washington, DC",
+    "Speech_Weather": "26 degrees, sunny and brisk"
   },
   {
     "Filename": "12_1833_AJ.txt",
@@ -2490,10 +2819,17 @@
     "Commonaliy_Rank": 36,
     "orig_x": 1.08244904,
     "orig_y": -0.44435521,
-    "x": 1.68244904,
+    "x": 1.08244904,
     "y": -0.44435521,
     "coord": 1.36914748,
-    "Cluster": 3
+    "Cluster": 3,
+    "Label": "s Second Inaugural Address",
+    "Short_Label": "2nd",
+    "Speech_Date": "March 4th, 1833",
+    "President_Age": 65,
+    "Speech_Building": "House of Reps.",
+    "Speech_City": "Washington, DC",
+    "Speech_Weather": "29 degrees, snow"
   },
   {
     "Filename": "11_1829_AJ.txt",
@@ -2503,7 +2839,7 @@
     "Reach": "25%",
     "Reach_vs_Avg": "-42%",
     "Bendat_Transition": "Power of the People",
-    "Notes": "First inauguation at Capitols East Portico featured the wildest inauguration party.",
+    "Notes": "First inauguration at Capitols East Portico featured the wildest inauguration party.",
     "Boller_Top": 0,
     "Name": "Andrew Jackson",
     "Party": "Democratic",
@@ -2545,7 +2881,14 @@
     "x": 0.80020798,
     "y": 2.33483952,
     "coord": 6.0918084,
-    "Cluster": 2
+    "Cluster": 2,
+    "Label": "s First Inaugural Address",
+    "Short_Label": "1st",
+    "Speech_Date": "March 4th, 1829",
+    "President_Age": 61,
+    "Speech_Building": "Capitol Building, East Portico",
+    "Speech_City": "Washington, DC",
+    "Speech_Weather": "57 degrees, warm and balmy"
   },
   {
     "Filename": "10_1825_JA.txt",
@@ -2595,9 +2938,16 @@
     "orig_x": 0.75114286,
     "orig_y": 0.22643573,
     "x": 0.75114286,
-    "y": 0.32643573,
+    "y": 0.22643573,
     "coord": 0.61548873,
-    "Cluster": 3
+    "Cluster": 3,
+    "Label": "s Inaugural Address",
+    "Short_Label": "",
+    "Speech_Date": "March 4th, 1825",
+    "President_Age": 57,
+    "Speech_Building": "House of Reps.",
+    "Speech_City": "Washington, DC",
+    "Speech_Weather": ""
   },
   {
     "Filename": "9_1821_JM.txt",
@@ -2649,7 +2999,14 @@
     "x": 0.82307095,
     "y": -0.28323232,
     "coord": 0.75766634,
-    "Cluster": 3
+    "Cluster": 3,
+    "Label": "s Second Inaugural Address",
+    "Short_Label": "2nd",
+    "Speech_Date": "March 5th, 1821",
+    "President_Age": 62,
+    "Speech_Building": "House of Reps.",
+    "Speech_City": "Washington, DC",
+    "Speech_Weather": "28 degrees, snow"
   },
   {
     "Filename": "8_1817_JM.txt",
@@ -2701,7 +3058,14 @@
     "x": 0.56501881,
     "y": 0.21709265,
     "coord": 0.36637548,
-    "Cluster": 3
+    "Cluster": 3,
+    "Label": "s First Inaugural Address",
+    "Short_Label": "1st",
+    "Speech_Date": "March 4th, 1817",
+    "President_Age": 58,
+    "Speech_Building": "Outside Congress Hall",
+    "Speech_City": "Washington, DC",
+    "Speech_Weather": "50 degrees, warm and sunny"
   },
   {
     "Filename": "7_1813_JM.txt",
@@ -2753,7 +3117,14 @@
     "x": -0.94225243,
     "y": 1.77512155,
     "coord": 4.03889617,
-    "Cluster": 2
+    "Cluster": 2,
+    "Label": "s Second Inaugural Address",
+    "Short_Label": "2nd",
+    "Speech_Date": "March 4th, 1813",
+    "President_Age": 61,
+    "Speech_Building": "House of Reps.",
+    "Speech_City": "Washington, DC",
+    "Speech_Weather": ""
   },
   {
     "Filename": "6_1809_JM.txt",
@@ -2805,7 +3176,14 @@
     "x": 0.44033815,
     "y": 1.27626765,
     "coord": 1.82275679,
-    "Cluster": 2
+    "Cluster": 2,
+    "Label": "s First Inaugural Address",
+    "Short_Label": "1st",
+    "Speech_Date": "March 4th, 1809",
+    "President_Age": 57,
+    "Speech_Building": "House of Reps.",
+    "Speech_City": "Washington, DC",
+    "Speech_Weather": ""
   },
   {
     "Filename": "5_1805_TJ.txt",
@@ -2857,7 +3235,14 @@
     "x": -0.3695111,
     "y": 1.08437993,
     "coord": 1.31241829,
-    "Cluster": 2
+    "Cluster": 2,
+    "Label": "s Second Inaugural Address",
+    "Short_Label": "2nd",
+    "Speech_Date": "March 4th, 1805",
+    "President_Age": 61,
+    "Speech_Building": "House of Reps.",
+    "Speech_City": "Washington, DC",
+    "Speech_Weather": ""
   },
   {
     "Filename": "4_1801_TJ.txt",
@@ -2909,7 +3294,14 @@
     "x": 1.19462648,
     "y": 0.80921415,
     "coord": 2.08195996,
-    "Cluster": 3
+    "Cluster": 3,
+    "Label": "s First Inaugural Address",
+    "Short_Label": "1st",
+    "Speech_Date": "March 4th, 1801",
+    "President_Age": 57,
+    "Speech_Building": "U.S. Senate",
+    "Speech_City": "Washington, DC",
+    "Speech_Weather": ""
   },
   {
     "Filename": "3_1797_JA.txt",
@@ -2961,7 +3353,14 @@
     "x": 0.7587005,
     "y": 0.74031482,
     "coord": 1.12369248,
-    "Cluster": 3
+    "Cluster": 3,
+    "Label": "s Inaugural Address",
+    "Short_Label": "",
+    "Speech_Date": "March 4th, 1797",
+    "President_Age": 61,
+    "Speech_Building": "Congress Hall",
+    "Speech_City": "Philadelphia, PA",
+    "Speech_Weather": ""
   },
   {
     "Filename": "2_1793_GW.txt",
@@ -3013,7 +3412,14 @@
     "x": -1.21248204,
     "y": 2.16456394,
     "coord": 6.15544974,
-    "Cluster": 2
+    "Cluster": 2,
+    "Label": "s Second Inaugural Address",
+    "Short_Label": "2nd",
+    "Speech_Date": "March 4th, 1793",
+    "President_Age": 61,
+    "Speech_Building": "Congress Hall",
+    "Speech_City": "Philadelphia, PA",
+    "Speech_Weather": ""
   },
   {
     "Filename": "1_1789_GW.txt",
@@ -3065,6 +3471,13 @@
     "x": 0.22531341,
     "y": 1.21552518,
     "coord": 1.5282676,
-    "Cluster": 3
+    "Cluster": 3,
+    "Label": "s First Inaugural Address",
+    "Short_Label": "1st",
+    "Speech_Date": "April 30th, 1789",
+    "President_Age": 57,
+    "Speech_Building": "Federal Hall",
+    "Speech_City": "New York City",
+    "Speech_Weather": "59 degrees, cool"
   }
 ]

@@ -3,22 +3,42 @@
 <template>
   <div>
     <div class="title">
-    <h1>"My Fellow Citizens..."</h1>
+    "My Fellow Citizens..."
     </div>
     <div class="subtitle">
-    <h2>The Inaugural Addresses of the Presidents of the United States</h2>
-    <h2>1789-2021</h2>
-    
-    <h4>Explore the presidential inaugurals below.</h4>
-    <h4>Click on any image to continue.</h4>
+  
+    <!--George Washington's First Inaugural Address-->
+    <div v-if="selectedPresident">
+      {{selectedPresident.Name}}{{selectedPresident.Label}}<br />
+      {{selectedPresident.Year}}<br />
+      <span class="subtitle-note">{{selectedPresident.Note}}</span><br />
     </div>
+    <div v-else>
+      The Inaugural Addresses of the Presidents of the United States<br>
+      1789-2021<br>
+      <br>
+    </div>
+    <!--1789-->
+    </div>
+    <div class="instructions">
+      <br>
+    Click on a president to continue.
+    </div>
+    
     <ol id="president-list">
       <li
         v-for="inauguralData in inauguralDataList"
         :key="inauguralData.Id"
         class="inaugural-data"
+        @mouseenter="selectedPresident = inauguralData"
+        @mouseleave="selectedPresident = null"
       >
+
         <Component :is="inauguralData.Speech === 1 ? 'router-link' : 'div'" class="presidentBlock" :to="`/explore/content?id=${inauguralData.Id}`">
+
+       
+        <!--if they had a speech then router link, else create a div-->
+        
           <span class="Photo"
             ><img
               :src="'/imgs/portrait_original/' + inauguralData.Photo"
@@ -27,12 +47,13 @@
               class="presidentImage"
           /></span>
           <div class="inaugural-stats">
-            <span class="Name">{{ inauguralData.Name }}</span>
+            <span class="Name"><b>{{ inauguralData.Name }}{{ inauguralData.Label }}</b></span>
             <br />
             <span class="Year">{{ inauguralData.Year }}</span>
             <br />
             <span class="Note">{{ inauguralData.Note }}</span>
           </div>
+        
         </Component>
       </li>
     </ol>
@@ -45,7 +66,8 @@ export default {
   data () {
     return {
       inauguralDataList: [],
-      clickedInauguralId: ''
+      clickedInauguralId: '',
+      selectedPresident: null
     }
   },
   props: {
@@ -89,19 +111,43 @@ a.presidentBlock {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  font-size: 3em;
+  font-size: 6em;
+  font-style: bold;
+  margin-block: 0;
 
 }
 
 .subtitle {
 
+ //font-family: EB Garamond, Helvetica, Arial, sans-serif;
  font-family: EB Garamond, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
+ 
+ -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  font-size: 2.0em;
 
 }
+
+.subtitle-note {
+  font-size: 1.4rem;
+}
+
+
+.instructions {
+
+ //font-family: EB Garamond, Helvetica, Arial, sans-serif;
+ font-family: EB Garamond, Helvetica, Arial, sans-serif;
+ 
+ -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  font-size: 1.0em;
+
+}
+
 
 
 .Photo img {
@@ -128,6 +174,15 @@ circle {
 }
 
 .inaugural-stats {
+
+  font-family: EB Garamond, Helvetica, Arial, sans-serif;
+ 
+ -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  font-size: 1.0em;
+
   display: none;
   /* position: absolute; */
   position: absolute;
@@ -138,11 +193,38 @@ circle {
   width: 200px;
   border: 1px solid gray;
   border-radius: 5px;
-  background: lightgoldenrodyellow;
+  background: #FEF7EE;
   text-align: left;
 }
 .inaugural-data:hover .inaugural-stats {
-  display: block;
+  //display: block;
+  //uncomment to restore pop-up
 }
+
+/*
+img:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: 1;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+*/
+
+
+
+
+
 
 </style>
