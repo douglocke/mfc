@@ -1,7 +1,8 @@
 <template>
   <div :class="$style.sidebar">
-    <div>
-      <h2>Compare</h2>
+    <div>     
+    <div :class="$style.compareHeader">
+      Compare</div>
 
       <div :class="$style.presidentsRow">
         <div :class="$style.presidentBlock">
@@ -18,7 +19,9 @@
               :alt="selectedPresident?.Name"
             />
           </button>
-          <span>{{ selectedPresident?.Name }}</span>
+          <span>{{ selectedPresident?.Name +'\'s'}}<br>
+            {{ selectedPresident?.Short_Label }}
+          </span>
         </div>
         <div :class="$style.switchPresidentsButtonBlock">
           <button
@@ -43,7 +46,8 @@
             />
           </button>
           <span>
-            {{ selectedPresidentCompare?.Name || 'Select' }}
+            {{ selectedPresidentCompare?.Name + '\'s' || 'Select' }}<br>
+          <span>{{ selectedPresidentCompare?.Short_Label}}<br></span>
           </span>
         </div>
       </div>
@@ -115,6 +119,11 @@ const prepareData = (selectedPresident = {}, selectedPresidentCompare = {}) => {
       label: 'Party',
       right: right.Party,
     },
+     {
+      left: left.CP_Public_Persuasion,
+      label: 'President Persuasion Rank',
+      right: right.CP_Public_Persuasion,
+    },
     {
       left: left.Recession,
       label: 'Recession',
@@ -125,23 +134,82 @@ const prepareData = (selectedPresident = {}, selectedPresidentCompare = {}) => {
       label: 'War',
       right: right.War,
     },
+    
     {
-      left: left.CP_Overall,
-      label: 'C-Span Historian Rank',
-      right: right.CP_Overall,
+      headline: 'Form',
+    },
+   
+     {
+      left: left.Reach,
+      label: 'Reach',
+      right: right.Reach,
+    },
+       {
+      left: left.['Flesch Kincaid Grade Level'],
+      label: 'Grade Level',
+      right: right.['Flesch Kincaid Grade Level'],
+    },
+       {
+      left: left.['Word Count'],
+      label: 'Word Count',
+      right: right.['Word Count'],
+    }, 
+    {
+      left: left.['Dale-Chall Difficult Words'],
+      label: 'Difficult Words',
+      right: right.['Dale-Chall Difficult Words'],
+    },
+
+    {
+      left: left.['Difficult_Words_Rank'],
+      label: 'Difficult Words Rank',
+      right: right.['Difficult_Words_Rank'],
     },
     {
-      headline: 'Rank',
+      left: left.['Words Per Sentence'],
+      label: 'Words Per Sentence',
+      right: right.['Words Per Sentence'],
+    }, 
+      {
+      left: left.['Speaking Time'],
+      label: 'Speaking Time',
+      right: right.['Speaking Time'],
+    }, 
+{
+      headline: 'Content',
+    },
+   
+ {
+      left: left.Top_Speech,
+      label: 'Top Speech',
+      right: right.Top_Speech,
+    },
+
+
+     {
+      left: left.['Activity_Rank'],
+      label: 'Activity Rank',
+      right: right.['Activity_Rank'],
+    },
+     {
+      left: left.['Certainty_Rank'],
+      label: 'Certainty Rank',
+      right: right.['Certainty_Rank'],
     },
     {
-      left: '1st',
-      label: 'Overall',
-      right: '7th',
+      left: left.['Commonaliy_Rank'],
+      label: 'Commonality Rank',
+      right: right.['Commonaliy_Rank'],
     },
-    {
-      left: '3rd',
-      label: 'Persuasion',
-      right: '8th',
+     {
+      left: left.['Optimism_Rank'],
+      label: 'Optimism Rank',
+      right: right.['Optimism_Rank'],
+    },
+      {
+      left: left.['Realism_Rank'],
+      label: 'Realism Rank',
+      right: right.['Realism_Rank'],
     },
   ]
 }
@@ -197,7 +265,21 @@ export default {
   flex-wrap: wrap;
 }
 
+.compareHeader{
+  font-family: EB Garamond, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+    font-weight: bold;
+  font-size: 1.6rem;
+}
+
+
 .headlineRow {
+  font-family: EB Garamond, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
   flex-basis: 100%;
   margin-top: 1rem;
 }

@@ -15,7 +15,10 @@ pwd<template>
           Delivered {{ selectedPresident.Speech_Date }}<br>
           at {{ selectedPresident.Speech_Building }}
           in {{ selectedPresident.Speech_City }} <br><br>
-          Weather: {{ selectedPresident.Speech_Weather }} <br>
+           <div v-if="selectedPresident.Speech_Weather">
+          Weather: {{ selectedPresident.Speech_Weather }} 
+          </div>
+          <br>
         </div>
 
         <template v-if="speech?.length">
@@ -205,7 +208,8 @@ export default {
   color: #2c3e50;
   font-size: 1.2em;
   padding-right: 90px;
-  padding-left: 110px
+  padding-left: 110px;
+  background-color:  #FEF7EE;
 
 }
 
@@ -229,7 +233,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: red;
-  font-size: 1.5em;
+  font-size: 1.3em;
 }
 
 .speechSubTitle {
@@ -240,7 +244,6 @@ export default {
   text-align: center;
   color: red;
   font-size: 1.0em;
-  font-style: italic;
   padding-top: 19px
 }
 

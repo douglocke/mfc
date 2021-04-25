@@ -83,15 +83,22 @@
       <div class="p-content">
         
         <span data-tippy-content="Language featuring movement, change, the implementation of ideas and the
-avoidance of inertia.">Activity </span><b>{{ parseFloat(presidentDetails.Activity_Rank).toFixed(0) }}</b><br />
+avoidance of inertia.">Activity </span>
+        <span :class="['rank', presidentDetails.Activity_Rank < 12 && 'rank-high', presidentDetails.Activity_Rank > 50 && 'rank-low']">{{ parseFloat(presidentDetails.Activity_Rank).toFixed(0) }}</span>
+        <br />
          <span data-tippy-content="Language indicating resoluteness, inflexibility, and completeness and a tendency to
-speak ex cathedra.">Certainty</span> <b>{{ parseFloat(presidentDetails.Certainty_Rank).toFixed(0) }}</b><br />
+speak ex cathedra.">Certainty</span> 
+        <span :class="['rank', presidentDetails.Certainty_Rank < 12 && 'rank-high', presidentDetails.Certainty_Rank > 50 && 'rank-low']">{{ parseFloat(presidentDetails.Certainty_Rank).toFixed(0) }}</span>
+
+        <br />
         <span data-tippy-content="Language endorsing some person, group, concept or event, or highlighting their
-positive entailments.">Optimism</span> <b>{{ parseFloat(presidentDetails.Optimism_Rank).toFixed(0) }}</b
-        ><br />
-         <span data-tippy-content="Language describing tangible, immediate, recognizable matters that affect people's
-everyday lives.">Realism</span> <b>{{ parseFloat(presidentDetails.Realism_Rank).toFixed(0) }}</b
-        ><br />
+positive entailments.">Optimism</span>
+        <span :class="['rank', presidentDetails.Optimism_Rank < 12 && 'rank-high', presidentDetails.Optimism_Rank > 50 && 'rank-low']">{{ parseFloat(presidentDetails.Optimism_Rank).toFixed(0) }}</span>
+        <br/>
+        <span data-tippy-content="Language describing tangible, immediate, recognizable matters that affect people's
+everyday lives.">Realism</span> 
+        <span :class="['rank', presidentDetails.Realism_Rank < 12 && 'rank-high', presidentDetails.Realism_Rank > 50 && 'rank-low']">{{ parseFloat(presidentDetails.Realism_Rank).toFixed(0) }}</span>
+        <br />
         <span data-tippy-content="Language highlighting the agreed-upon values of a group and rejecting
 idiosyncratic modes of engagement.">Commonality</span>
         <span :class="['rank', presidentDetails.Commonaliy_Rank < 12 && 'rank-high', presidentDetails.Commonaliy_Rank > 50 && 'rank-low']">{{ parseFloat(presidentDetails.Commonaliy_Rank).toFixed(0) }}</span
@@ -142,7 +149,9 @@ export default {
 }
 
 .rank-high { 
-  color: orange;
+  color: rgb(55, 150, 194);
+  font-weight: bold;
+
   &:after {
     content: '\2022'
   }
@@ -150,6 +159,7 @@ export default {
 
 .rank-low {
   color: red;
+  font-weight: bold;
 }
 .details-bar {
   height: 105px;
