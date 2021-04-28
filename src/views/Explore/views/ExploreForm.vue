@@ -24,14 +24,14 @@
         xVar="Flesch Reading Ease"
         yVar="CP_Public_Persuasion"
         keyVar="Cluster"
-        :getFill="colorScale"
+        :getFill="getFill"
         @mouseenter="onMouseEnter"
         :colorScale="colorScale"
         @click="$emit('onPresidentSelected', $event)"
         :colorByProperty="colorByProperty"
       >
         <template v-if="showClusters">
-          <Cluster
+          <!--Cluster
             selector=".scatterplot"
             shape="ellipse"
             :attributes="{
@@ -49,7 +49,7 @@
             showTooltip
             tooltipLabel="Hello tooltip"
             :tooltipPosition="{x: 120, y: 80}"
-          />
+          /-->
 
           <!-- 
             <Cluster>
@@ -62,18 +62,40 @@
             selector=".scatterplot"
             shape="rect"
             :attributes="{
-              x: 350,
-              y: 80,
-              width: 295,
-              height: 120,
+              x: 40,
+              y: 10,
+              width: 495,
+              height: 260,
             }"
             :styles="{
-              fill: 'red',
+              fill: 'blue',
               stroke: '#232323',
-              opacity: 0.15,
+              opacity: 0.07,
               transform: 'rotate(5)',
             }"
-            tooltipLabel="Hello tooltip"
+            showTooltip
+            tooltipLabel="Least Persuasive Presidents + Difficult form speeches"
+            :tooltipPosition="{x: 55, y: 35}"
+          />
+
+           <Cluster
+            selector=".scatterplot"
+            shape="rect"
+            :attributes="{
+              x: 470,
+              y: 300,
+              width: 495,
+              height: 260,
+            }"
+            :styles="{
+              fill: 'green',
+              stroke: '#232323',
+              opacity: 0.07,
+              transform: 'rotate(5)',
+            }"
+            showTooltip
+            tooltipLabel="Most Persuasive Presidents + Easier form speeches"
+            :tooltipPosition="{x: 580, y: 320}"
           />
         </template>
       </Scatterplot>
@@ -112,7 +134,7 @@ export default {
     },
     colorByProperty: {
       type: String,
-      default: 'Cluster',
+      default: 'Top_Speech',
     },
     showClusters: {
       type: Boolean,
@@ -122,6 +144,7 @@ export default {
   computed: {
     colorScale() {
       const colorMap = {
+        Top_Speech: this.topspeechColorScale,
         Cluster: this.clusterColorScale,
         Party: this.partyColorScale,
         Bendat_Transition: this.bendatColorScale,
@@ -142,8 +165,35 @@ export default {
     },
   },
   methods: {
+     getFill(point, keyVar) {
+      const propMap = {
+        Top_Speech: 'Top_Speech',
+        Reach: 'ReachNum',
+        Cluster: 'Cluster',
+        Party: 'Party'
+      }
+
+      if (point.Id === this.selectedPresidentDetails?.Id) {
+        return '#3b82f6'
+      }
+
+      if (this.colorByProperty in propMap) {
+        return this.colorScale(point[propMap[this.colorByProperty]])
+      }
+  
+
+
+      if (this.colorByProperty === 'Bendat_Transition') {
+        return this.colorScale(point.Bendat_Transition ? 'Yes' : 'No')
+      }
+
+      return this.colorScale(point[keyVar])
+    },
     onMouseEnter(e, point) {
       this.$emit('onPresidentHover', point)
+    },
+    topspeechColorScale() {
+      return scaleOrdinal().domain(['Yes', 'No']).range(['#F87171', '#9CA3AF'])
     },
     bendatColorScale() {
       return scaleOrdinal().domain(['No', 'Yes']).range(['#34d399', '#f59e0b'])

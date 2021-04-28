@@ -72,8 +72,8 @@
       </div>
 
       <div class="p-form">
-        
-        Reach <b>{{ presidentDetails.Reach }}</b
+
+        <span data-tippy-content="The Reach Score is a measure of the proportion of an audience who can understand the speech easily, and is calibrated against the literate general public.  A reach score of 100% would be readable by about 85% of the general public.">Reach</span> <b>{{ presidentDetails.Reach }}</b
         ><br />
         Grade Level <b>{{ presidentDetails['Flesch Kincaid Grade Level'] }}</b
         ><br />
@@ -116,7 +116,6 @@ idiosyncratic modes of engagement.">Commonality</span>
 
 <script>
 import tippy from 'tippy.js'
-import 'tippy.js/dist/tippy.css';
 
 export default {
   props: {

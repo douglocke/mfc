@@ -65,6 +65,7 @@
       <div class="filter-section">
         <h3 class="section-headline">Color</h3>
         <select :value="colorByProperty" @change="onChangeColorByProperty">
+          <option value="Top_Speech">Top Speech</option>
           <option value="Cluster">Cluster</option>
           <option value="Party">Party</option>
           <option value="Bendat_Transition">Bendat Transition</option>
@@ -130,7 +131,7 @@ export default {
     },
     colorByProperty: {
       type: String,
-      default: 'Cluster',
+      default: 'Top_Speech',
     },
     showClusters: {
       type: Boolean,

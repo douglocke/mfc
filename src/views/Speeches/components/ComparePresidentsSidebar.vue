@@ -1,25 +1,27 @@
 <template>
   <div :class="$style.sidebar">
-    <div>     
-    <div :class="$style.compareHeader">
-      Compare</div>
+    <div>
+      <div :class="$style.compareHeader">Compare</div>
 
       <div :class="$style.presidentsRow">
         <div :class="$style.presidentBlock">
-          <button :class="$style.presidentImageButton" @click.prevent="$emit('select-president', 'speech')">
+          <button
+            :class="$style.presidentImageButton"
+            @click.prevent="$emit('select-president', 'speech')"
+          >
             <img
               :class="$style.presidentImage"
-            v-show="selectedPresident?.Sequence"
+              v-show="selectedPresident?.Sequence"
               :src="
                 '/imgs/portrait_original/' +
                 selectedPresident?.Sequence +
                 '.jpeg'
               "
-            
               :alt="selectedPresident?.Name"
             />
           </button>
-          <span>{{ selectedPresident?.Name +'\'s'}}<br>
+          <span
+            >{{ selectedPresident?.Name }}<br />
             {{ selectedPresident?.Short_Label }}
           </span>
         </div>
@@ -32,7 +34,10 @@
           </button>
         </div>
         <div :class="$style.presidentBlock">
-          <button :class="$style.presidentImageButton" @click.prevent="$emit('select-president', 'compare')">
+          <button
+            :class="$style.presidentImageButton"
+            @click.prevent="$emit('select-president', 'compare')"
+          >
             <img
               :class="$style.presidentImage"
               v-show="selectedPresidentCompare?.Sequence"
@@ -41,13 +46,16 @@
                 selectedPresidentCompare?.Sequence +
                 '.jpeg'
               "
-             
               :alt="selectedPresidentCompare?.Name"
             />
           </button>
           <span>
-            {{ selectedPresidentCompare?.Name + '\'s' || 'Select' }}<br>
-          <span>{{ selectedPresidentCompare?.Short_Label}}<br></span>
+            {{
+              selectedPresidentCompare
+                ? selectedPresidentCompare?.Name 
+                : 'Select'
+            }}<br />
+            <span>{{ selectedPresidentCompare?.Short_Label }}<br /></span>
           </span>
         </div>
       </div>
@@ -87,7 +95,15 @@
             <span :class="$style.compareColumn">
               {{ data.left }}
             </span>
-            <span :class="[$style.compareColumn, $style.compareLabel]">
+            <span
+              :class="[$style.compareColumn, $style.compareLabel]"
+              v-bind="{
+                ...(data.tooltipInfo && {
+                  'data-tippy-content': data.tooltipInfo,
+                }),
+                //if we have tooltipinfo, pass an object with the data-tippy-content inside, else it's undefined, so v-bind will receive an empty object
+              }"
+            >
               {{ data.label }}
             </span>
             <span :class="$style.compareColumn">
@@ -101,6 +117,8 @@
 </template>
 
 <script>
+import tippy from 'tippy.js'
+
 const prepareData = (selectedPresident = {}, selectedPresidentCompare = {}) => {
   console.log({ selectedPresident, selectedPresidentCompare })
   const left = selectedPresident ? selectedPresident : {}
@@ -112,16 +130,19 @@ const prepareData = (selectedPresident = {}, selectedPresidentCompare = {}) => {
     {
       left: left.Year,
       label: 'Year',
+      tooltipInfo: 'Year in which something happened',
       right: right.Year,
     },
     {
       left: left.Party,
       label: 'Party',
+      tooltipInfo: 'Political party',
       right: right.Party,
     },
-     {
+    {
       left: left.CP_Public_Persuasion,
       label: 'President Persuasion Rank',
+      tooltipInfo: 'How good at speaking was this one?',
       right: right.CP_Public_Persuasion,
     },
     {
@@ -134,82 +155,81 @@ const prepareData = (selectedPresident = {}, selectedPresidentCompare = {}) => {
       label: 'War',
       right: right.War,
     },
-    
+
     {
       headline: 'Form',
     },
-   
-     {
+
+    {
       left: left.Reach,
       label: 'Reach',
       right: right.Reach,
     },
-       {
-      left: left.['Flesch Kincaid Grade Level'],
-      label: 'Grade Level',
-      right: right.['Flesch Kincaid Grade Level'],
-    },
-       {
-      left: left.['Word Count'],
-      label: 'Word Count',
-      right: right.['Word Count'],
-    }, 
     {
-      left: left.['Dale-Chall Difficult Words'],
+      left: left['Flesch Kincaid Grade Level'],
+      label: 'Grade Level',
+      right: right['Flesch Kincaid Grade Level'],
+    },
+    {
+      left: left['Word Count'],
+      label: 'Word Count',
+      right: right['Word Count'],
+    },
+    {
+      left: left['Dale-Chall Difficult Words'],
       label: 'Difficult Words',
-      right: right.['Dale-Chall Difficult Words'],
+      right: right['Dale-Chall Difficult Words'],
     },
 
     {
-      left: left.['Difficult_Words_Rank'],
+      left: left['Difficult_Words_Rank'],
       label: 'Difficult Words Rank',
-      right: right.['Difficult_Words_Rank'],
+      right: right['Difficult_Words_Rank'],
     },
     {
-      left: left.['Words Per Sentence'],
+      left: left['Words Per Sentence'],
       label: 'Words Per Sentence',
-      right: right.['Words Per Sentence'],
-    }, 
-      {
-      left: left.['Speaking Time'],
+      right: right['Words Per Sentence'],
+    },
+    {
+      left: left['Speaking Time'],
       label: 'Speaking Time',
-      right: right.['Speaking Time'],
-    }, 
-{
+      right: right['Speaking Time'],
+    },
+    {
       headline: 'Content',
     },
-   
- {
+
+    {
       left: left.Top_Speech,
       label: 'Top Speech',
       right: right.Top_Speech,
     },
 
-
-     {
-      left: left.['Activity_Rank'],
+    {
+      left: left['Activity_Rank'],
       label: 'Activity Rank',
-      right: right.['Activity_Rank'],
-    },
-     {
-      left: left.['Certainty_Rank'],
-      label: 'Certainty Rank',
-      right: right.['Certainty_Rank'],
+      right: right['Activity_Rank'],
     },
     {
-      left: left.['Commonaliy_Rank'],
+      left: left['Certainty_Rank'],
+      label: 'Certainty Rank',
+      right: right['Certainty_Rank'],
+    },
+    {
+      left: left['Commonaliy_Rank'],
       label: 'Commonality Rank',
-      right: right.['Commonaliy_Rank'],
+      right: right['Commonaliy_Rank'],
     },
-     {
-      left: left.['Optimism_Rank'],
+    {
+      left: left['Optimism_Rank'],
       label: 'Optimism Rank',
-      right: right.['Optimism_Rank'],
+      right: right['Optimism_Rank'],
     },
-      {
-      left: left.['Realism_Rank'],
+    {
+      left: left['Realism_Rank'],
       label: 'Realism Rank',
-      right: right.['Realism_Rank'],
+      right: right['Realism_Rank'],
     },
   ]
 }
@@ -228,6 +248,22 @@ export default {
       // return data
       return prepareData(this.selectedPresident, this.selectedPresidentCompare)
     },
+  },
+  methods: {
+    destroyTooltips() {
+      this.tooltips?.forEach(instance => instance?.destroy())
+    },
+  },
+  updated() {
+    console.log(this.tooltips)
+    this.destroyTooltips()
+    this.tooltips = tippy('[data-tippy-content]')
+  },
+  beforeUnmount() {
+    this.destroyTooltips()
+  },
+  mounted() {
+    this.tooltips = tippy('[data-tippy-content]')
   },
 }
 </script>
@@ -265,15 +301,14 @@ export default {
   flex-wrap: wrap;
 }
 
-.compareHeader{
+.compareHeader {
   font-family: EB Garamond, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-    font-weight: bold;
+  font-weight: bold;
   font-size: 1.6rem;
 }
-
 
 .headlineRow {
   font-family: EB Garamond, Helvetica, Arial, sans-serif;

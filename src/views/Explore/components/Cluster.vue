@@ -70,7 +70,10 @@ export default {
       tooltip.append('text')
         .attr('x', x)
         .attr('y', y)
-        .style('color', 'red')
+        .attr('color', 'red')
+        .attr('font-weight',900)
+        .attr('font-size',19)
+        .attr('font-family', 'EB Garamond')
         .text(this.tooltipLabel)
 
       this.tooltip = tooltip

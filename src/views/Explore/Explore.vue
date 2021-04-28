@@ -81,7 +81,7 @@ export default {
       disablePointerEvents: true,
       presidentsData: {} /*empty object, we will assign a new object that contains the ID and the rest of the item details*/,
       selectedPresidentDetail: null /* get from Sidebar */,
-      colorByProperty: 'Cluster',
+      colorByProperty: 'Top_Speech',
       showClusters: false,
       /* filters: [
         {

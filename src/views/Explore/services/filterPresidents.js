@@ -17,7 +17,13 @@ const transitionMap = {
   'Civil War': 'signficant',
   'Eve of Civil War': 'significant',
   'Power of the People': 'significant',
-  'First African American President': 'significant'
+  'First African American President': 'significant',
+  'Disputed Election': 'significant',
+  'World War II': 'significant',
+  'Great Depression 1933': 'significant',
+  'Eve of U.S. Entry to Civil War': 'significant',
+  'First Change in Political Power': 'significant',
+  'Close of Revolution': 'significant'
 }
 
 const filterByBendatTransition = (item, key, selectedValue) => {

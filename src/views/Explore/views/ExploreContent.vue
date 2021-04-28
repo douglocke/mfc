@@ -24,7 +24,7 @@
         xVar="x"
         yVar="y"
         keyVar="Cluster"
-        :getFill="colorScale"
+        :getFill="getFill"
         @mouseenter="onMouseEnter"
         :colorScale="colorScale"
         @click="$emit('onPresidentSelected', $event)"
@@ -39,13 +39,13 @@
             shape="ellipse"
             :attributes="{
               cx: 350,
-              cy: 80,
-              rx: 295,
-              ry: 120,
+              cy: 130,
+              rx: 275,
+              ry: 140,
             }"
             :styles="{
               fill: 'lightgreen',
-              stroke: '#232323',
+              //stroke: '#232323',
               opacity: 0.15,
               'pointer-events': 'none',
               transform: 'rotate(5)',
@@ -55,14 +55,14 @@
             selector=".scatterplot"
             shape="ellipse"
             :attributes="{
-              cx: 240,
-              cy: 420,
-              rx: 260,
-              ry: 220,
+              cx: 300,
+              cy: 440,
+              rx: 360,
+              ry: 150,
             }"
             :styles="{
               fill: 'red',
-              stroke: '#232323',
+              //stroke: '#232323',
               opacity: 0.15,
               'pointer-events': 'none',
               transform: 'rotate(5)',
@@ -72,14 +72,14 @@
             selector=".scatterplot"
             shape="ellipse"
             :attributes="{
-              cx: 560,
+              cx: 580,
               cy: 320,
               rx: 300,
               ry: 200,
             }"
             :styles="{
               fill: 'blue',
-              stroke: '#232323',
+              //stroke: '#232323',
               opacity: 0.15,
               'pointer-events': 'none',
               transform: 'rotate(5)',
@@ -117,7 +117,7 @@ export default {
     },
     colorByProperty: {
       type: String,
-      default: 'Cluster',
+      default: 'Top_Speech',
     },
     showClusters: {
       type: Boolean,
@@ -127,6 +127,7 @@ export default {
   computed: {
     colorScale() {
       const colorMap = {
+        'Top_Speech': this.topspeechColorScale,
         'Cluster': this.clusterColorScale,
         'Party': this.partyColorScale,
         'Bendat_Transition': this.bendatColorScale,
@@ -146,11 +147,37 @@ export default {
     },
   },
   methods: {
+    getFill(point, keyVar) {
+      const propMap = {
+        Top_Speech: 'Top_Speech',
+        Reach: 'ReachNum',
+        Cluster: 'Cluster',
+        Party: 'Party'
+      }
+
+      if (point.Id === this.selectedPresidentDetails?.Id) {
+        return '#3b82f6'
+      }
+
+      if (this.colorByProperty in propMap) {
+        return this.colorScale(point[propMap[this.colorByProperty]])
+      } 
+
+
+      if (this.colorByProperty === 'Bendat_Transition') {
+        return this.colorScale(point.Bendat_Transition ? 'Yes' : 'No')
+      }
+
+      return this.colorScale(point[keyVar])
+    },
     onMouseEnter(e, point) {
       this.$emit('onPresidentHover', point)
     },
     bendatColorScale() {
-      return scaleOrdinal().domain(['No', 'Yes']).range(['#34d399', '#f59e0b'])
+      return scaleOrdinal().domain(['No', 'Yes']).range(['#9CA3AF', '#34d399'])
+    },
+    topspeechColorScale() {
+      return scaleOrdinal().domain(['Yes', 'No']).range(['#F87171', '#9CA3AF'])
     },
     partyColorScale() {
       return scaleOrdinal().domain(this.colorDomain).range(['#F87171', '#34d399', '#60A5FA', '#2563EB', '#1E3A8A', '#f59e0b'])

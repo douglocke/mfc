@@ -1,5 +1,5 @@
 <template>
-<!--https://codepen.io/team/Vue/pen/mdPoyvv-->
+<!--Douglas Locke - April 2021 The modal code was retrieved from https://codepen.io/team/Vue/pen/mdPoyvv-->
   <transition name="modal">
     <div class="modal-mask">
       <div class="modal-wrapper">
@@ -53,6 +53,7 @@
   margin: 0px auto;
   padding: 20px 30px;
   background-color: #fff;
+  opacity: 0.9;
   border-radius: 2px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
   transition: all 0.3s ease;

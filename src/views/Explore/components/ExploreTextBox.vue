@@ -16,9 +16,11 @@ const textMap = {
    Assumenda animi incidunt harum suscipit distinctio voluptatum, voluptate doloremque iste, quaerat ratione mollitia error. Vero, dolorem perspiciatis rerum ea architecto quas, alias adipisci voluptatem modi veniam at nobis, necessitatibus totam.`,
   },
   exploreContent: {
-    Cluster: `Lorem ipsum cluster sit amet consectetur adipisicing elit. Asperiores culpa dolorem voluptatum est repudiandae officiis ex non soluta accusamus aut, nihil rerum nulla aliquid, id minus sed placeat assumenda deserunt.`,
-    Bendat_Transition: ` Lorem ipsum bendat sit amet consectetur adipisicing elit. Consequuntur eius minus quo itaque tenetur officia dolorem tempore quibusdam doloribus nulla nobis fugiat modi voluptas amet voluptates hic ipsum, illo mollitia?
-    Id ab nemo earum facere quis ducimus exercitationem fugiat eum molestiae. Quibusdam, reiciendis laboriosam a praesentium sit officia incidunt vero debitis tempora, itaque, sed minus sapiente? Harum molestiae alias recusandae.`,
+    Top_Speech: `In red italics we see inaugural speeches that have been rated as being the very best by presidential historians.   The closer the names are to each other, the closer the speeches are similar in their content, as rated by the special five non-overlapping lexical variables, Activity, Certainty, Commonality, Optimism, and Realism.  The raw scores are not shown, but the detail bar on the top right shows how each speech ranked (out of a possible 59).  James Madison's first inaugural scores very closely with George Washington's first address.  And George W. Bush's 1st inaugural compares closely in content scoring with Franklin Roosevelt's first inaugural.  Is it possible these speeches been overlooked by historians?`,
+    Cluster: `A clustering analysis shows that there are 3 main groupings of presidential inaugural addresses, when considering the five lexical content variables.  Woodrow Wilson scored in extremes: low in Activity and Commonality, but very high on Optimism.`,
+    Bendat_Transition: `Presidential historian Jim Bendat has identified the most significant presidential transitions of power.  Four of the nine significant transitions are also considered top speeches.  Clearly significant transitions help also to raise the profile of certain speeches.`,
+    Party: `Political party appears to have no bearing on speech content similarity.`,
+    Reach: `The Reach Score is a measure of the proportion of an audience who can understand the speech easily, and is calibrated against the literate general public.  A reach score of 100% would be readable by about 85% of the general public.`,
   },
 }
 export default {
@@ -49,9 +51,13 @@ export default {
 font-family: EB Garamond, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  text-align: left;
+  font-size: 18px;
   color: #2c3e50;
-
+  padding-right: 30px;
+  padding-left: 30px;
+  background-color:#FEF7EE;
+  /*#FEF7EE cream*/
 }
  
 </style>

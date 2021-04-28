@@ -101,6 +101,10 @@ export default {
   },
   methods: {
     getFillColor(point) {
+      /*if (this.colorByProperty === 'Top_Speech') {
+        return this.getFill(point.Top_Speech)
+      }
+
       if (this.colorByProperty === 'Reach') {
         return this.getFill(point.ReachNum)
       }
@@ -116,7 +120,8 @@ export default {
       if (this.colorByProperty === 'Bendat_Transition') {
         return this.getFill(point.Bendat_Transition ? 'Yes' : 'No')
       }
-      return this.getFill(point[this.keyVar])
+      return this.getFill(point[this.keyVar])*/
+      return this.getFill(point, this.keyVar)
     },
 
 
@@ -232,14 +237,16 @@ export default {
   updated() {
     this.updateLegend({
       color: this.colorScale,
-      title: 'Presidents legend',
+      title: this.colorByProperty ,
+      //title: 'presidents legend'
     })
   },
   mounted() {
     setTimeout(() => {  
       this.addLegend({
         color: this.colorScale,
-        title: 'Presidents legend',
+        title: this.colorByProperty,
+        //title: 'Presidents legend',
       })
     }, 100)
   },
