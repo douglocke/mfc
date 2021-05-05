@@ -9,7 +9,7 @@
         <button class="president-button" :to="`/explore/content?id=${president.Id}`" @click="$emit('president-selected', president)">
           <span class="Photo"
             ><img
-              :src="`/imgs/portrait_original/${president.Sequence}.jpeg`"
+              :src="`${publicPath}imgs/portrait_original/${president.Sequence}.jpeg`"
               :width="140"
               :height="170"
           /></span>
@@ -31,7 +31,8 @@
 export default {
   data() {
     return {
-      presidentsData: []
+      presidentsData: [],
+      publicPath: process.env.BASE_URL
     }
   },
   methods: {
