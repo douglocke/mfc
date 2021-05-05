@@ -1,6 +1,6 @@
 <template>
   <div class="footerbox">
-    <p v-if="currentText">{{ currentText }}</p>
+    <p v-if="currentText" v-html="currentText"></p>
   </div>
 </template>
 <script>
@@ -17,7 +17,7 @@ const textMap = {
    Assumenda animi incidunt harum suscipit distinctio voluptatum, voluptate doloremque iste, quaerat ratione mollitia error. Vero, dolorem perspiciatis rerum ea architecto quas, alias adipisci voluptatem modi veniam at nobis, necessitatibus totam.`,
   },
   exploreContent: {
-    Top_Speech: `In red italics we see inaugural speeches that have been rated as being the very best by presidential historians.   The closer the names are to each other, the closer the speeches are similar in their content, as rated by the special five non-overlapping lexical variables, Activity, Certainty, Commonality, Optimism, and Realism.  The raw scores are not shown, but the detail bar on the top right shows how each speech ranked (out of a possible 59).  James Madison's first inaugural scores very closely with George Washington's first address.  And George W. Bush's 1st inaugural compares closely in content scoring with Franklin Roosevelt's first inaugural.  Is it possible these speeches been overlooked by historians?`,
+    Top_Speech: `In <span class="red italics roboto">red italics</span> we see inaugural speeches that have been rated as being the very best by presidential historians.   The closer the names are to each other, the closer the speeches are similar in their content, as rated by the special five non-overlapping lexical variables, Activity, Certainty, Commonality, Optimism, and Realism.  The raw scores are not shown, but the detail bar on the top right shows how each speech ranked (out of a possible 59).  James Madison's first inaugural scores very closely with George Washington's first address.  And George W. Bush's 1st inaugural compares closely in content scoring with Franklin Roosevelt's first inaugural.  Is it possible these speeches been overlooked by historians?`,
     Cluster: `A clustering analysis shows that there are 3 main groupings of presidential inaugural addresses, when considering the five lexical content variables.  Cluster 2 (green) has some inaugurals that score well in Activity & Commonality, notably Barack Obama's second inaugural shows much higher scores in these areas than his first inaugural.  Cluster 4 (red) contains many of the historically great speeches, interestingly most of these coincidentally have excellent reach scores.   Cluster 3 (blue) contains many ordinary speeches densely concentrated, with some notable exceptions in Washington's first and Jefferson's first. Woodrow Wilson scored in extremes: low in Activity and Commonality, but very high on Optimism.`,
     Bendat_Transition: `Presidential historian Jim Bendat has identified the most significant presidential transitions of power.  Four of the nine significant transitions are also considered top speeches.  Clearly significant transitions help also to raise the profile of certain speeches.`,
     Party: `Political party appears to have no bearing on speech content similarity.`,
@@ -46,6 +46,23 @@ export default {
   },
 }
 </script>
+<style lang="scss">
+.footerbox {
+  .red {
+    color: red;
+  }
+
+  .italics {
+    font-style: italic;;
+  }
+
+  .roboto {
+    font-family: Roboto, Helvetica, Arial, sans-serif;;
+  }
+}
+
+</style>
+
 <style scoped>
 
 .footerbox{

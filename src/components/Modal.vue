@@ -7,9 +7,14 @@
 
           <div class="modal-header">
             <slot name="header">
-              <button class="modal-default-button" @click="$emit('close')">
-                OK1
-              </button>
+             
+            </slot>
+            <slot name="header-right">
+               <div class="modal-header-right">
+                  <button class="modal-header-close-icon" @click="$emit('close')">
+                  X
+                </button>
+               </div>
             </slot>
           </div>
 
@@ -61,6 +66,23 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
   transition: all 0.3s ease;
   font-family: Helvetica, Arial, sans-serif;
+}
+
+.modal-header {
+  position: relative;
+}
+
+.modal-header-right {
+  position: absolute;
+  top: 0px;
+  right: 5px;
+}
+
+.modal-header-close-icon {
+  background: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
 }
 
 .modal-header h3 {
