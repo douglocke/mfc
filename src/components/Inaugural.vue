@@ -43,7 +43,7 @@
 
           <span class="Photo"
             ><img
-              :src="'/imgs/portrait_original/' + inauguralData.Photo"
+              :src="`${publicPath}imgs/portrait_original/` + inauguralData.Photo"
               :width="90"
               :height="110"
               class="presidentImage"
@@ -71,6 +71,7 @@ export default {
       inauguralDataList: [],
       clickedInauguralId: '',
       selectedPresident: null,
+      publicPath: process.env.BASE_URL
     }
   },
   props: {
@@ -78,7 +79,7 @@ export default {
   },
   methods: {
     getInauguralData() {
-      fetch('./data/smalltitle.json')
+      fetch(`${process.env.BASE_URL}data/smalltitle.json`)
         .then(response => response.json())
         .then(data => (this.inauguralDataList = data))
     },

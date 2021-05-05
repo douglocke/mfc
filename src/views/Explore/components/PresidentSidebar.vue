@@ -6,7 +6,7 @@
           <img
             class="president-image"
             :src="
-              '/imgs/portrait_original/' + selectedPresident.Sequence + '.jpeg'
+              `${publicPath}imgs/portrait_original/` + selectedPresident.Sequence + '.jpeg'
             "
             :width="40"
             :height="60"
@@ -20,7 +20,7 @@
           <img
             class="president-image"
             :src="
-              '/imgs/portrait_original/' +
+              `${publicPath}imgs/portrait_original/` +
               selectedPresidentCompare.Sequence +
               '.jpeg'
             "
@@ -89,7 +89,7 @@
       <template #header>Help intructions</template>
       <template #body> Instructions here 
 
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia illum ducimus quam ipsum natus tenetur tempora sit. Atque dolore minima iste eum optio vero sequi. Cupiditate tenetur eligendi vero repellendus.
+        This is testing 123  ipsum dolor sit amet consectetur adipisicing elit. Mollitia illum ducimus quam ipsum natus tenetur tempora sit. Atque dolore minima iste eum optio vero sequi. Cupiditate tenetur eligendi vero repellendus.
         Quis delectus accusamus omnis error iste vel? Vitae totam rem nobis dolorem facere dolor eligendi repellendus ea voluptatibus? Vero voluptatem quos aspernatur nesciunt cum earum dolores nisi et in officiis?
         Earum, blanditiis, optio dicta, inventore animi ratione dolore ea ullam itaque consequatur nemo commodi cumque quaerat. Veniam error commodi nemo quas. Illo ab delectus earum. Culpa, perferendis. Earum, inventore asperiores.
         Voluptatum earum perspiciatis voluptate in molestias id nam, quam, sed explicabo veniam incidunt asperiores illo. Inventore quibusdam voluptates perspiciatis repellendus vitae facilis, error adipisci dignissimos, beatae, sed sequi expedita voluptate?
@@ -150,6 +150,7 @@ export default {
       : true
     return {
       showHelpModal,
+      publicPath: process.env.BASE_URL
     }
   },
   created() {
@@ -183,6 +184,10 @@ export default {
 </script>
 <style src="@vueform/toggle/themes/default.css"></style>
 <style lang="scss" scoped>
+
+
+
+
 .help-button {
   position: fixed;
   bottom: 1rem;
@@ -198,6 +203,11 @@ export default {
 
 .section-headline {
   text-align: left;
+   font-family: EB Garamond, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: left;
+  color: #2c3e50;
 }
 
 .filter-section {

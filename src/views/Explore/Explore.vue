@@ -194,7 +194,7 @@ export default {
       this.selectedPresidentDetail = presidentsData[id]
     },
     getMainVizData() {
-      fetch('/data/MainVizData.json')
+      fetch(`${process.env.BASE_URL}data/MainVizData.json`)
         .then(response => response.json())
         .then(data => {
           console.log({ data })
@@ -218,8 +218,8 @@ export default {
 }
 .mainViz {
   display: grid;
-  grid-template-columns: 1fr 22rem;
-  grid-template-rows: 80px 1fr;
+  grid-template-columns: 1fr 25rem;
+  grid-template-rows: 85px 1fr; //change to 80 to remove top bar
   min-height: 100vh;
   background: rgb(236, 231, 226);
   //display: flex;
@@ -240,6 +240,7 @@ export default {
   grid-row: 2 / 4;
   grid-column: 1 / 2;
   background: rgb(254, 247, 238);
+  //border-bottom: 1px solid lightgrey;
 }
 
 .aside {
@@ -247,7 +248,8 @@ export default {
   grid-column: 2 / 3;
   //display: flex;
   //align-items: left;
-  background: rgb(254, 247, 238)
+  background: rgb(254, 247, 238);
+  border-left: 1px solid lightgrey;
 }
 
 /*

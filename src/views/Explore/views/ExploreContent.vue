@@ -32,6 +32,7 @@
         hideXAxis
         hideYAxis
         :showClusters="showClusters"
+        :selectedPresidentId="selectedPresidentDetails?.Id"
       >
        <template v-if="showClusters">
           <Cluster
@@ -156,7 +157,8 @@ export default {
       }
 
       if (point.Id === this.selectedPresidentDetails?.Id) {
-        return '#3b82f6'
+        return '#0073B4'
+        //3b82f6
       }
 
       if (this.colorByProperty in propMap) {
@@ -174,13 +176,13 @@ export default {
       this.$emit('onPresidentHover', point)
     },
     bendatColorScale() {
-      return scaleOrdinal().domain(['No', 'Yes']).range(['#9CA3AF', '#34d399'])
+      return scaleOrdinal().domain(['Yes', 'No']).range(['#34d399', '#6B7280'])
     },
     topspeechColorScale() {
-      return scaleOrdinal().domain(['Yes', 'No']).range(['#F87171', '#9CA3AF'])
+      return scaleOrdinal().domain(['Yes', 'No']).range(['#F87171', '#6B7280'])
     },
     partyColorScale() {
-      return scaleOrdinal().domain(this.colorDomain).range(['#F87171', '#34d399', '#60A5FA', '#2563EB', '#1E3A8A', '#f59e0b'])
+      return scaleOrdinal().domain(this.colorDomain).range(['#1E40AF', '#D97706', '#34D399', '#60A5FA', '#A78BFA', '#F87171'])
     },
      clusterColorScale() {
       return scaleOrdinal().domain(['1','2','3','4']).range(['#F0C808', '#52AA5E', '#1E3A8A', '#F87171'])

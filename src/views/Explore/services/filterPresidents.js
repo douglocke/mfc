@@ -30,7 +30,8 @@ const filterByBendatTransition = (item, key, selectedValue) => {
   // Get the corresponding significance value for the Bendat_Transition
   const result = transitionMap[item[key]] || ''
   // If the selected dropdown option is normal and the found Bendat_Transition is empty then include the president
-  if (selectedValue === 'normal' && result === '') return true
+  if (!selectedValue || (selectedValue === 'normal' && result === '')) return true
+   //it's normal when there is an empty string in the data
 
   // Chyeck if Bendat_Transition significance matches the dropdown option
   return result === selectedValue

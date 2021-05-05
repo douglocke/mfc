@@ -18,7 +18,7 @@
         :fill="getFillColor(point)"
         @click="$emit('click', point)"
         :font-style="point.Boller_Top === 1 ? 'italic' : 'normal'"
-        :font-weight="point.Boller_Top === 1 ? 'bold' : 'normal'"
+        :font-weight="point.Id === selectedPresidentId || point.Boller_Top === 1 ? 'bold' : 'normal'"
         @mouseenter="$emit('mouseenter', $event, point)"
       ></LabeledPoint>
     </g>
@@ -47,9 +47,9 @@ export default {
   },
   data() {
     return {
-      margin: 30,
-      width: 900,
-      height: 600,
+      margin: 45,
+      width: 1100,
+      height: 670,
     }
   },
   props: {
@@ -68,6 +68,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    selectedPresidentId: {
+      type: String,
+      default: ''
+    }
   },
  
   computed: {
@@ -93,7 +97,8 @@ export default {
       //console.log('yScale domain', [-2, max(this.points, d => +d[this.yVar])], 'range', [this.height - this.margin, this.margin])
       return (
         scaleLinear()
-          .domain([-2, max(this.points, d => +d[this.yVar])])
+          .domain([min(this.points, d => +d[this.yVar]), max(this.points, d => +d[this.yVar])])
+          //.domain([-2, max(this.points, d => +d[this.yVar])])
           //.domain([-2, 3])
           .range([this.height - this.margin, this.margin])
       )
@@ -142,12 +147,45 @@ export default {
       /*const y = scaleBand()
         .domain(color.domain()) // bind text elements.
         .rangeRound([marginLeft, width - marginRight])*/
+
+      console.log("Doug this.colorByProperty: " + this.colorByProperty);
       console.log('domain', color.domain())
 
       const g = select('.scatterplot')
         .append('g')
         .attr('class', 'legend-element')
-        .attr('transform', 'translate(850, 50)')
+        .attr('transform', 'translate(1100, 50)')
+
+      const g2 = select('.scatterplot')
+        .append('g')
+        .attr('class', 'legend-title')
+        .attr('transform', 'translate(1100, 50)')
+
+       /*
+        const g2 = select('.scatterplot')
+        .append('g')
+        .attr('class', 'legend-title')
+        .attr('transform', 'translate(800, 25)')
+        .join('text')
+        .attr('x', marginRight-40)             
+        .attr('y', marginTop -35)
+        .text('Doug Legend');
+        */
+        /*svg.append("text")
+        .attr("x", (width / 2))             
+        .attr("y", 0 - (margin.top / 2))
+        .attr("text-anchor", "middle")  
+        .style("font-size", "16px") 
+        .style("text-decoration", "underline")  
+        .text("Value vs Date Graph");*/
+
+        g2.append('text')
+        .join('text')
+        .attr('x', marginRight-5)             
+        .attr('y', marginTop -10)
+        .style('font-size', '20px') 
+        .style('font-size', '20px') 
+        .text(this.colorByProperty.replace(/_/g,' '));
 
       g.selectAll('text')
         .data(color.domain())
@@ -204,6 +242,20 @@ export default {
         .data(color.domain())
         .join('rect')       
         .attr('fill', color) */
+      const g2 = select('.legend-title')
+         g2.selectAll('text').remove()
+     
+
+        g2.append('text')
+        .join('text')
+        .attr('x', marginRight-5)             
+        .attr('y', marginTop -10)
+        .style('font-size', '20px') 
+        .style('font-size', '20px') 
+        .text(this.colorByProperty.replace(/_/g,' '));
+
+
+
       const g = select('.legend-element')
       console.log('domain', color.domain())
       g.selectAll('text').remove()

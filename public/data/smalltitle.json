@@ -561,6 +561,17 @@
     "Note": "Ask not what you can do for your country; first time both parents withnessed their son's inauguration"
   },
   {
+    "Year": 1963,
+    "Id": 999,
+    "Name": "Lyndon B. Johnson",
+    "Sequence": 36,
+    "Photo": "36.jpeg",
+    "Speech": 0,
+    "Great_Speech": 0,
+    "Label": "",
+    "Note": "Only time a president has been sworn in by a woman.  No inaugural address."
+  },
+  {
     "Year": 1965,
     "Id": 52,
     "Name": "Lyndon B. Johnson",
@@ -723,7 +734,7 @@
     "Speech": 1,
     "Great_Speech": 0,
     "Label": "'s Inaugural Address",
-    "Note": "\"Together, we will make America great again.\""
+    "Note": "\"Together, we will make America great again.\" Second president to have never had previously held an elected office."
   },
   {
     "Year": 2021,

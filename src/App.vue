@@ -11,7 +11,7 @@
 @font-face {
   font-family: "RemsenScript";
   src: local("RemsenScript"),
-   url('/fonts/webFonts/RemsenScript/font.woff') format("woff");
+   url('./assets/fonts/webFonts/RemsenScript/font.woff') format("woff");
 }
 </style>
 

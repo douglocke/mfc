@@ -160,7 +160,7 @@ export default {
       try {
         this.fetchSpeechStatus = apiStatus.PENDING
         const { Filename, Id } = president
-        const response = await fetch(`/data/speeches/${Filename}`)
+        const response = await fetch(`${process.env.BASE_URL}data/speeches/${Filename}`)
         const speech = await response.text()
         console.log({ speech })
         this.speechesById[Id] = speech.split('\n')
@@ -209,6 +209,7 @@ export default {
   font-size: 1.2em;
   padding-right: 90px;
   padding-left: 110px;
+   padding-top: 35px;
   background-color:  #FEF7EE;
 
 }

@@ -13,7 +13,7 @@
               :class="$style.presidentImage"
               v-show="selectedPresident?.Sequence"
               :src="
-                '/imgs/portrait_original/' +
+                `${publicPath}imgs/portrait_original/` +
                 selectedPresident?.Sequence +
                 '.jpeg'
               "
@@ -42,7 +42,7 @@
               :class="$style.presidentImage"
               v-show="selectedPresidentCompare?.Sequence"
               :src="
-                '/imgs/portrait_original/' +
+                `${publicPath}imgs/portrait_original/` +
                 selectedPresidentCompare?.Sequence +
                 '.jpeg'
               "
@@ -130,19 +130,19 @@ const prepareData = (selectedPresident = {}, selectedPresidentCompare = {}) => {
     {
       left: left.Year,
       label: 'Year',
-      tooltipInfo: 'Year in which something happened',
+      tooltipInfo: 'Year of Inaugural',
       right: right.Year,
     },
     {
       left: left.Party,
       label: 'Party',
-      tooltipInfo: 'Political party',
+      tooltipInfo: 'Political Party',
       right: right.Party,
     },
     {
       left: left.CP_Public_Persuasion,
-      label: 'President Persuasion Rank',
-      tooltipInfo: 'How good at speaking was this one?',
+      label: 'C-SPAN Persuasion Rank',
+      tooltipInfo: `Public persuasion ranking is from the 2017 C-SPAN Historians Survey of Presidential Leadership and is based on the entierety of a president's term(s) in office. Based on survey of 91 presidential historians.`,
       right: right.CP_Public_Persuasion,
     },
     {
@@ -163,11 +163,13 @@ const prepareData = (selectedPresident = {}, selectedPresidentCompare = {}) => {
     {
       left: left.Reach,
       label: 'Reach',
+      tooltipInfo: 'The Reach Score is a measure of the proportion of an audience who can understand the speech easily, and is calibrated against the literate general public.  A reach score of 100% would be readable by about 85% of the general public.',
       right: right.Reach,
     },
     {
       left: left['Flesch Kincaid Grade Level'],
       label: 'Grade Level',
+      tooltipInfo: 'Flresch Kincaid Grade level presents a U.S. grade level, making it easier for teachers, parents, librarians, and others to judge the readability level of various books and texts.',
       right: right['Flesch Kincaid Grade Level'],
     },
     {
@@ -178,12 +180,14 @@ const prepareData = (selectedPresident = {}, selectedPresidentCompare = {}) => {
     {
       left: left['Dale-Chall Difficult Words'],
       label: 'Difficult Words',
+      tooltipInfo: 'Dale-Chall difficult words are those not found in a list of commonn words.  Those common words are a list of words with which 80% or more of fourth-grade students are familiar.',
       right: right['Dale-Chall Difficult Words'],
     },
 
     {
       left: left['Difficult_Words_Rank'],
       label: 'Difficult Words Rank',
+      tooltipInfo: 'How did the presidential inaugural rank out of 59 regarding word difficulty (out of 59).',
       right: right['Difficult_Words_Rank'],
     },
     {
@@ -194,6 +198,7 @@ const prepareData = (selectedPresident = {}, selectedPresidentCompare = {}) => {
     {
       left: left['Speaking Time'],
       label: 'Speaking Time',
+      tooltipInfo: 'Readable.com computed approximate speaking time.',
       right: right['Speaking Time'],
     },
     {
@@ -209,26 +214,31 @@ const prepareData = (selectedPresident = {}, selectedPresidentCompare = {}) => {
     {
       left: left['Activity_Rank'],
       label: 'Activity Rank',
+      tooltipInfo: 'Activity is language featuring movement, change, the implementation of ideas and the avoidance of inertia.  Rank out of 59 inaugurals addresses.',
       right: right['Activity_Rank'],
     },
     {
       left: left['Certainty_Rank'],
       label: 'Certainty Rank',
+      tooltipInfo: 'Certainty is language indicating resoluteness, inflexibility, and completeness and a tendency to speak ex cathedra. Rank out of 59 inaugurals addresses.',
       right: right['Certainty_Rank'],
     },
     {
       left: left['Commonaliy_Rank'],
       label: 'Commonality Rank',
+      tooltipInfo: 'Commonality is language highlighting the agreed-upon values of a group and rejecting idiosyncratic modes of engagement. Rank out of 59 inaugurals addresses.',
       right: right['Commonaliy_Rank'],
     },
     {
       left: left['Optimism_Rank'],
       label: 'Optimism Rank',
+      tooltipInfo: 'Optimism is language endorsing some person, group, concept or event, or highlighting their positive entailments. Rank out of 59 inaugurals addresses.',
       right: right['Optimism_Rank'],
     },
     {
       left: left['Realism_Rank'],
       label: 'Realism Rank',
+      tooltipInfo: `Realism is language describing tangible, immediate, recognizable matters that affect people's everyday lives. Rank out of 59 inaugurals addresses.`,
       right: right['Realism_Rank'],
     },
   ]
@@ -242,6 +252,11 @@ export default {
     selectedPresidentCompare: {
       type: Object,
     },
+  },
+  data() {
+    return {
+      publicPath: process.env.BASE_URL
+    }
   },
   computed: {
     compareData() {
@@ -308,6 +323,7 @@ export default {
   text-align: center;
   font-weight: bold;
   font-size: 1.6rem;
+  padding-top: 10px;
 }
 
 .headlineRow {

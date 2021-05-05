@@ -21,8 +21,9 @@
     <div>
       <Scatterplot
         :points="presidentsData"
-        xVar="Flesch Reading Ease"
-        yVar="CP_Public_Persuasion"
+        xVar="Year"
+
+        yVar="Flesch Kincaid Grade Level"
         keyVar="Cluster"
         :getFill="getFill"
         @mouseenter="onMouseEnter"
@@ -193,22 +194,15 @@ export default {
       this.$emit('onPresidentHover', point)
     },
     topspeechColorScale() {
-      return scaleOrdinal().domain(['Yes', 'No']).range(['#F87171', '#9CA3AF'])
+      return scaleOrdinal().domain(['Yes', 'No']).range(['#F87171', '#6B7280'])
     },
     bendatColorScale() {
-      return scaleOrdinal().domain(['No', 'Yes']).range(['#34d399', '#f59e0b'])
+      return scaleOrdinal().domain(['Yes', 'No']).range(['#34d399', '#6B7280'])
     },
     partyColorScale() {
       return scaleOrdinal()
         .domain(this.colorDomain)
-        .range([
-          '#F87171',
-          '#34d399',
-          '#60A5FA',
-          '#2563EB',
-          '#1E3A8A',
-          '#f59e0b',
-        ])
+        .range(['#1E40AF', '#D97706', '#34D399', '#60A5FA', '#A78BFA', '#F87171'])
     },
     clusterColorScale() {
       return scaleOrdinal()

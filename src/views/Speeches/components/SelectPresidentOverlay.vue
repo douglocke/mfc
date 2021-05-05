@@ -37,7 +37,7 @@ export default {
   methods: {
     async getPresidentsData () {
       try {
-        const response = await fetch('./data/MainVizData.json')
+        const response = await fetch(`${process.env.BASE_URL}data/MainVizData.json`)
         const data = await response.json()
         const presidentsWithSpeeches = data.filter(president => !!president.Filename)
         this.presidentsData = presidentsWithSpeeches.reverse()

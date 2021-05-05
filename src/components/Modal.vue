@@ -7,6 +7,9 @@
 
           <div class="modal-header">
             <slot name="header">
+              <button class="modal-default-button" @click="$emit('close')">
+                OK1
+              </button>
             </slot>
           </div>
 
@@ -18,7 +21,7 @@
           <div class="modal-footer">
             <slot name="footer">
               <button class="modal-default-button" @click="$emit('close')">
-                OK
+                OK2
               </button>
             </slot>
           </div>

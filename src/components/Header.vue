@@ -1,7 +1,7 @@
 <template>
     <header :class="$style.header">
         <div :class="$style.logoBlock">
-            <img src="/imgs/eagle.png" alt="Eagle" />
+            <img src="@/assets/imgs/eagle.png" alt="Eagle" />
             <span :class="$style.logoTitle">The United States Presidential Inaugural Address</span>
         </div>
       <nav :class="$style.nav">
@@ -14,7 +14,11 @@
 </template>
 <script>
 export default {
-
+    data() {
+        return {
+            publicPath: process.env.BASE_URL
+        }
+    }
 }
 </script>
 <style lang="scss" module>
@@ -48,7 +52,7 @@ export default {
 
 .nav {
     display: flex;
-    font-size: 1.1rem;
+    font-size: 1.4rem;
 
     a + a {
         margin-left: 1rem;

@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import { select, axisBottom } from 'd3'
+import { select, axisBottom, format } from 'd3'
 
 export default {
   name: 'XAxis',
@@ -23,13 +23,14 @@ export default {
   },
   methods: {
     updateAxis() {
-      select(`.x-axis-${this.normalisedId}`).call(axisBottom(this.xScale))
+      select(`.x-axis-${this.normalisedId}`).call(axisBottom(this.xScale).tickFormat(format("d")));
       select(`.x-axis-${this.normalisedId}Label`).append("text")
         //.attr("transform", "translate(" + (width / 2) + " ," + (height + margin.bottom) + ")")
         .attr("transform", "translate(500,40)")
         .style("text-anchor", "middle")
         .style("color", "red")
         .style("font-size", "12px")
+        //.tickFormat(this.format("d"))
         .text(this.id.substring(0, this.id.indexOf("-")));
 //str.substring(0, str.indexOf(":"))
         //string.split(":").pop()
