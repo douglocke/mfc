@@ -64,9 +64,9 @@
             shape="rect"
             :attributes="{
               x: 40,
-              y: 10,
-              width: 495,
-              height: 260,
+              y: 30,
+              width: 380,
+              height: 360,
             }"
             :styles="{
               fill: 'blue',
@@ -75,18 +75,37 @@
               transform: 'rotate(5)',
             }"
             showTooltip
-            tooltipLabel="Least Persuasive Presidents + Difficult form speeches"
-            :tooltipPosition="{x: 55, y: 35}"
+            tooltipLabel="The Early Republic; More Complex Speeches"
+            :tooltipPosition="{x: 65, y: 35}"
+          />
+ <Cluster
+            selector=".scatterplot"
+            shape="rect"
+            :attributes="{
+              x: 380,
+              y: 200,
+              width: 305,
+              height: 300,
+            }"
+            :styles="{
+              fill: 'red',
+              stroke: '#232323',
+              opacity: 0.07,
+              transform: 'rotate(5)',
+            }"
+            showTooltip
+            tooltipLabel="The Civil War to the Great Depression"
+            :tooltipPosition="{x: 390, y: 200}"
           />
 
            <Cluster
             selector=".scatterplot"
             shape="rect"
             :attributes="{
-              x: 470,
-              y: 300,
+              x: 670,
+              y: 400,
               width: 495,
-              height: 260,
+              height: 240,
             }"
             :styles="{
               fill: 'green',
@@ -95,8 +114,8 @@
               transform: 'rotate(5)',
             }"
             showTooltip
-            tooltipLabel="Most Persuasive Presidents + Easier form speeches"
-            :tooltipPosition="{x: 580, y: 320}"
+            tooltipLabel="Speechwriter and Mass Communications Era"
+            :tooltipPosition="{x: 740, y: 410}"
           />
         </template>
       </Scatterplot>
