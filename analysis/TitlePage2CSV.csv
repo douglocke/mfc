@@ -1,0 +1,68 @@
+﻿Year,Id,Name,Sequence,Photo,Speech,Great_Speech,Label,Note
+1789,1,George Washington,1,1.jpeg,1,1,s First Inaugural Address,The First Inauguration
+1793,2,George Washington,1,1.jpeg,1,0,s Second Inaugural Address,Shortest Inaugural Address
+1797,3,John Adams,2,2.jpeg,1,0,s Inaugural Address,First president to be sworn in by a chief justice.
+1801,4,Thomas Jefferson,3,3.jpeg,1,1,s First Inaugural Address,"First Washington inauguration; ""We are all Federalists; we are all Republicans"""
+1805,5,Thomas Jefferson,3,3.jpeg,1,0,s Second Inaugural Address,First informal parade down Pennsylvania Avenue
+1809,6,James Madison,4,4.jpeg,1,0,s First Inaugural Address,First official inaugural parade and the first inaugural ball
+1813,7,James Madison,4,4.jpeg,1,0,s Second Inaugural Address,During the middle of the war of 1812.
+1817,8,James Monroe,5,5.jpeg,1,0,s First Inaugural Address,First fully outdoor inauguration.
+1821,9,James Monroe,5,5.jpeg,1,0,s Second Inaugural Address,First inauguration delayed to avoid Sunday ceremony; ceremony moved indoors due to poor weather.
+1825,10,John Quincy Adams,6,6.jpeg,1,0,s Inaugural Address,"First son of a former president; first president to wear long pants, instead of knickers at his inauguration."
+1829,11,Andrew Jackson,7,7.jpeg,1,0,s First Inaugural Address,First inauguation at Capitols East Portico featured the wildest inauguration party.
+1833,12,Andrew Jackson,7,7.jpeg,1,0,s Second Inaugural Address,Ceremony moved indoors and inaugural parade cancelled due to poor weather.
+1837,13,Martin Van Buren,8,8.jpeg,1,0,s Inaugural Address,First American president born as an American citizen.  First time old and new presidents rode together to Capitol ceremony.
+1841,14,William Henry Harrison,9,9.jpeg,1,0,s Inaugural Address,"Longest address, caught pneumonia, died one month later."
+1841,15,John Tyler,10,10.jpeg,0,0,,First vice president to succeed to presidency upon death of predecessor; No inaugural address.
+1845,16,James K. Polk,11,11.jpeg,1,0,s Inaugural Address,First inauguration reported by telegraph.
+1849,17,Zachary Taylor,12,12.jpeg,1,0,s Inaugural Address,Inauguration delayed one day to Monday.
+1850,18,Millard Fillmore,13,13.jpeg,0,0,,Oath administered by same subsitute justice who had sworn in John Tyler; No inaugural address.
+1853,19,Franklin Pierce,14,14.jpeg,1,0,s Inaugural Address,Only President to affirm the oath; memorized his inaugural address.
+1857,20,James Buchanan,15,15.jpeg,1,0,s Inaugural Address,First inauguration to be photographed.
+1861,21,Abraham Lincoln,16,16.jpeg,1,1,s First Inaugural Address,Massive military presence at inauguration.
+1865,22,Abraham Lincoln,16,16.jpeg,1,1,s Second Inaugural Address,"\""With Malice toward none, and charity to all\""; first inaugural parade to include African Americans"
+1865,23,Andrew Johnson,17,17.jpeg,0,0,s Inaugural Address,"Delivered his VP speech while drunk, just 42 days earlier; No inaugural address."
+1869,24,Ulysses S. Grant,18,18.jpeg,1,0,s First Inaugural Address,Much patriotic enthusiasm for the first inauguration post Civil War
+1873,25,Ulysses S. Grant,18,18.jpeg,1,0,s Second Inaugural Address,2nd coldest inaugural; first presidential review stand; frozen food at inaugural ball
+1877,26,Rutherford B. Hayes,19,19.jpeg,1,0,s Inaugural Address,"Only President to be sworn in a day early, privately at White House"
+1881,27,James A. Garfield,20,20.jpeg,1,0,s Inaugural Address,First inauguration attended by the mother of a president; first inaugural parade reviewing stand in front of White House
+1881,28,Chester A. Arthur,21,21.jpeg,0,0,,Only president to be sworn in at his own home; No inaugural address.
+1885,29,Grover Cleveland,22,22.jpeg,1,0,s First Inaugural Address,Only president to serve two non consecutive terms
+1889,30,Benjamin Harrison,23,23.jpeg,1,0,s Inaugural Address,Outgoing President Cleveland held umbrella over Harrison during rainy ceremony
+1893,31,Grover Cleveland,24,24.jpeg,1,0,s  Second Inaugural Address,Only president to serve two non consecutive terms
+1897,32,William McKinley,25,25.jpeg,1,0,s First Inaugural Address,First inauguration to be filmed and recorded with sound
+1901,33,William McKinley,25,25.jpeg,1,0,s Second Inaugural Address,Recent war hero Theodore Roosevelt new vice president
+1901,34,Theodore Roosevelt,26,26.jpeg,0,0,,"Inauguration of nation's youngest president, age 42; No inaugural address."
+1905,35,Theodore Roosevelt,26,26.jpeg,1,0,s Inaugural Address,Most colorful inaugural parade in history
+1909,36,William Howard Taft,27,27.jpeg,1,0,s Inaugural Address,First time president and first lady rode together back to White House after ceremony
+1913,37,Woodrow Wilson,28,28.jpeg,1,1,s First Inaugural Address,Era of no inaugural balls begins
+1917,38,Woodrow Wilson,28,28.jpeg,1,0,s Second Inaugural Address,First private oath taken on a Sunday
+1921,39,Warren G. Harding,29,29.jpeg,1,0,s Inaugural Address,First time president to ride to inauguration in an automobile; first time loudspeakers used at inauguration ceremony
+1923,40,Calvin Coolidge,30,30.jpeg,0,0,,Oath aministered by President's father; took oath a second time to legitimize ceremony weeks later; No inaugural address.
+1925,41,Calvin Coolidge,30,30.jpeg,1,0,s Inaugural Address,First inauguration to be broadcast on live radio
+1929,42,Herbert Hoover,31,31.jpeg,1,0,s Inaugural Address,First inauguration to be broadcast on sound newsreel
+1933,43,Franklin D. Roosevelt,32,32.jpeg,1,1,s First Inaugural Address,"The only thing we have to fear, is fear itself"
+1937,44,Franklin D. Roosevelt,32,32.jpeg,1,0,s Second Inaugural Address,The First January 20th ceremony
+1941,45,Franklin D. Roosevelt,32,32.jpeg,1,0,s Third Inaugural Address,First president to be elected to three terms in office
+1945,46,Franklin D. Roosevelt,32,32.jpeg,1,0,s Fourth Inaugural Address,Low key inauguration held on White House balcony during World War
+1945,47,Harry S. Truman,33,33.jpeg,0,0,,First new president in more than 12 years; No inaugural address.
+1949,48,Harry S. Truman,33,33.jpeg,1,0,s  Inaugural Address,First televised inauguration
+1953,49,Dwight D. Eisenhower,34,34.jpeg,1,0,s First Inaugural Address,Longest inaugural parade
+1957,50,Dwight D. Eisenhower,34,34.jpeg,1,0,s Second Inaugural Address,Private Sunday ceremony at White House
+1961,51,John F. Kennedy,35,35.jpeg,1,1,s Inaugural Address,Ask not what you can do for your country; first time both parents withnessed their son's inauguration
+1965,52,Lyndon B. Johnson,36,36.jpeg,1,0,s Inaugural Address,First lady held Bible during oath for first time
+1969,53,Richard Nixon,37,37.jpeg,1,0,s First Inaugural Address,First inaugural parade disrupted by protestors
+1973,54,Richard Nixon,37,37.jpeg,1,0,s Second Inaugural Address,Second  inaugural parade disrupted by protestors
+1974,55,Gerald R. Ford,38,38.jpeg,0,0,,First inauguration of someone never elected either president or vice-president; No inaugural address.
+1977,56,Jimmy Carter,39,39.jpeg,1,0,s Inaugural Address,Only president to use a nickname when taking the formal oath
+1981,57,Ronald Reagan,40,40.jpeg,1,0,s First Inaugural Address,Oldest president at time; first inauguration on Capitol's west side
+1985,58,Ronald Reagan,40,40.jpeg,1,0,s Second Inaugural Address,Sunday ceremony at White House
+1989,59,George H. W. Bush,41,41.jpeg,1,0,s Inaugural Address,"Called inauguration ""Democracy's Big Day"""""
+1993,60,Bill Clinton,42,42.jpeg,1,0,s First Inaugural Address,First president to attend inaugural morning services at a predominantly African American church.
+1997,61,Bill Clinton,42,42.jpeg,1,0,s Second Inaugural Address,First inauguration broadcast live over Internet
+2001,62,George W. Bush,43,43.jpeg,1,0,s First Inaugural Address,Father George bcame first former president to personally witness the inauguration of his son
+2005,63,George W. Bush,43,43.jpeg,1,0,s Second Inaugural Address,First time a protest took place during the inaugural oath
+2009,64,Barack Obama,44,44.jpeg,1,0,s First Inaugural Address,First inauguration of an African American preident; largest attendance
+2013,65,Barack Obama,44,44.jpeg,1,0,s Second Inaugural Address,Oath of office misstated & administered next day
+2017,66,Donald J. Trump,45,45.jpeg,1,0,s Inaugural Address,"\""Together, we will make America great again.\"""
+2021,67,Joseph R. Biden,46,46.jpeg,1,0,s Inaugural Address,"Oldest President at inauguration; First female Vice President, Kamala Harris."
