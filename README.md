@@ -10,9 +10,19 @@ A Visual Exploration of the United States Presidential Inaugural Addresses (1789
 
 ![Preview](preview.png)
 
+# Link
+
+https://douglocke.github.io/myfellowcitizens/
+
 # Abstract
 
 The United States Presidential inaugural speeches serve to form a qualitative and historical basis for applying data visualization techniques.    This data visualization serves to illuminate historical context, further evaluate the texts, and aid in their appreciation.   Visualization techniques employed are designed to aid in topical exploration & allow user agency to enable new discovery of insights.
+
+# Special Acknowledgements
+
+Thank you to Jessica & my children for your support, love, and patience.
+
+Thanks to my thesis advisor Alec Barrett.  Also professors who gave me helpful advice and inspired me to do my best: Daniel Sauter, Aaron Hill, William Bevington, Richard The, Christian Swinehart.  And thank you to the many students who have joined me in this journey and shared your knowledge with me.
 
 # Design Process
 
