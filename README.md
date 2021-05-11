@@ -22,7 +22,7 @@ The United States Presidential inaugural speeches serve to form a qualitative an
 
 Thank you to Jessica & my children for your support, love, and patience.
 
-Thanks to my thesis advisor Alec Barrett.  Also professors who gave me helpful advice and inspired me to do my best: Daniel Sauter, Aaron Hill, William Bevington, Richard The, Christian Swinehart.  And thank you to the many students who have joined me in this journey and shared your knowledge with me.
+Thanks to my thesis advisor Alec Barrett, who gave insightful feedback and elevated my work.  Also professors who also gave me helpful advice and inspired me to do my best: Daniel Sauter, Aaron Hill, William Bevington, Richard The, Christian Swinehart.  And thank you to the many students who have joined me in this journey and shared your knowledge with me.
 
 # Design Process
 
