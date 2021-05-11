@@ -25,9 +25,7 @@
 
           <div class="modal-footer">
             <slot name="footer">
-              <button class="modal-default-button" @click="$emit('close')">
-                OK2
-              </button>
+              
             </slot>
           </div>
         </div>
@@ -55,7 +53,7 @@
 
 .modal-container {
   min-width: 300px;
-  max-width: 600px;
+  max-width: 920px;
   max-height: 60vh;
   overflow-y: auto;
   margin: 0px auto;
