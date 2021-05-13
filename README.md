@@ -20,7 +20,7 @@ The United States Presidential inaugural speeches serve to form a qualitative an
 
 # Acknowledgements
 
-Thank you to Jessica & my children for your support, love, and patience.
+Thank you to Jessica & our children for your support, love, and patience.
 
 Thanks to my thesis advisor Alec Barrett, who gave insightful feedback and elevated my work.  Also professors who also gave me helpful advice and inspired me to do my best: Daniel Sauter, Aaron Hill, William Bevington, Richard The, Christian Swinehart.  
 
